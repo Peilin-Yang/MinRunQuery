@@ -1,0 +1,9 @@
+<parameters>
+  <index>/home/ypeilin/Downloads/IndriTest/index_orig</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>425</number>
+    <text>#weight( 1.0 counterfeiting 1.0 money )</text>
+  </query>
+</parameters>

@@ -1,0 +1,9 @@
+<parameters>
+  <server>128.4.12.98:9875</server>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>425</number>
+    <text>counterfeiting money </text>
+  </query>
+</parameters>

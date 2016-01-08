@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>indri</ProjectName>
+    <ProjectGuid>{5C8D97A4-E7FA-4B9D-B18A-F159560A4A40}</ProjectGuid>
+    <RootNamespace>indri</RootNamespace>
+    <Keyword>ManagedCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;../contrib/antlr/include;../contrib/xpdf/include;../contrib/lemur/include;../contrib/zlib/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4018;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;../contrib/antlr/include;../contrib/xpdf/include;../contrib/lemur/include;../contrib/zlib/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4018;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>../include;../contrib/antlr/include;../contrib/xpdf/include;../contrib/lemur/include;../contrib/zlib/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>../include;../contrib/antlr/include;../contrib/xpdf/include;../contrib/lemur/include;../contrib/zlib/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BulkTree.cpp" />
+    <ClCompile Include="CompressedCollection.cpp" />
+    <ClCompile Include="ContextSimpleCountAccumulator.cpp" />
+    <ClCompile Include="Copier.cpp" />
+    <ClCompile Include="DeletedDocumentList.cpp" />
+    <ClCompile Include="DirectoryIterator.cpp" />
+    <ClCompile Include="DiskDocListIterator.cpp" />
+    <ClCompile Include="DiskIndex.cpp" />
+    <ClCompile Include="DiskTermListFileIterator.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="IndriTimer.cpp" />
+    <ClCompile Include="InferenceNetwork.cpp" />
+    <ClCompile Include="InferenceNetworkBuilder.cpp" />
+    <ClCompile Include="KrovetzStemmer.cpp" />
+    <ClCompile Include="KrovetzStemmerTransformation.cpp" />
+    <ClCompile Include="LocalQueryServer.cpp" />
+    <ClCompile Include="NetworkMessageStream.cpp" />
+    <ClCompile Include="NetworkServerProxy.cpp" />
+    <ClCompile Include="NetworkServerStub.cpp" />
+    <ClCompile Include="NormalizationTransformation.cpp" />
+    <ClCompile Include="NullListNode.cpp" />
+    <ClCompile Include="NullScorerNode.cpp" />
+    <ClCompile Include="Packer.cpp" />
+    <ClCompile Include="Parameters.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="Porter_Stemmer.cpp" />
+    <ClCompile Include="PorterStemmerTransformation.cpp" />
+    <ClCompile Include="QueryEnvironment.cpp" />
+    <ClCompile Include="QueryStopper.cpp" />
+    <ClCompile Include="RelevanceModel.cpp" />
+    <ClCompile Include="Repository.cpp" />
+    <ClCompile Include="RepositoryLoadThread.cpp" />
+    <ClCompile Include="RepositoryMaintenanceThread.cpp" />
+    <ClCompile Include="SimpleQueryParser.cpp" />
+    <ClCompile Include="StemmerFactory.cpp" />
+    <ClCompile Include="StopperTransformation.cpp" />
+    <ClCompile Include="StopStructureRemover.cpp" />
+    <ClCompile Include="TermFrequencyBeliefNode.cpp" />
+    <ClCompile Include="TermScoreFunctionFactory.cpp" />
+    <ClCompile Include="TextDocumentExtractor.cpp" />
+    <ClCompile Include="TFIDFTermScoreFunction.cpp" />
+    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="uint64comp.cpp" />
+    <ClCompile Include="Unpacker.cpp" />
+    <ClCompile Include="UnpackerInternal.cpp" />
+    <ClCompile Include="UTF8CaseNormalizationTransformation.cpp" />
+    <ClCompile Include="UTF8Transcoder.cpp" />
+    <ClCompile Include="UtilityThread.cpp" />
+    <ClCompile Include="Walker.cpp" />
+    <ClCompile Include="WeightedAndNode.cpp" />
+    <ClCompile Include="XMLNode.cpp" />
+    <ClCompile Include="XMLReader.cpp" />
+    <ClCompile Include="XMLWriter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\indri\Appliers.hpp" />
+    <ClInclude Include="..\include\indri\atomic.hpp" />
+    <ClInclude Include="..\include\indri\BeliefNode.hpp" />
+    <ClInclude Include="..\include\indri\Buffer.hpp" />
+    <ClInclude Include="..\include\indri\BulkTree.hpp" />
+    <ClInclude Include="..\include\indri\Collection.hpp" />
+    <ClInclude Include="..\include\indri\CompressedCollection.hpp" />
+    <ClInclude Include="..\include\indri\ConditionVariable.hpp" />
+    <ClInclude Include="..\include\indri\ContextCountGraphCopier.hpp" />
+    <ClInclude Include="..\include\indri\ContextCountGraphExtractor.hpp" />
+    <ClInclude Include="..\include\indri\ContextSimpleCountAccumulator.hpp" />
+    <ClInclude Include="..\include\indri\ContextSimpleCountCollectorCopier.hpp" />
+    <ClInclude Include="..\include\indri\Copier.hpp" />
+    <ClInclude Include="..\include\indri\CorpusStatistics.hpp" />
+    <ClInclude Include="..\include\indri\DagCopier.hpp" />
+    <ClInclude Include="..\include\indri\DateParse.hpp" />
+    <ClInclude Include="..\include\indri\delete_range.hpp" />
+    <ClInclude Include="..\include\indri\DeletedDocumentList.hpp" />
+    <ClInclude Include="..\include\indri\DirectoryIterator.hpp" />
+    <ClInclude Include="..\include\indri\DirichletTermScoreFunction.hpp" />
+    <ClInclude Include="..\include\indri\DiskDocListIterator.hpp" />
+    <ClInclude Include="..\include\indri\DiskIndex.hpp" />
+    <ClInclude Include="..\include\indri\DiskTermData.hpp" />
+    <ClInclude Include="..\include\indri\DiskTermListFileIterator.hpp" />
+    <ClInclude Include="..\include\indri\DocExtentListIterator.hpp" />
+    <ClInclude Include="..\include\indri\DocListFileIterator.hpp" />
+    <ClInclude Include="..\include\indri\DocListIterator.hpp" />
+    <ClInclude Include="..\include\indri\DocumentCount.hpp" />
+    <ClInclude Include="..\include\indri\DocumentData.hpp" />
+    <ClInclude Include="..\include\indri\DocumentDataIterator.hpp" />
+    <ClInclude Include="..\include\indri\DocumentIterator.hpp" />
+    <ClInclude Include="..\include\indri\EvaluatorNode.hpp" />
+    <ClInclude Include="..\include\indri\Extent.hpp" />
+    <ClInclude Include="..\include\indri\ExtentRestrictionModelAnnotatorCopier.hpp" />
+    <ClInclude Include="..\include\indri\FieldStatistics.hpp" />
+    <ClInclude Include="..\include\indri\File.hpp" />
+    <ClInclude Include="..\include\indri\FrequencyListCopier.hpp" />
+    <ClInclude Include="..\include\indri\HashTable.hpp" />
+    <ClInclude Include="..\include\indri\Index.hpp" />
+    <ClInclude Include="..\include\indri\indri-platform.h" />
+    <ClInclude Include="..\include\indri\IndriTimer.hpp" />
+    <ClInclude Include="..\include\indri\IndriTokenizer.hpp" />
+    <ClInclude Include="..\include\indri\InferenceNetwork.hpp" />
+    <ClInclude Include="..\include\indri\InferenceNetworkBuilder.hpp" />
+    <ClInclude Include="..\include\indri\InferenceNetworkNode.hpp" />
+    <ClInclude Include="..\include\indri\InternalFileBuffer.hpp" />
+    <ClInclude Include="..\include\indri\JelinekMercerTermScoreFunction.hpp" />
+    <ClInclude Include="..\include\indri\KrovetzStemmer.hpp" />
+    <ClInclude Include="..\include\indri\KrovetzStemmerTransformation.hpp" />
+    <ClInclude Include="..\include\indri\ListCache.hpp" />
+    <ClInclude Include="..\include\indri\ListIteratorNode.hpp" />
+    <ClInclude Include="..\include\indri\LocalQueryServer.hpp" />
+    <ClInclude Include="..\include\indri\Lockable.hpp" />
+    <ClInclude Include="..\include\indri\MetadataPair.hpp" />
+    <ClInclude Include="..\include\indri\Mutex.hpp" />
+    <ClInclude Include="..\include\indri\NetworkListener.hpp" />
+    <ClInclude Include="..\include\indri\NetworkMessageStream.hpp" />
+    <ClInclude Include="..\include\indri\NetworkServerProxy.hpp" />
+    <ClInclude Include="..\include\indri\NetworkServerStub.hpp" />
+    <ClInclude Include="..\include\indri\NetworkStream.hpp" />
+    <ClInclude Include="..\include\indri\NormalizationTransformation.hpp" />
+    <ClInclude Include="..\include\indri\NullListNode.hpp" />
+    <ClInclude Include="..\include\indri\NullScorerNode.hpp" />
+    <ClInclude Include="..\include\indri\ObjectHandler.hpp" />
+    <ClInclude Include="..\include\indri\Packer.hpp" />
+    <ClInclude Include="..\include\indri\Parameters.hpp" />
+    <ClInclude Include="..\include\indri\ParsedDocument.hpp" />
+    <ClInclude Include="..\include\indri\Path.hpp" />
+    <ClInclude Include="..\include\indri\Porter_Stemmer.hpp" />
+    <ClInclude Include="..\include\indri\PorterStemmerTransformation.hpp" />
+    <ClInclude Include="..\include\indri\QueryEnvironment.hpp" />
+    <ClInclude Include="..\include\indri\QueryResponsePacker.hpp" />
+    <ClInclude Include="..\include\indri\QueryResponseUnpacker.hpp" />
+    <ClInclude Include="..\include\indri\QueryServer.hpp" />
+    <ClInclude Include="..\include\indri\QuerySpec.hpp" />
+    <ClInclude Include="..\include\indri\QueryStopper.hpp" />
+    <ClInclude Include="..\include\indri\RawScorerNodeExtractor.hpp" />
+    <ClInclude Include="..\include\indri\RawTextParser.hpp" />
+    <ClInclude Include="..\include\indri\ReaderLockable.hpp" />
+    <ClInclude Include="..\include\indri\ReadersWritersLock.hpp" />
+    <ClInclude Include="..\include\indri\ref_ptr.hpp" />
+    <ClInclude Include="..\include\indri\RegionAllocator.hpp" />
+    <ClInclude Include="..\include\indri\RelevanceModel.hpp" />
+    <ClInclude Include="..\include\indri\Repository.hpp" />
+    <ClInclude Include="..\include\indri\RepositoryLoadThread.hpp" />
+    <ClInclude Include="..\include\indri\RepositoryMaintenanceThread.hpp" />
+    <ClInclude Include="..\include\indri\RVLCompressStream.hpp" />
+    <ClInclude Include="..\include\indri\RVLDecompressStream.hpp" />
+    <ClInclude Include="..\include\indri\ScopedLock.hpp" />
+    <ClInclude Include="..\include\indri\ScopedMonitor.hpp" />
+    <ClInclude Include="..\include\indri\ScoredExtentAccumulator.hpp" />
+    <ClInclude Include="..\include\indri\ScoredExtentResult.hpp" />
+    <ClInclude Include="..\include\indri\SequentialReadBuffer.hpp" />
+    <ClInclude Include="..\include\indri\SequentialWriteBuffer.hpp" />
+    <ClInclude Include="..\include\indri\SimpleCopier.hpp" />
+    <ClInclude Include="..\include\indri\SimpleQueryParser.hpp" />
+    <ClInclude Include="..\include\indri\SkippingCapableNode.hpp" />
+    <ClInclude Include="..\include\indri\SmoothingAnnotatorWalker.hpp" />
+    <ClInclude Include="..\include\indri\StemmerFactory.hpp" />
+    <ClInclude Include="..\include\indri\StopperTransformation.hpp" />
+    <ClInclude Include="..\include\indri\StopStructureRemover.hpp" />
+    <ClInclude Include="..\include\indri\SumNode.hpp" />
+    <ClInclude Include="..\include\indri\TermBitmap.hpp" />
+    <ClInclude Include="..\include\indri\TermData.hpp" />
+    <ClInclude Include="..\include\indri\TermExtent.hpp" />
+    <ClInclude Include="..\include\indri\TermFieldStatistics.hpp" />
+    <ClInclude Include="..\include\indri\TermFrequencyBeliefNode.hpp" />
+    <ClInclude Include="..\include\indri\TermList.hpp" />
+    <ClInclude Include="..\include\indri\TermListFileIterator.hpp" />
+    <ClInclude Include="..\include\indri\TermRecorder.hpp" />
+    <ClInclude Include="..\include\indri\TermScoreFunction.hpp" />
+    <ClInclude Include="..\include\indri\TermScoreFunctionFactory.hpp" />
+    <ClInclude Include="..\include\indri\TermTranslator.hpp" />
+    <ClInclude Include="..\include\indri\TextDocumentExtractor.hpp" />
+    <ClInclude Include="..\include\indri\TFIDFTermScoreFunction.hpp" />
+    <ClInclude Include="..\include\indri\Thread.hpp" />
+    <ClInclude Include="..\include\indri\TokenizedDocument.hpp" />
+    <ClInclude Include="..\include\indri\Transformation.hpp" />
+    <ClInclude Include="..\include\indri\TreePrinterWalker.hpp" />
+    <ClInclude Include="..\include\indri\TwoStageTermScoreFunction.hpp" />
+    <ClInclude Include="..\include\indri\uint64comp.hpp" />
+    <ClInclude Include="..\include\indri\UnnecessaryNodeRemoverCopier.hpp" />
+    <ClInclude Include="..\include\indri\Unpacker.hpp" />
+    <ClInclude Include="..\include\indri\UnparsedDocument.hpp" />
+    <ClInclude Include="..\include\indri\UTF8CaseNormalizationTransformation.hpp" />
+    <ClInclude Include="..\include\indri\UTF8Transcoder.hpp" />
+    <ClInclude Include="..\include\indri\UtilityThread.hpp" />
+    <ClInclude Include="..\include\indri\VocabularyIterator.hpp" />
+    <ClInclude Include="..\include\indri\Walker.hpp" />
+    <ClInclude Include="..\include\indri\WeightedAndNode.hpp" />
+    <ClInclude Include="..\include\indri\WeightFoldingCopier.hpp" />
+    <ClInclude Include="..\include\indri\WriterLockable.hpp" />
+    <ClInclude Include="..\include\indri\XMLNode.hpp" />
+    <ClInclude Include="..\include\indri\XMLReader.hpp" />
+    <ClInclude Include="..\include\indri\XMLWriter.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
