@@ -32,12 +32,6 @@ namespace lemur
     /// Provide RVL compression of arbitrary data.
     class RVLCompress {
     public:
-      ///return number of bytes in result
-      static int compress_ints (int *data_ptr, unsigned char *out_ptr, int size);
-
-      /// returns number of ints decompressed
-      static int decompress_ints(unsigned char *data_ptr, int *out_ptr, int num_bytes);
-
       /// size of data when compressed with RVLCompress
       static int compressedSize( int data );
       /// size of data when compressed with RVLCompress

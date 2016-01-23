@@ -76,20 +76,6 @@ namespace indri
                                indri::index::DeletedDocumentList& deletedList,
                                lemur::api::DOCID_T documentOffset );
 
-
-      void _copyStorageEntry( indri::file::SequentialReadBuffer* input,
-                              indri::file::SequentialWriteBuffer* output, 
-                              int key,
-                              UINT64 position,
-                              UINT64 length, 
-                              lemur::file::Keyfile& lookup );
-      void _copyStorageData( indri::file::SequentialReadBuffer* input,
-                             indri::file::SequentialWriteBuffer* output,
-                             indri::index::DeletedDocumentList& deletedList,
-                             lemur::api::DOCID_T documentOffset,
-                             lemur::file::Keyfile& sourceLookup,
-                             lemur::file::Keyfile& destLookup,
-                             UINT64 storageLength );
       void _copyForwardLookup( const std::string& name, lemur::file::Keyfile& other, lemur::api::DOCID_T documentOffset );
 
       bool _storeDocs;      
@@ -106,10 +92,6 @@ namespace indri
       std::string retrieveMetadatum( lemur::api::DOCID_T documentID, const std::string& attributeName );
       std::vector<indri::api::ParsedDocument*> retrieveByMetadatum( const std::string& attributeName, const std::string& value );
       std::vector<lemur::api::DOCID_T> retrieveIDByMetadatum( const std::string& attributeName, const std::string& value );
-
-      void addDocument( lemur::api::DOCID_T documentID, indri::api::ParsedDocument* document );
-      void compact( indri::index::DeletedDocumentList& deletedList );
-      void append( indri::collection::CompressedCollection& other, indri::index::DeletedDocumentList& deletedList, lemur::api::DOCID_T documentOffset );
 
       std::vector<std::string> forwardFields();
       std::vector<std::string> reverseFields();

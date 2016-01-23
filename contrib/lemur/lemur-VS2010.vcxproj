@@ -162,39 +162,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\fileio.c" />
-    <ClCompile Include="src\fn_f.c" />
-    <ClCompile Include="src\HarvestSortMerge.cpp" />
     <ClCompile Include="src\Keyfile.cpp" />
     <ClCompile Include="src\keyfilecode.c" />
-    <ClCompile Include="src\keyfilecompress.c" />
-    <ClCompile Include="src\keyprint.c" />
     <ClCompile Include="src\lemur-compat.cpp" />
     <ClCompile Include="src\RVLCompress.cpp" />
-    <ClCompile Include="src\SHA1.cpp" />
-    <ClCompile Include="src\SortMergeTextFiles.cpp" />
     <ClCompile Include="src\string-set.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\lemur\common_headers.hpp" />
     <ClInclude Include="include\lemur\Exception.hpp" />
     <ClInclude Include="include\lemur\fileio.h" />
-    <ClInclude Include="include\lemur\HarvestSortMerge.hpp" />
     <ClInclude Include="include\lemur\IndexTypes.hpp" />
     <ClInclude Include="include\lemur\integer_types.h" />
-    <ClInclude Include="include\lemur\InvFPTypes.hpp" />
-    <ClInclude Include="include\lemur\key_consts.h" />
     <ClInclude Include="include\lemur\keydef.h" />
     <ClInclude Include="include\lemur\keyerr.h" />
     <ClInclude Include="include\lemur\keyfile.h" />
     <ClInclude Include="include\lemur\Keyfile.hpp" />
-    <ClInclude Include="include\lemur\keyprint.h" />
     <ClInclude Include="include\lemur\keyref.h" />
-    <ClInclude Include="include\lemur\kf6ref.h" />
     <ClInclude Include="include\lemur\lemur-compat.hpp" />
     <ClInclude Include="include\lemur\lemur-platform.h" />
     <ClInclude Include="include\lemur\RVLCompress.hpp" />
-    <ClInclude Include="include\lemur\SHA1.hpp" />
-    <ClInclude Include="include\lemur\SortMergeTextFiles.hpp" />
     <ClInclude Include="include\lemur\string-set.h" />
     <ClInclude Include="include\lemur\TermInfoList.hpp" />
   </ItemGroup>

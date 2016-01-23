@@ -31,7 +31,6 @@ namespace indri
     class Collection {
     public:
       virtual ~Collection() {};
-      virtual void addDocument( lemur::api::DOCID_T documentID, indri::api::ParsedDocument* document ) = 0;
       virtual indri::api::ParsedDocument* retrieve( lemur::api::DOCID_T  documentID ) = 0;
     };
   }

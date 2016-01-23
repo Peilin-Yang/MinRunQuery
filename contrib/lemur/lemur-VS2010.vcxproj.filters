@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\compress.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\fileio.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\fn_f.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\HarvestSortMerge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Keyfile.cpp">
@@ -33,19 +24,10 @@
     <ClCompile Include="src\keyfilecode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\keyprint.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\lemur-compat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\RVLCompress.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SHA1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\SortMergeTextFiles.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\string-set.c">
@@ -53,28 +35,16 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\lemur\common_headers.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\lemur\Exception.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lemur\fileio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lemur\HarvestSortMerge.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\lemur\IndexTypes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lemur\integer_types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\lemur\InvFPTypes.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\lemur\key_consts.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lemur\keydef.h">
@@ -89,13 +59,7 @@
     <ClInclude Include="include\lemur\Keyfile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\lemur\keyprint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\lemur\keyref.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\lemur\kf6ref.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lemur\lemur-compat.hpp">
@@ -105,12 +69,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lemur\RVLCompress.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\lemur\SHA1.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\lemur\SortMergeTextFiles.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lemur\string-set.h">
