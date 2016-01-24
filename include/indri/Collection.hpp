@@ -31,7 +31,6 @@ namespace indri
     class Collection {
     public:
       virtual ~Collection() {};
-      virtual indri::api::ParsedDocument* retrieve( lemur::api::DOCID_T  documentID ) = 0;
     };
   }
 }

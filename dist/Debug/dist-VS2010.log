@@ -1,4 +1,4 @@
-﻿Build started 2016/1/23 17:00:22.
+﻿Build started 2016/1/24 8:57:31.
      1>Project "D:\MinRunQuery\dist\dist-VS2010.vcxproj" on node 2 (clean target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\dist.lastbuildstate".
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:00.02

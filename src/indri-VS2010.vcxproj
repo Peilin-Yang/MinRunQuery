@@ -190,7 +190,6 @@
     <ClCompile Include="StopStructureRemover.cpp" />
     <ClCompile Include="TermFrequencyBeliefNode.cpp" />
     <ClCompile Include="TermScoreFunctionFactory.cpp" />
-    <ClCompile Include="TextDocumentExtractor.cpp" />
     <ClCompile Include="TFIDFTermScoreFunction.cpp" />
     <ClCompile Include="Thread.cpp" />
     <ClCompile Include="uint64comp.cpp" />
@@ -319,7 +318,6 @@
     <ClInclude Include="..\include\indri\TermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\TermScoreFunctionFactory.hpp" />
     <ClInclude Include="..\include\indri\TermTranslator.hpp" />
-    <ClInclude Include="..\include\indri\TextDocumentExtractor.hpp" />
     <ClInclude Include="..\include\indri\TFIDFTermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\Thread.hpp" />
     <ClInclude Include="..\include\indri\TokenizedDocument.hpp" />

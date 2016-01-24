@@ -50,6 +50,7 @@
 /* @(#) $Id$ */
 
 #include "deflate.h"
+#include<stdio.h>
 
 const char deflate_copyright[] =
    " deflate 1.2.1 Copyright 1995-2003 Jean-loup Gailly ";
@@ -256,6 +257,7 @@ int ZEXPORT deflateInit2_(strm, level, method, windowBits, memLevel, strategy,
         wrap = 0;
         windowBits = -windowBits;
     }
+
 #ifdef GZIP
     else if (windowBits > 15) {
         wrap = 2;       /* write gzip wrapper instead */
@@ -311,50 +313,6 @@ int ZEXPORT deflateInit2_(strm, level, method, windowBits, memLevel, strategy,
 }
 
 /* ========================================================================= */
-int ZEXPORT deflateSetDictionary (strm, dictionary, dictLength)
-    z_streamp strm;
-    const Bytef *dictionary;
-    uInt  dictLength;
-{
-    deflate_state *s;
-    uInt length = dictLength;
-    uInt n;
-    IPos hash_head = 0;
-
-    if (strm == Z_NULL || strm->state == Z_NULL || dictionary == Z_NULL ||
-        strm->state->wrap == 2 ||
-        (strm->state->wrap == 1 && strm->state->status != INIT_STATE))
-        return Z_STREAM_ERROR;
-
-    s = strm->state;
-    if (s->wrap)
-        strm->adler = adler32(strm->adler, dictionary, dictLength);
-
-    if (length < MIN_MATCH) return Z_OK;
-    if (length > MAX_DIST(s)) {
-        length = MAX_DIST(s);
-#ifndef USE_DICT_HEAD
-        dictionary += dictLength - length; /* use the tail of the dictionary */
-#endif
-    }
-    zmemcpy(s->window, dictionary, length);
-    s->strstart = length;
-    s->block_start = (long)length;
-
-    /* Insert all strings in the hash table (except for the last two bytes).
-     * s->lookahead stays null, so s->ins_h will be recomputed at the next
-     * call of fill_window.
-     */
-    s->ins_h = s->window[0];
-    UPDATE_HASH(s, s->ins_h, s->window[1]);
-    for (n = 0; n <= length - MIN_MATCH; n++) {
-        INSERT_STRING(s, n, hash_head);
-    }
-    if (hash_head) hash_head = 0;  /* to make compiler happy */
-    return Z_OK;
-}
-
-/* ========================================================================= */
 int ZEXPORT deflateReset (strm)
     z_streamp strm;
 {
@@ -390,17 +348,6 @@ int ZEXPORT deflateReset (strm)
     return Z_OK;
 }
 
-/* ========================================================================= */
-int ZEXPORT deflatePrime (strm, bits, value)
-    z_streamp strm;
-    int bits;
-    int value;
-{
-    if (strm == Z_NULL || strm->state == Z_NULL) return Z_STREAM_ERROR;
-    strm->state->bi_valid = bits;
-    strm->state->bi_buf = (ush)(value & ((1 << bits) - 1));
-    return Z_OK;
-}
 
 /* ========================================================================= */
 int ZEXPORT deflateParams(strm, level, strategy)

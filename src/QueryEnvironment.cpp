@@ -20,7 +20,6 @@
 #include "indri/CompressedCollection.hpp"
 
 #include <vector>
-#include <queue>
 #include "indri/delete_range.hpp"
 
 #include "indri/InferenceNetwork.hpp"
@@ -50,7 +49,6 @@
 
 #include "indri/Index.hpp"
 
-#include <set>
 #include <map>
 
 #include "indri/Appliers.hpp"

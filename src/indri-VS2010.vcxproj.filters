@@ -132,9 +132,6 @@
     <ClCompile Include="TermScoreFunctionFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TextDocumentExtractor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TFIDFTermScoreFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -513,9 +510,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\TermTranslator.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\TextDocumentExtractor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\TFIDFTermScoreFunction.hpp">

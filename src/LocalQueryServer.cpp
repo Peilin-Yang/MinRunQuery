@@ -112,12 +112,6 @@ indri::index::Index* indri::server::LocalQueryServer::_indexWithDocument( indri:
 // document
 //
 
-indri::api::ParsedDocument* indri::server::LocalQueryServer::document( lemur::api::DOCID_T documentID ) {
-  indri::collection::CompressedCollection* collection = _repository.collection();
-  indri::api::ParsedDocument* document = collection->retrieve( documentID );
-  return document;
-}
-
 std::string indri::server::LocalQueryServer::documentMetadatum( lemur::api::DOCID_T documentID, const std::string& attributeName ) {
   indri::collection::CompressedCollection* collection = _repository.collection();
   return collection->retrieveMetadatum( documentID, attributeName );

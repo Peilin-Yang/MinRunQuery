@@ -55,12 +55,6 @@ namespace indri
       indri::utility::HashTable<const char*, lemur::file::Keyfile*> _forwardLookups;
       String_set* _strings;
 
-      void _writePositions( indri::api::ParsedDocument* document, int& keyLength, int& valueLength );
-      void _writeMetadataItem( indri::api::ParsedDocument* document, int i, int& keyLength, int& valueLength );
-      void _writeText( indri::api::ParsedDocument* document, int& keyLength, int& valueLength );
-      void _writeContent( indri::api::ParsedDocument* document, int& keyLength, int& valueLength );
-      void _writeContentLength( indri::api::ParsedDocument* document, int& keyLength, int& valueLength );
-
       void _readPositions( indri::api::ParsedDocument* document, const void* positionData, int positionDataLength );
 
       void _removeForwardLookups( indri::index::DeletedDocumentList& deletedList, lemur::file::Keyfile& keyfile );
@@ -87,14 +81,7 @@ namespace indri
       void open( const std::string& fileName );
       void openRead( const std::string& fileName );
       void close();
-      bool exists(lemur::api::DOCID_T documentID);
-      indri::api::ParsedDocument* retrieve( lemur::api::DOCID_T documentID );
       std::string retrieveMetadatum( lemur::api::DOCID_T documentID, const std::string& attributeName );
-      std::vector<indri::api::ParsedDocument*> retrieveByMetadatum( const std::string& attributeName, const std::string& value );
-      std::vector<lemur::api::DOCID_T> retrieveIDByMetadatum( const std::string& attributeName, const std::string& value );
-
-      std::vector<std::string> forwardFields();
-      std::vector<std::string> reverseFields();
     };
   }
 }

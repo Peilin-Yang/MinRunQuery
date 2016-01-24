@@ -53,7 +53,6 @@ namespace indri
       QueryServerResponse* runQuery( std::vector<indri::lang::Node*>& roots, int resultsRequested, bool optimize );
 
       // single document queries
-      indri::api::ParsedDocument* document( lemur::api::DOCID_T documentID );
       std::string documentMetadatum( lemur::api::DOCID_T documentID, const std::string& attributeName );
 
       // batch queries
