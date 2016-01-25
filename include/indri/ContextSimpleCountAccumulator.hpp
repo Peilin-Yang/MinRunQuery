@@ -28,11 +28,7 @@ namespace indri
     class ContextSimpleCountAccumulator : public EvaluatorNode {
     private:
       std::string _name;
-
-      std::vector<std::string> _terms;
-      std::string _field;
-      std::string _context;
-
+      std::string _term;
       UINT64 _occurrences;
       UINT64 _size;
       lemur::api::DOCID_T _maximumDocument;
@@ -44,10 +40,7 @@ namespace indri
       void _computeCounts( indri::index::Index& index );
 
     public:
-      ContextSimpleCountAccumulator( const std::string& nodeName,
-                                     const std::vector<std::string>& terms,
-                                     const std::string& field,
-                                     const std::string& context );
+      ContextSimpleCountAccumulator( const std::string& term );
 
       const std::string& getName() const;
       const EvaluatorNode::MResults& getResults();

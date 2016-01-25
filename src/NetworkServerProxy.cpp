@@ -146,12 +146,17 @@ std::string indri::server::NetworkServerProxy::_stringRequest( indri::xml::XMLNo
 // runQuery
 //
 
-indri::server::QueryServerResponse* indri::server::NetworkServerProxy::runQuery( std::vector<indri::lang::Node*>& roots, int resultsRequested, bool optimize ) {
-  indri::lang::Packer packer;
+indri::server::QueryServerResponse* indri::server::NetworkServerProxy::getGlobalStatistics( std::map<std::string, double>& queryDict ) {
+  return new indri::server::NetworkServerProxyResponse( _stream );  
+}
 
+indri::server::QueryServerResponse* indri::server::NetworkServerProxy::runQuery( std::map<std::string, double>& queryDict, int resultsRequested, bool optimize ) {
+  indri::lang::Packer packer;
+  /*
   for( size_t i=0; i<roots.size(); i++ ) {
     packer.pack( roots[i] );
   }
+  */
 
   indri::xml::XMLNode* query = packer.xml();
   query->addAttribute( "resultsRequested", i64_to_string(resultsRequested) );

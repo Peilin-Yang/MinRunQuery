@@ -22,13 +22,14 @@
 #include "lemur/lemur-compat.hpp"
 #include <vector>
 
-#include "indri/UnnecessaryNodeRemoverCopier.hpp"
-#include "indri/ContextSimpleCountCollectorCopier.hpp"
-#include "indri/FrequencyListCopier.hpp"
-#include "indri/DagCopier.hpp"
+// #include "indri/UnnecessaryNodeRemoverCopier.hpp"
+// #include "indri/ContextSimpleCountCollectorCopier.hpp"
+// #include "indri/FrequencyListCopier.hpp"
+// #include "indri/DagCopier.hpp"
 
 #include "indri/InferenceNetworkBuilder.hpp"
 #include "indri/InferenceNetwork.hpp"
+#include "indri/ContextSimpleCountAccumulator.hpp"
 
 #include "indri/CompressedCollection.hpp"
 #include "indri/delete_range.hpp"
@@ -83,29 +84,10 @@ namespace indri
 // Class code
 //
 
-indri::server::LocalQueryServer::LocalQueryServer( indri::collection::Repository& repository ) :
-  _repository(repository), _maxWildcardMatchesPerTerm(indri::infnet::InferenceNetworkBuilder::DEFAULT_MAX_WILDCARD_TERMS)
+indri::server::LocalQueryServer::LocalQueryServer( indri::collection::Repository& repository ) : _repository(repository)
 {
   // if supplied and false, turn off optimization for all queries.
   _optimizeParameter = indri::api::Parameters::instance().get( "optimize", true );
-}
-
-//
-// _indexWithDocument
-//
-
-indri::index::Index* indri::server::LocalQueryServer::_indexWithDocument( indri::collection::Repository::index_state& indexes, lemur::api::DOCID_T documentID ) {
-  for( size_t i=0; i<indexes->size(); i++ ) {
-    indri::thread::ScopedLock lock( (*indexes)[i]->statisticsLock() );
-    lemur::api::DOCID_T lowerBound = (*indexes)[i]->documentBase();
-    lemur::api::DOCID_T upperBound = (*indexes)[i]->documentMaximum();
-    
-    if( lowerBound <= documentID && upperBound > documentID ) {
-      return (*indexes)[i];
-    }
-  }
-  
-  return 0;
 }
 
 //
@@ -139,45 +121,63 @@ indri::server::QueryServerMetadataResponse* indri::server::LocalQueryServer::doc
   return new indri::server::LocalQueryServerMetadataResponse( actual );
 }
 
-indri::server::QueryServerResponse* indri::server::LocalQueryServer::runQuery( std::vector<indri::lang::Node*>& roots, int resultsRequested, bool optimize ) {
-
-  indri::lang::TreePrinterWalker printer;
-
-  // use UnnecessaryNodeRemover to get rid of window nodes, ExtentAnd nodes and ExtentOr nodes
-  // that only have one child and LengthPrior nodes where the exponent is zero
-  indri::lang::ApplyCopiers<indri::lang::UnnecessaryNodeRemoverCopier> unnecessary( roots );
-
-  // run the contextsimplecountcollectorcopier to gather easy stats
-  indri::lang::ApplyCopiers<indri::lang::ContextSimpleCountCollectorCopier> contexts( unnecessary.roots(), _repository );
-
-  // use frequency-only nodes where appropriate
-  indri::lang::ApplyCopiers<indri::lang::FrequencyListCopier> frequency( contexts.roots(), _cache );
-
-  // fold together any nested weight nodes
-  indri::lang::ApplyCopiers<indri::lang::WeightFoldingCopier> weight( frequency.roots() );
-
-  // make all this into a dag
-  indri::lang::ApplySingleCopier<indri::lang::DagCopier> dag( weight.roots(), _repository );
-
-  std::vector<indri::lang::Node*>& networkRoots = dag.roots();
-  // turn off optimization if called with optimize == false
-  // turn off optimization if called the Parameter optimize == false
-  if( !optimize || !_optimizeParameter ) {
-    // we may be asked not to perform optimizations that might
-    // drastically change the structure of the tree; for instance,
-    // annotation queries may ask for this
-    networkRoots = contexts.roots();
+indri::server::QueryServerResponse* indri::server::LocalQueryServer::getGlobalStatistics( std::map<std::string, double>& queryDict ) {
+  indri::infnet::InferenceNetwork* network = new indri::infnet::InferenceNetwork(_repository);
+  for (std::map<std::string, double>::iterator it = queryDict.begin(); it != queryDict.end(); it++) {
+    // Possible process: UTF8, Normalize, Stemming
+    std::string processed_term = _repository.processTerm(it->first);
+    indri::infnet::ContextSimpleCountAccumulator *contextCount = new indri::infnet::ContextSimpleCountAccumulator( processed_term );
+    network->addEvaluatorNode( contextCount );
   }
-  /*
-    indri::lang::TreePrinterWalker printer;
-    indri::lang::ApplyWalker<indri::lang::TreePrinterWalker> printTree(networkRoots, &printer);
-  */
+  
+  indri::infnet::InferenceNetwork::MAllResults result;
+  result = network->evaluate();
 
-  // build an inference network
-  indri::infnet::InferenceNetworkBuilder builder( _repository, _cache, resultsRequested, _maxWildcardMatchesPerTerm );
-  indri::lang::ApplyWalker<indri::infnet::InferenceNetworkBuilder> buildWalker( networkRoots, &builder );
+  return new indri::server::LocalQueryServerResponse( result );  
+}
 
-  indri::infnet::InferenceNetwork* network = builder.getNetwork();
+indri::server::QueryServerResponse* indri::server::LocalQueryServer::runQuery( 
+    std::map<std::string, double>& queryDict, 
+    int resultsRequested, 
+    bool optimize ) {
+  indri::infnet::InferenceNetwork* network = new indri::infnet::InferenceNetwork(_repository);
+  indri::infnet::BeliefNode* belief = 0;
+  indri::query::TermScoreFunction* function = 0;
+/* 
+  function = indri::query::TermScoreFunctionFactory::get( smoothing, occurrences, contextSize, documentOccurrences, documentCount );
+                                      ( termScorerNode->getSmoothing(),
+                                      termScorerNode->getOccurrences(),
+                                      termScorerNode->getContextSize(),
+                                      termScorerNode->getDocumentOccurrences(),
+                                      termScorerNode->getDocumentCount());
+
+  if( termScorerNode->getOccurrences() > 0 ) {
+    bool stopword = false;
+    std::string processed = termScorerNode->getText();
+    int termID = 0;
+  
+    // stem and stop the word
+    if( termScorerNode->getStemmed() == false ) {
+      processed = _repository.processTerm( termScorerNode->getText() );
+      stopword = processed.length() == 0;
+    }
+
+    // if it isn't a stopword, we can try to get it from the index
+    if( !stopword ) {
+      int listID = _network->addDocIterator( processed );
+      belief = new TermFrequencyBeliefNode( termScorerNode->nodeName(), *_network, listID, *function );
+    }
+  }
+
+  // either there's no list here, or there aren't any occurrences
+  // in the local collection, so just use a NullScorerNode in place
+  if( !belief ) {
+    belief = new NullScorerNode( termScorerNode->nodeName(), *function );
+  }
+
+  network->addScoreFunction( function );
+  network->addBeliefNode( belief );*/
+
   indri::infnet::InferenceNetwork::MAllResults result;
   result = network->evaluate();
 

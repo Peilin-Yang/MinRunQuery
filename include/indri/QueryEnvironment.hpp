@@ -117,6 +117,17 @@ namespace indri
       std::vector<QueryResult> results;
     } QueryResults;
     
+    typedef struct QueryDict 
+    {
+      std::string processed; // processed term, e.g. stemmed
+      double qtf; // query term frequency
+      double collectionFrequency; // number of occurences in the collection of the term
+      double collTermCnt; // total number of terms in collection
+      int docFrequency; // number of documents we occur in
+      int docCnt; // total number of documents
+    } QueryDict;
+      
+
     /*! \brief Principal class for interacting with Indri indexes during retrieval. 
       Provides the API for opening one or more Repository servers, either local
       or remote. Provides the API for querying the servers with the Indri
@@ -136,20 +147,25 @@ namespace indri
       std::vector<indri::net::NetworkStream*> _streams;
       std::vector<indri::net::NetworkMessageStream*> _messageStreams;
 
+	  // we parse the query to the query dict where key is the raw query string and value is its QTF
+	  std::map<std::string, QueryDict> _queryDict;
+
       Parameters _parameters;
       
+      void _setQTF(std::map<std::string, double>& parsedQuery);
+      void _setCollectionStatistics(std::string term, double collectionFrequency, double collTermCnt, int docFrequency, int docCnt);
       void _mergeQueryResults( indri::infnet::InferenceNetwork::MAllResults& results, std::vector<indri::server::QueryServerResponse*>& responses );
       void _copyStatistics( std::vector<indri::lang::RawScorerNode*>& scorerNodes, indri::infnet::InferenceNetwork::MAllResults& statisticsResults );
 
-      std::vector<indri::server::QueryServerResponse*> _runServerQuery( std::vector<indri::lang::Node*>& roots, int resultsRequested );
-      void _sumServerQuery( indri::infnet::InferenceNetwork::MAllResults& results, std::vector<indri::lang::Node*>& roots, int resultsRequested );
-      void _mergeServerQuery( indri::infnet::InferenceNetwork::MAllResults& results, std::vector<indri::lang::Node*>& roots, int resultsRequested );
+      std::vector<indri::server::QueryServerResponse*> _runServerQuery( int resultsRequested );
+      void _sumServerQuery( indri::infnet::InferenceNetwork::MAllResults& results, int resultsRequested );
+      void _mergeServerQuery( indri::infnet::InferenceNetwork::MAllResults& results, int resultsRequested );
      
       std::vector<indri::api::ScoredExtentResult> _runQuery( indri::infnet::InferenceNetwork::MAllResults& results,
                                                              const std::string& q,
                                                              int resultsRequested,
                                                              const std::string &queryType = "indri" );
-      void _scoredQuery( indri::infnet::InferenceNetwork::MAllResults& results, indri::lang::Node* queryRoot, std::string& accumulatorName, int resultsRequested );
+      void _scoredQuery( indri::infnet::InferenceNetwork::MAllResults& results, std::string& accumulatorName, int resultsRequested );
 
       QueryEnvironment( QueryEnvironment& other ) {}
 

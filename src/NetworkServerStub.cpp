@@ -31,12 +31,13 @@ indri::net::NetworkServerStub::NetworkServerStub( indri::server::QueryServer* se
 }
 
 void indri::net::NetworkServerStub::_handleQuery( indri::xml::XMLNode* request ) {
+  std::map<std::string, double> queryDict;
   indri::lang::Unpacker unpacker(request);
   std::vector<indri::lang::Node*> nodes = unpacker.unpack();
   int resultsRequested = (int) string_to_i64( request->getAttribute( "resultsRequested" ) );
   bool optimize = request->getAttribute("optimize") == "1";
 
-  indri::server::QueryServerResponse* response = _server->runQuery( nodes, resultsRequested, optimize );
+  indri::server::QueryServerResponse* response = _server->runQuery( queryDict, resultsRequested, optimize );
   indri::infnet::InferenceNetwork::MAllResults results = response->getResults();
 
   QueryResponsePacker packer( results );

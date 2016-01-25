@@ -26,44 +26,17 @@
 #include "indri/ScoredExtentResult.hpp"
 
 void indri::infnet::ContextSimpleCountAccumulator::_computeCounts( indri::index::Index& index ) {
-  assert( _terms.size() );
-  assert( _context.size() == 0 || _field.size() == 0 );
-
-  if( _context.size() ) {
-    _size += index.fieldTermCount( _context );
-    _documentCount += index.fieldDocumentCount( _context );
-  } else {
-    _size += index.termCount();
-    _documentCount += index.documentCount();
-  }
-
-  for( size_t i=0; i<_terms.size(); i++ ) {
-    if( _terms.size() == 1 )
-      _documentOccurrences += index.documentCount( _terms[0] );
-    else {
-      // TODO: implement this case!
-    }
-
-    if( _terms[i].length() != 0 ) {
-      if( _field.size() ) {
-        _occurrences += index.fieldTermCount( _field, _terms[i] );
-      } else if( _context.size() ) {
-        _occurrences += index.fieldTermCount( _context, _terms[i] );
-      } else {
-        _occurrences += index.termCount( _terms[i] );
-      }
-    }
+  _size += index.termCount();
+  _documentCount += index.documentCount();
+  _documentOccurrences += index.documentCount( _term );
+  if( _term.length() != 0 ) {
+    _occurrences += index.termCount( _term );
   }
 }
 
-indri::infnet::ContextSimpleCountAccumulator::ContextSimpleCountAccumulator( const std::string& nodeName,
-                                                                             const std::vector<std::string>& terms,
-                                                                             const std::string& field,
-                                                                             const std::string& context ) :
-  _name(nodeName),
-  _terms(terms),
-  _field(field),
-  _context(context),
+indri::infnet::ContextSimpleCountAccumulator::ContextSimpleCountAccumulator( const std::string& term ) :
+  _name(term),
+  _term(term),
   _occurrences(0),
   _size(0),
   _documentOccurrences(0),

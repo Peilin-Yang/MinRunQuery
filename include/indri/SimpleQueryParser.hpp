@@ -7,17 +7,12 @@
 #ifndef SIMPLEQUERYPARSER_HPP
 #define SIMPLEQUERYPARSER_HPP
 #include <string>
+#include <map>
 #include "lemur/Exception.hpp"
-#include "indri/QuerySpec.hpp"
 
 namespace indri
 {
-  namespace lang 
-  {
-    class ScoredExtentNode;
-  }
-  
-  namespace api
+  namespace query
   {
     // This class only deals with 1-level CombineNode and WeightedAndNode
     class SimpleQueryParser {
@@ -25,11 +20,16 @@ namespace indri
       std::string _rawQ;
     
     public:
-      indri::lang::ScoredExtentNode* parseQuery( std::string query );
+      // split the query string. return a Dict with the key as the unique query term 
+      // and the value as the counts(qtf) in the query.
+      std::map<string, double> parseQuery( std::string query );
+
+      // process the query terms. the input is the result of "parseQuery".
+      // For example, we can stem the query terms.
+      std::map<string, double> processQueryTerms( std::map<string, double>& queryDict );
     };
 
     #define EMPTY_QUERY ((lemur::api::LemurErrorType)0xFFFFFFEF)
-
   }
 }
 

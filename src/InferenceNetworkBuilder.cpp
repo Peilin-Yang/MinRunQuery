@@ -115,6 +115,7 @@ static void inferencenetworkbuilder_find_stopwords_stretch( const std::vector<in
 
 void indri::infnet::InferenceNetworkBuilder::after( indri::lang::ContextSimpleCounterNode* contextSimpleCounterNode ) {
   if( _nodeMap.find( contextSimpleCounterNode ) == _nodeMap.end() ) {
+	/*
     ContextSimpleCountAccumulator* contextCount = 0;
 
     contextCount = new ContextSimpleCountAccumulator( contextSimpleCounterNode->nodeName(),
@@ -124,6 +125,7 @@ void indri::infnet::InferenceNetworkBuilder::after( indri::lang::ContextSimpleCo
 
     _network->addEvaluatorNode( contextCount );
     _nodeMap[ contextSimpleCounterNode ] = contextCount;
+	*/
   }
 }
 

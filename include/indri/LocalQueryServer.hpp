@@ -41,16 +41,12 @@ namespace indri
       bool _optimizeParameter;
       indri::collection::Repository& _repository;
       indri::lang::ListCache _cache;
-
-      int _maxWildcardMatchesPerTerm;
-
-      indri::index::Index* _indexWithDocument( indri::collection::Repository::index_state& state, lemur::api::DOCID_T documentID );
-
     public:
       LocalQueryServer( indri::collection::Repository& repository );
 
       // query
-      QueryServerResponse* runQuery( std::vector<indri::lang::Node*>& roots, int resultsRequested, bool optimize );
+	  QueryServerResponse* getGlobalStatistics( std::map<std::string, double>& queryDict );
+      QueryServerResponse* runQuery( std::map<std::string, double>& queryDict, int resultsRequested, bool optimize );
 
       // single document queries
       std::string documentMetadatum( lemur::api::DOCID_T documentID, const std::string& attributeName );

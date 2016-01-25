@@ -87,6 +87,10 @@ namespace indri
       void addEvaluatorNode( EvaluatorNode* evaluatorNode );
       void addComplexEvaluatorNode( EvaluatorNode* complexEvaluator );
       void addScoreFunction( indri::query::TermScoreFunction* scoreFunction );
+
+      // build the run query essential related InferenceNetwork
+      void buildQueryInferenceNetwork();
+
       const MAllResults& evaluate();
     };
   }
