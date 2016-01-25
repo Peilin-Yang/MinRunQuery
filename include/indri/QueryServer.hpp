@@ -43,7 +43,8 @@ namespace indri
     class QueryServer {
     public:
       virtual ~QueryServer() {};
-	  virtual QueryServerResponse* getGlobalStatistics( std::map<std::string, double>& queryDict ) = 0;
+	  virtual std::string processTerm( std::string ) = 0;
+	  virtual QueryServerResponse* getGlobalStatistics( std::vector<std::string>& queryTerms ) = 0;
       virtual QueryServerResponse* runQuery( std::map<std::string, double>& queryDict, int resultsRequested, bool optimize ) = 0;
       virtual QueryServerMetadataResponse* documentMetadata( const std::vector<lemur::api::DOCID_T>& documentIDs, const std::string& attributeName ) = 0;
     };

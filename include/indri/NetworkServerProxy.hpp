@@ -39,7 +39,8 @@ namespace indri
     public:
       NetworkServerProxy( indri::net::NetworkMessageStream* stream );
 
-	  QueryServerResponse* getGlobalStatistics( std::map<std::string, double>& queryDict );
+	  std::string processTerm( std::string );
+	  QueryServerResponse* getGlobalStatistics( std::vector<std::string>& queryTerms );
       QueryServerResponse* runQuery( std::map<std::string, double>& queryDict, int resultsRequested, bool optimize );
       QueryServerMetadataResponse* documentMetadata( const std::vector<lemur::api::DOCID_T>& documentIDs, const std::string& attributeName );
     };

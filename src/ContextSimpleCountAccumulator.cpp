@@ -51,10 +51,10 @@ const std::string& indri::infnet::ContextSimpleCountAccumulator::getName() const
 const indri::infnet::EvaluatorNode::MResults& indri::infnet::ContextSimpleCountAccumulator::getResults() {
   _results.clear();
 
-  _results[ "occurrences" ].push_back( indri::api::ScoredExtentResult( _occurrences, 0 ) );
-  _results[ "contextSize" ].push_back( indri::api::ScoredExtentResult( _size, 0 ) );
-  _results[ "documentOccurrences" ].push_back( indri::api::ScoredExtentResult(UINT64(_documentOccurrences), 0 ) );
-  _results[ "documentCount" ].push_back( indri::api::ScoredExtentResult( UINT64(_documentCount), 0 ) );
+  _results[ "collectionFrequency" ].push_back( indri::api::ScoredExtentResult( _occurrences, 0 ) );
+  _results[ "collTermCnt" ].push_back( indri::api::ScoredExtentResult( _size, 0 ) );
+  _results[ "docFrequency" ].push_back( indri::api::ScoredExtentResult(UINT64(_documentOccurrences), 0 ) );
+  _results[ "docCnt" ].push_back( indri::api::ScoredExtentResult( UINT64(_documentCount), 0 ) );
 
   return _results;
 }

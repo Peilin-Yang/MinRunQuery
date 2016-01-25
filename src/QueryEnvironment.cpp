@@ -176,6 +176,45 @@ void indri::api::QueryEnvironment::_setQTF(std::map<std::string, double>& parsed
   }
 }
 
+void indri::api::QueryEnvironment::_transformQuery() {
+  for (std::map<std::string, QueryDict>::iterator it = _queryDict.begin(); it != _queryDict.end(); it++) {
+    std::string processed = _servers[0]->processTerm(it->first);
+    it->second.processed = processed;
+    if (!processed.empty()) { // stopword
+      _reverseMapping[processed] = it->first;
+    }
+  }
+}
+
+std::vector<std::string> indri::api::QueryEnvironment::_getProcessedQTerms() {
+  vector<std::string> res;
+  for(std::map<std::string, std::string>::iterator it = _reverseMapping.begin(); it != _reverseMapping.end(); ++it) {
+    res.push_back(it->first);
+  }
+  return res;
+}
+
+void indri::api::QueryEnvironment::_setCollectionStatistics( indri::infnet::InferenceNetwork::MAllResults& statisticsResults ) {
+  for(std::map<std::string, std::string>::iterator it = _reverseMapping.begin(); it != _reverseMapping.end(); ++it) {
+    std::string processed = it->first;
+    std::string orig = it->second;
+    std::vector<ScoredExtentResult>& occurrencesList = statisticsResults[ processed ][ "collectionFrequency" ];
+    std::vector<ScoredExtentResult>& contextSizeList = statisticsResults[ processed ][ "collTermCnt" ];
+    std::vector<ScoredExtentResult>& documentOccurrencesList = statisticsResults[ processed ][ "docFrequency" ];
+    std::vector<ScoredExtentResult>& documentCountList = statisticsResults[ processed ][ "docCnt" ];
+
+    double collectionFrequency = occurrencesList[0].score;
+    double collTermCnt = contextSizeList[0].score;
+    int docFrequency = int(documentOccurrencesList[0].score);
+    int docCnt = int(documentCountList[0].score);
+
+    _queryDict[orig].collectionFrequency = collectionFrequency;
+    _queryDict[orig].collTermCnt = collTermCnt;
+    _queryDict[orig].docFrequency = docFrequency;
+    _queryDict[orig].docCnt = docCnt;
+  }
+}
+
 void indri::api::QueryEnvironment::_copyStatistics( std::vector<indri::lang::RawScorerNode*>& scorerNodes, 
 	indri::infnet::InferenceNetwork::MAllResults& statisticsResults ) {
   for( size_t i=0; i<scorerNodes.size(); i++ ) {
@@ -204,6 +243,7 @@ std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::_runQu
   indri::query::SimpleQueryParser* sqp = new indri::query::SimpleQueryParser();
   std::map<std::string, double> parsedQuery = sqp->parseQuery( q );
   _setQTF(parsedQuery);
+  _transformQuery();
 
   PRINT_TIMER( "Parsing complete" );
   
@@ -224,9 +264,9 @@ std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::_runQu
   indri::infnet::InferenceNetwork::MAllResults statisticsResults;
             
   indri::lang::ApplyCopiers<indri::lang::ContextCountGraphCopier, indri::lang::RawScorerNode> graph( scorerNodes );*/
-  //indri::infnet::InferenceNetwork::MAllResults statisticsResults;
-  //_sumServerQuery( statisticsResults, resultsRequested ); //1000
-
+  indri::infnet::InferenceNetwork::MAllResults statisticsResults;
+  _sumServerQuery( statisticsResults, resultsRequested ); //1000
+  _setCollectionStatistics( statisticsResults );
   //PRINT_TIMER( "Statistics complete" );
 
   // feed the statistics we found back into the query network
@@ -248,11 +288,11 @@ std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::_runQu
   PRINT_TIMER( "Query complete" );
 
   delete(sqp);*/
-  std::string accumulatorName;
-  _scoredQuery( results, accumulatorName, resultsRequested );
-  std::vector<indri::api::ScoredExtentResult> queryResults = results[accumulatorName]["scores"];
+  //std::string accumulatorName;
+  //_scoredQuery( results, accumulatorName, resultsRequested );
+  //std::vector<indri::api::ScoredExtentResult> queryResults = results[accumulatorName]["scores"];
 
-  //std::vector<indri::api::ScoredExtentResult> queryResults;
+  std::vector<indri::api::ScoredExtentResult> queryResults;
   return queryResults;
 }
 
@@ -264,10 +304,11 @@ std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::_runQu
 std::vector<indri::server::QueryServerResponse*> indri::api::QueryEnvironment::_runServerQuery( int resultsRequested ) {
   std::vector<indri::server::QueryServerResponse*> responses;
   
+  std::vector<std::string> processedQueryTerms = _getProcessedQTerms();
   // this ships out the requests to each server (doesn't necessarily block until they're done)
   for( size_t i=0; i<_servers.size(); i++ ) {
-    //indri::server::QueryServerResponse* response = _servers[i]->getGlobalStatistics( _queryDict );
-    //responses.push_back( response );
+    indri::server::QueryServerResponse* response = _servers[i]->getGlobalStatistics( processedQueryTerms );
+    responses.push_back( response );
   }
 
   // this just goes through all the results, blocking on each one,

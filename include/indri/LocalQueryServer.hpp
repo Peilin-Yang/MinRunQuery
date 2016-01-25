@@ -45,7 +45,8 @@ namespace indri
       LocalQueryServer( indri::collection::Repository& repository );
 
       // query
-	  QueryServerResponse* getGlobalStatistics( std::map<std::string, double>& queryDict );
+      std::string processTerm( std::string s);
+	    QueryServerResponse* getGlobalStatistics( std::vector<std::string>& queryTerms );
       QueryServerResponse* runQuery( std::map<std::string, double>& queryDict, int resultsRequested, bool optimize );
 
       // single document queries

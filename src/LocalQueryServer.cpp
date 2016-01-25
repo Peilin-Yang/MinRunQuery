@@ -121,12 +121,15 @@ indri::server::QueryServerMetadataResponse* indri::server::LocalQueryServer::doc
   return new indri::server::LocalQueryServerMetadataResponse( actual );
 }
 
-indri::server::QueryServerResponse* indri::server::LocalQueryServer::getGlobalStatistics( std::map<std::string, double>& queryDict ) {
+std::string indri::server::LocalQueryServer::processTerm( std::string s) {
+  std::string processed_term = _repository.processTerm(s);
+  return processed_term;
+}
+
+indri::server::QueryServerResponse* indri::server::LocalQueryServer::getGlobalStatistics( std::vector<std::string>& queryTerms ) {
   indri::infnet::InferenceNetwork* network = new indri::infnet::InferenceNetwork(_repository);
-  for (std::map<std::string, double>::iterator it = queryDict.begin(); it != queryDict.end(); it++) {
-    // Possible process: UTF8, Normalize, Stemming
-    std::string processed_term = _repository.processTerm(it->first);
-    indri::infnet::ContextSimpleCountAccumulator *contextCount = new indri::infnet::ContextSimpleCountAccumulator( processed_term );
+  for (size_t i = 0; i != queryTerms.size(); i++) {
+    indri::infnet::ContextSimpleCountAccumulator *contextCount = new indri::infnet::ContextSimpleCountAccumulator( queryTerms[i] );
     network->addEvaluatorNode( contextCount );
   }
   

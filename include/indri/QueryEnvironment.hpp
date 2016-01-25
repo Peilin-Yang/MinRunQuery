@@ -149,11 +149,15 @@ namespace indri
 
 	  // we parse the query to the query dict where key is the raw query string and value is its QTF
 	  std::map<std::string, QueryDict> _queryDict;
+	  // mapping processedTerm->rawQueryTerm
+	  std::map<std::string, std::string> _reverseMapping;
 
       Parameters _parameters;
       
       void _setQTF(std::map<std::string, double>& parsedQuery);
-      void _setCollectionStatistics(std::string term, double collectionFrequency, double collTermCnt, int docFrequency, int docCnt);
+	  void _transformQuery();
+	  std::vector<std::string> _getProcessedQTerms();
+      void _setCollectionStatistics( indri::infnet::InferenceNetwork::MAllResults& statisticsResults );
       void _mergeQueryResults( indri::infnet::InferenceNetwork::MAllResults& results, std::vector<indri::server::QueryServerResponse*>& responses );
       void _copyStatistics( std::vector<indri::lang::RawScorerNode*>& scorerNodes, indri::infnet::InferenceNetwork::MAllResults& statisticsResults );
 

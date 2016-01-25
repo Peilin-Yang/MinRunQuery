@@ -146,7 +146,11 @@ std::string indri::server::NetworkServerProxy::_stringRequest( indri::xml::XMLNo
 // runQuery
 //
 
-indri::server::QueryServerResponse* indri::server::NetworkServerProxy::getGlobalStatistics( std::map<std::string, double>& queryDict ) {
+std::string indri::server::NetworkServerProxy::processTerm( std::string s) {
+  return s;
+}
+
+indri::server::QueryServerResponse* indri::server::NetworkServerProxy::getGlobalStatistics( std::vector<std::string>& queryTerms ) {
   return new indri::server::NetworkServerProxyResponse( _stream );  
 }
 
