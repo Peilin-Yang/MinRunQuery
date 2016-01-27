@@ -19,8 +19,6 @@
 #include "indri/LocalQueryServer.hpp"
 #include "lemur/lemur-platform.h"
 #include "lemur/lemur-compat.hpp"
-#include <vector>
-
 #include "indri/InferenceNetwork.hpp"
 #include "indri/ContextSimpleCountAccumulator.hpp"
 #include "indri/NullScorerNode.hpp"
@@ -30,6 +28,8 @@
 #include "indri/CompressedCollection.hpp"
 #include "indri/delete_range.hpp"
 #include "indri/ScopedLock.hpp"
+#include <vector>
+#include <algorithm>
 
 //
 // Response objects

@@ -187,7 +187,6 @@
     <ClCompile Include="UTF8CaseNormalizationTransformation.cpp" />
     <ClCompile Include="UTF8Transcoder.cpp" />
     <ClCompile Include="UtilityThread.cpp" />
-    <ClCompile Include="Walker.cpp" />
     <ClCompile Include="WeightedAndNode.cpp" />
     <ClCompile Include="XMLNode.cpp" />
     <ClCompile Include="XMLReader.cpp" />
@@ -283,13 +282,11 @@
     <ClInclude Include="..\include\indri\TokenizedDocument.hpp" />
     <ClInclude Include="..\include\indri\Transformation.hpp" />
     <ClInclude Include="..\include\indri\uint64comp.hpp" />
-    <ClInclude Include="..\include\indri\UnnecessaryNodeRemoverCopier.hpp" />
     <ClInclude Include="..\include\indri\UnparsedDocument.hpp" />
     <ClInclude Include="..\include\indri\UTF8CaseNormalizationTransformation.hpp" />
     <ClInclude Include="..\include\indri\UTF8Transcoder.hpp" />
     <ClInclude Include="..\include\indri\UtilityThread.hpp" />
     <ClInclude Include="..\include\indri\VocabularyIterator.hpp" />
-    <ClInclude Include="..\include\indri\Walker.hpp" />
     <ClInclude Include="..\include\indri\WeightedAndNode.hpp" />
     <ClInclude Include="..\include\indri\WeightFoldingCopier.hpp" />
     <ClInclude Include="..\include\indri\WriterLockable.hpp" />

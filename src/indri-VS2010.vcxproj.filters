@@ -123,9 +123,6 @@
     <ClCompile Include="UtilityThread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Walker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="WeightedAndNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -407,9 +404,6 @@
     <ClInclude Include="..\include\indri\uint64comp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\UnnecessaryNodeRemoverCopier.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\UnparsedDocument.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -423,9 +417,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\VocabularyIterator.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\Walker.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\WeightedAndNode.hpp">
