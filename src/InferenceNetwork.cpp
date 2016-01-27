@@ -179,6 +179,10 @@ indri::infnet::InferenceNetwork::~InferenceNetwork() {
   indri::utility::delete_vector_contents<indri::infnet::EvaluatorNode*>( _evaluators );
 }
 
+std::vector<indri::infnet::BeliefNode*> indri::infnet::InferenceNetwork::getBeliefNodes() {
+  return _beliefNodes;
+}
+
 indri::index::DocListIterator* indri::infnet::InferenceNetwork::getDocIterator( int index ) {
   return _docIterators[index];
 }

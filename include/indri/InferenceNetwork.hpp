@@ -75,6 +75,7 @@ namespace indri
 
       const std::vector<EvaluatorNode*>& getEvaluators() const;
 
+      std::vector<BeliefNode*> getBeliefNodes();
       indri::index::DocListIterator* getDocIterator( int index );
       indri::index::DocExtentListIterator* getFieldIterator( int index );
       

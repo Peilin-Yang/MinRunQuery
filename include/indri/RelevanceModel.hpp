@@ -22,7 +22,7 @@
 #include <vector>
 #include "indri/TermFieldStatistics.hpp"
 #include "indri/TermScoreFunction.hpp"
-#include "indri/TermScoreFunctionFactory.hpp"
+//#include "indri/TermScoreFunctionFactory.hpp"
 #include "indri/HashTable.hpp"
 #include "indri/greedy_vector"
 #include "indri/QueryEnvironment.hpp"

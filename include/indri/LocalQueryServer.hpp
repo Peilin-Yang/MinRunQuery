@@ -44,12 +44,12 @@ namespace indri
       indri::lang::ListCache _cache;
 
       //
-      void _buildTermScoreFunction(
+      void _buildInferenceNetwork(
         indri::infnet::InferenceNetwork* network, 
         std::map<std::string, std::map<std::string, double> >& queryTerms, 
-        std::map<std::string, double>& modelParas
+        std::map<std::string, double>& modelParas,
+        int resultsRequested
       );
-      void _buildScorerAccmulator();
     public:
       LocalQueryServer( indri::collection::Repository& repository );
 

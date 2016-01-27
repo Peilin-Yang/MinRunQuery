@@ -27,12 +27,11 @@
 
 #include "indri/LocalQueryServer.hpp"
 
-#include "indri/InferenceNetworkBuilder.hpp"
+//#include "indri/InferenceNetworkBuilder.hpp"
 #include "indri/RawScorerNodeExtractor.hpp"
 #include "indri/TreePrinterWalker.hpp"
 #include "indri/SmoothingAnnotatorWalker.hpp"
 
-#include "indri/InferenceNetworkBuilder.hpp"
 #include "indri/Packer.hpp"
 
 #include "indri/XMLReader.hpp"

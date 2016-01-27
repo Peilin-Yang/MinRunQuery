@@ -19,6 +19,7 @@
 #ifndef INDRI_TERMSCOREFUNCTION_HPP
 #define INDRI_TERMSCOREFUNCTION_HPP
 
+#include <string>
 #include <map>
 
 namespace indri
@@ -27,9 +28,13 @@ namespace indri
   {
     class TermScoreFunction {
     private:
+      double _collectionOccurence;
+      double _collectionSize;
+      double _documentOccurrences;
+      double _documentCount;
       std::map<std::string, double> _modelParas;
     public:
-      TermScoreFunction( double collectionFrequency, double collectionSize, double documentOccurrences, 
+      TermScoreFunction( double collectionOccurence, double collectionSize, double documentOccurrences, 
           double documentCount, std::map<std::string, double>& paras );
       double scoreOccurrence( double occurrences, int contextLength );
       double scoreOccurrence( double occurrences, int contextLength, double documentOccurrences, int documentLength );

@@ -51,9 +51,6 @@
     <ClCompile Include="InferenceNetwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InferenceNetworkBuilder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="KrovetzStemmer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -121,9 +118,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TermScoreFunction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TermScoreFunctionFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Thread.cpp">
@@ -264,9 +258,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\InferenceNetwork.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\InferenceNetworkBuilder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\InferenceNetworkNode.hpp">
@@ -444,9 +435,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\TermScoreFunction.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\TermScoreFunctionFactory.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\TermTranslator.hpp">

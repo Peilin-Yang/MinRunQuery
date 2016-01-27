@@ -26,6 +26,8 @@
 #include "indri/ContextSimpleCountAccumulator.hpp"
 #include "indri/NullScorerNode.hpp"
 #include "indri/TermFrequencyBeliefNode.hpp"
+#include "indri/WeightedAndNode.hpp"
+#include "indri/ScoredExtentAccumulator.hpp"
 
 #include "indri/CompressedCollection.hpp"
 #include "indri/delete_range.hpp"
@@ -134,20 +136,29 @@ indri::server::QueryServerResponse* indri::server::LocalQueryServer::getGlobalSt
   return new indri::server::LocalQueryServerResponse( result );  
 }
 
-void indri::server::LocalQueryServer::_buildTermScoreFunction(indri::infnet::InferenceNetwork* network, 
-      std::map<std::string, std::map<std::string, double> >& queryTerms, std::map<std::string, double>& modelParas) {
+void indri::server::LocalQueryServer::_buildInferenceNetwork(indri::infnet::InferenceNetwork* network, 
+      std::map<std::string, std::map<std::string, double> >& queryTerms, 
+      std::map<std::string, double>& modelParas, 
+      int resultsRequested) {
+
+  /* _buildCombineNode */
+  std::string nodeName("ranking");
+  indri::infnet::WeightedAndNode* wandNode = new indri::infnet::WeightedAndNode( nodeName );
+  size_t querySize = queryTerms.size();
+
+  /* _buildTermScoreFunction */
   for (std::map<std::string, std::map<std::string, double> >::iterator it = queryTerms.begin(); it != queryTerms.end(); it++) {
     indri::infnet::BeliefNode* belief = 0;
     indri::query::TermScoreFunction* function = 0;
 
-    double collectionFrequency = it->second["collectionFrequency"];
+    double collectionOccurence = it->second["collectionFrequency"];
     double collTermCnt = it->second["collTermCnt"];
     double docFrequency = it->second["docFrequency"];
     double docCnt = it->second["docCnt"];
     if (collTermCnt == 0) collTermCnt = 1; // For non-existant fields.
-    function = new indri::query::TermScoreFunction( collectionFrequency, collTermCnt, docFrequency, docCnt, modelParas );
+    function = new indri::query::TermScoreFunction( collectionOccurence, collTermCnt, docFrequency, docCnt, modelParas );
 
-    if( collectionFrequency > 0 ) {
+    if( collectionOccurence > 0 ) {
       int listID = network->addDocIterator( it->first );
       belief = new indri::infnet::TermFrequencyBeliefNode( it->first, *network, listID, *function );
     }
@@ -158,9 +169,20 @@ void indri::server::LocalQueryServer::_buildTermScoreFunction(indri::infnet::Inf
       belief = new indri::infnet::NullScorerNode( it->first, *function );
     }
 
+    wandNode->addChild( 1.0/double(querySize), belief );
     network->addScoreFunction( function );
     network->addBeliefNode( belief );
   }
+
+  /* _buildCombineNode */
+  network->addBeliefNode( wandNode );
+
+  /* _buildScoreAccumulatorNode */
+  indri::infnet::ScoredExtentAccumulator* accumulator = 
+    new indri::infnet::ScoredExtentAccumulator( nodeName, wandNode, resultsRequested );
+
+  network->addEvaluatorNode( accumulator );
+  network->addComplexEvaluatorNode( accumulator );
 }
 
 indri::server::QueryServerResponse* indri::server::LocalQueryServer::runQuery( 
@@ -169,7 +191,7 @@ indri::server::QueryServerResponse* indri::server::LocalQueryServer::runQuery(
     int resultsRequested, 
     bool optimize ) {
   indri::infnet::InferenceNetwork* network = new indri::infnet::InferenceNetwork(_repository);
-  _buildTermScoreFunction(network, queryTerms, modelParas);
+  _buildInferenceNetwork(network, queryTerms, modelParas, resultsRequested);
 
   indri::infnet::InferenceNetwork::MAllResults result;
   result = network->evaluate();

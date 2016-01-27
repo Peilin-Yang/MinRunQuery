@@ -163,7 +163,6 @@
     <ClCompile Include="File.cpp" />
     <ClCompile Include="IndriTimer.cpp" />
     <ClCompile Include="InferenceNetwork.cpp" />
-    <ClCompile Include="InferenceNetworkBuilder.cpp" />
     <ClCompile Include="KrovetzStemmer.cpp" />
     <ClCompile Include="KrovetzStemmerTransformation.cpp" />
     <ClCompile Include="LocalQueryServer.cpp" />
@@ -187,7 +186,6 @@
     <ClCompile Include="StopStructureRemover.cpp" />
     <ClCompile Include="TermFrequencyBeliefNode.cpp" />
     <ClCompile Include="TermScoreFunction.cpp" />
-    <ClCompile Include="TermScoreFunctionFactory.cpp" />
     <ClCompile Include="Thread.cpp" />
     <ClCompile Include="uint64comp.cpp" />
     <ClCompile Include="Unpacker.cpp" />
@@ -236,7 +234,6 @@
     <ClInclude Include="..\include\indri\IndriTimer.hpp" />
     <ClInclude Include="..\include\indri\IndriTokenizer.hpp" />
     <ClInclude Include="..\include\indri\InferenceNetwork.hpp" />
-    <ClInclude Include="..\include\indri\InferenceNetworkBuilder.hpp" />
     <ClInclude Include="..\include\indri\InferenceNetworkNode.hpp" />
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp" />
     <ClInclude Include="..\include\indri\KrovetzStemmer.hpp" />
@@ -296,7 +293,6 @@
     <ClInclude Include="..\include\indri\TermListFileIterator.hpp" />
     <ClInclude Include="..\include\indri\TermRecorder.hpp" />
     <ClInclude Include="..\include\indri\TermScoreFunction.hpp" />
-    <ClInclude Include="..\include\indri\TermScoreFunctionFactory.hpp" />
     <ClInclude Include="..\include\indri\TermTranslator.hpp" />
     <ClInclude Include="..\include\indri\Thread.hpp" />
     <ClInclude Include="..\include\indri\TokenizedDocument.hpp" />
