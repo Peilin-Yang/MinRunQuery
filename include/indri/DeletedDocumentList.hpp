@@ -36,7 +36,6 @@ namespace indri
     
     class DeletedDocumentList {
     private:
-      bool _modified;
       indri::thread::ReadersWritersLock _lock;
       indri::thread::ReaderLockable _readLock;
       indri::thread::WriterLockable _writeLock;
@@ -63,13 +62,11 @@ namespace indri
       DeletedDocumentList();
 
       void append( DeletedDocumentList& other, int documentCount );
-      void markDeleted( lemur::api::DOCID_T documentID );
       bool isDeleted( lemur::api::DOCID_T documentID );
       UINT64 deletedCount() const;
       read_transaction* getReadTransaction();
 
       void read( const std::string& filename );
-      void write( const std::string& filename );
     };
   }
 }

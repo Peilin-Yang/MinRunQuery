@@ -27,7 +27,6 @@
 //
 
 indri::index::DeletedDocumentList::DeletedDocumentList() :
-  _modified( false ),
   _readLock( _lock ),
   _writeLock( _lock ),
   _deletedCount( 0 )
@@ -174,26 +173,6 @@ bool indri::index::DeletedDocumentList::read_transaction::isDeleted( lemur::api:
 }
 
 //
-// markDeleted
-//
-
-void indri::index::DeletedDocumentList::markDeleted( lemur::api::DOCID_T documentID ) {
-  _modified = true;
-  indri::thread::ScopedLock l( _writeLock );
-
-  if( (lemur::api::DOCID_T)_bitmap.position() < (documentID/8)+1 ) {
-    _grow( documentID );
-  }
-
-  UINT8 bit = 1<<(documentID%8);
-
-  if( !(_bitmap.front()[documentID/8] & bit) ) {
-    _deletedCount++;
-    _bitmap.front()[documentID/8] |= bit;
-  }
-}
-
-//
 // isDeleted
 //
 
@@ -265,22 +244,4 @@ void indri::index::DeletedDocumentList::read( const std::string& filename ) {
 
   // count number of bits set:
   _calculateDeletedCount();
-}
-
-//
-// write
-//
-
-void indri::index::DeletedDocumentList::write( const std::string& filename ) {
-  if ( _modified || ! indri::file::Path::exists( filename ) ) {
-    indri::file::File file;
-
-    if( indri::file::Path::exists( filename ) )
-      indri::file::Path::remove( filename );
-    if( !file.create( filename ) )
-      LEMUR_THROW( LEMUR_IO_ERROR, "Unable to create file: "  + filename );
-
-    file.write( _bitmap.front(), 0, _bitmap.position() );
-    file.close();
-  }
 }

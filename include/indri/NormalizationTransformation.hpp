@@ -30,10 +30,8 @@ namespace indri
     class NormalizationTransformation : public Transformation {
     private:
       ObjectHandler<indri::api::ParsedDocument>* _handler;
-      String_set* _acronyms;
-
     public:
-      NormalizationTransformation( indri::api::Parameters* acronymList = 0 );
+      NormalizationTransformation();
       ~NormalizationTransformation();
 
       indri::api::ParsedDocument* transform( indri::api::ParsedDocument* document );

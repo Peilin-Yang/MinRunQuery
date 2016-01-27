@@ -23,10 +23,8 @@
 #include "indri/InferenceNetwork.hpp"
 #include "indri/ScoredExtentResult.hpp"
 #include "indri/LocalQueryServer.hpp"
-#include "indri/XMLReader.hpp"
 #include "indri/IndriTimer.hpp"
 #include "indri/Index.hpp"
-#include "indri/VocabularyIterator.hpp"
 #include "indri/SimpleQueryParser.hpp"
 #include <vector>
 #include <map>

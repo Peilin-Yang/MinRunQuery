@@ -99,7 +99,6 @@ namespace indri
       void _copyParameters( indri::api::Parameters& options );
 
       void _removeStates( std::vector<index_state>& toRemove );
-      void _remove( const std::string& path );
 
       void _openIndexes( indri::api::Parameters& params, const std::string& parentPath );
       std::vector<index_state> _statesContaining( std::vector<indri::index::Index*>& indexes );
@@ -126,9 +125,6 @@ namespace indri
       ~Repository() {
         close();
       }
-      /// delete a document from the repository
-      /// @param documentID the internal ID of the document to delete
-      void deleteDocument( int documentID );
       /// Process, possibly transforming, the given term
       /// @param term the term to process
       /// @return the processed term
@@ -143,10 +139,6 @@ namespace indri
       /// @param path the directory to open the repository from
       /// @param options additional parameters
       void openRead( const std::string& path, indri::api::Parameters* options = 0 );
-      /// @return true if a valid Indri Repository resides in the named path
-      /// false otherwise.
-      /// @param path the directory to open the repository from
-      static bool exists( const std::string& path );
       /// Close the repository
       void close();
 

@@ -28,24 +28,7 @@ namespace indri
     
     class Path {
     public:
-      static void create( const std::string& path );
-      static bool isFile( const std::string& path );
-      static bool isDirectory( const std::string& path );
-      static bool exists( const std::string& path );
-      static void remove( const std::string& path );
-      static void rename( const std::string& oldPath, const std::string& newPath );
-      static void make( const std::string& path );
-
-      static std::string trim( const std::string& path );
-      static std::string relative( const std::string& basePath, const std::string absolutePath );
-
-      static char pathSeparator();
-
       static std::string combine( const std::string& root, const std::string& addition );
-      static std::string extension( const std::string& path );
-      static std::string directory( const std::string& path );
-      static std::string filename( const std::string& path );
-      static std::string basename( const std::string& path );
     };
   }
 }

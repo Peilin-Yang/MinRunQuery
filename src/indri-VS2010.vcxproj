@@ -155,7 +155,6 @@
     <ClCompile Include="CompressedCollection.cpp" />
     <ClCompile Include="ContextSimpleCountAccumulator.cpp" />
     <ClCompile Include="DeletedDocumentList.cpp" />
-    <ClCompile Include="DirectoryIterator.cpp" />
     <ClCompile Include="DiskDocListIterator.cpp" />
     <ClCompile Include="DiskIndex.cpp" />
     <ClCompile Include="DiskTermListFileIterator.cpp" />
@@ -184,8 +183,6 @@
     <ClCompile Include="TermScoreFunction.cpp" />
     <ClCompile Include="Thread.cpp" />
     <ClCompile Include="uint64comp.cpp" />
-    <ClCompile Include="UTF8CaseNormalizationTransformation.cpp" />
-    <ClCompile Include="UTF8Transcoder.cpp" />
     <ClCompile Include="UtilityThread.cpp" />
     <ClCompile Include="WeightedAndNode.cpp" />
     <ClCompile Include="XMLNode.cpp" />
@@ -203,7 +200,6 @@
     <ClInclude Include="..\include\indri\DateParse.hpp" />
     <ClInclude Include="..\include\indri\delete_range.hpp" />
     <ClInclude Include="..\include\indri\DeletedDocumentList.hpp" />
-    <ClInclude Include="..\include\indri\DirectoryIterator.hpp" />
     <ClInclude Include="..\include\indri\DiskDocListIterator.hpp" />
     <ClInclude Include="..\include\indri\DiskIndex.hpp" />
     <ClInclude Include="..\include\indri\DiskTermData.hpp" />
@@ -283,10 +279,7 @@
     <ClInclude Include="..\include\indri\Transformation.hpp" />
     <ClInclude Include="..\include\indri\uint64comp.hpp" />
     <ClInclude Include="..\include\indri\UnparsedDocument.hpp" />
-    <ClInclude Include="..\include\indri\UTF8CaseNormalizationTransformation.hpp" />
-    <ClInclude Include="..\include\indri\UTF8Transcoder.hpp" />
     <ClInclude Include="..\include\indri\UtilityThread.hpp" />
-    <ClInclude Include="..\include\indri\VocabularyIterator.hpp" />
     <ClInclude Include="..\include\indri\WeightedAndNode.hpp" />
     <ClInclude Include="..\include\indri\WeightFoldingCopier.hpp" />
     <ClInclude Include="..\include\indri\WriterLockable.hpp" />

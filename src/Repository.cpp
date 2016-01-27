@@ -23,15 +23,13 @@
 #include "indri/Parameters.hpp"
 #include "indri/StemmerFactory.hpp"
 #include "indri/NormalizationTransformation.hpp"
-#include "indri/UTF8CaseNormalizationTransformation.hpp"
 #include "lemur/Exception.hpp"
 #include "indri/Thread.hpp"
 #include "indri/DiskIndex.hpp"
 #include "indri/ScopedLock.hpp"
 #include "indri/RepositoryLoadThread.hpp"
 #include "indri/RepositoryMaintenanceThread.hpp"
-#include "indri/IndriTimer.hpp"
-#include "indri/DirectoryIterator.hpp" 
+#include "indri/IndriTimer.hpp" 
 
 #include <math.h>
 #include <string>
@@ -51,7 +49,7 @@ void indri::collection::Repository::_buildChain( indri::api::Parameters& paramet
 
   if( dontNormalize == false ) {
     _transformations.push_back( new indri::parse::NormalizationTransformation() );
-    _transformations.push_back( new indri::parse::UTF8CaseNormalizationTransformation() );
+    //_transformations.push_back( new indri::parse::UTF8CaseNormalizationTransformation() );
   }
 
   if( _parameters.exists("stopper.word") ) {
@@ -95,17 +93,6 @@ void indri::collection::Repository::_copyParameters( indri::api::Parameters& opt
     _parameters["stemmer"] = options["stemmer"];
   }
 
-}
-
-//
-// _remove
-//
-// In the future, this will remove a directory asynchronously,
-// and will be cancellable.
-//
-
-void indri::collection::Repository::_remove( const std::string& indexPath ) {
-  indri::file::Path::remove( indexPath );
 }
 
 //
@@ -259,23 +246,6 @@ void indri::collection::Repository::openRead( const std::string& path, indri::ap
 
 void indri::collection::Repository::open( const std::string& path, indri::api::Parameters* options ) {
 
-}
-
-//
-// exists
-//
-
-bool indri::collection::Repository::exists( const std::string& path ) {
-  std::string manifestPath = indri::file::Path::combine( path, "manifest" );
-  return indri::file::Path::exists( manifestPath );
-}
-
-//
-// deleteDocument
-//
-
-void indri::collection::Repository::deleteDocument( int documentID ) {
-  _deletedList.markDeleted( documentID );
 }
 
 //

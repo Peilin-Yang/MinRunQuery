@@ -27,9 +27,6 @@
     <ClCompile Include="DeletedDocumentList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DirectoryIterator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DiskDocListIterator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -114,12 +111,6 @@
     <ClCompile Include="uint64comp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UTF8CaseNormalizationTransformation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UTF8Transcoder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="UtilityThread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -165,9 +156,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\DeletedDocumentList.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\DirectoryIterator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\DiskDocListIterator.hpp">
@@ -407,16 +395,7 @@
     <ClInclude Include="..\include\indri\UnparsedDocument.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\UTF8CaseNormalizationTransformation.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\UTF8Transcoder.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\UtilityThread.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\VocabularyIterator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\WeightedAndNode.hpp">

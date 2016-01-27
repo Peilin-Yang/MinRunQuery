@@ -20,26 +20,11 @@
 #include "indri/Parameters.hpp"
 #include "lemur/string-set.h"
 
-indri::parse::NormalizationTransformation::NormalizationTransformation( indri::api::Parameters* acronymList )
-  :
-  _handler(0),
-  _acronyms(0)
+indri::parse::NormalizationTransformation::NormalizationTransformation():_handler(0)
 {
-  if( acronymList && acronymList->exists("word") ) {
-    indri::api::Parameters words = (*acronymList)["word"];
-    _acronyms = string_set_create();
-    
-    for( size_t i=0; i<words.size(); i++ ) {
-      std::string acronym;
-      acronym = (std::string) words[i];
-      string_set_add( acronym.c_str(), _acronyms );
-    }
-  }
 }
 
 indri::parse::NormalizationTransformation::~NormalizationTransformation() {
-  if(_acronyms)
-    string_set_delete(_acronyms);
 }
 
 indri::api::ParsedDocument* indri::parse::NormalizationTransformation::transform( indri::api::ParsedDocument* document ) {
@@ -78,14 +63,12 @@ indri::api::ParsedDocument* indri::parse::NormalizationTransformation::transform
     }
     term[k] = 0;
 
-    // if this is an acronym, skip it, otherwise, case normalize
-    if( !_acronyms || !string_set_lookup( term, _acronyms ) ) {
-      char* letter = term;
+    // case normalize
+    char* letter = term;
       
-      for( ; *letter; letter++ )
-        if( *letter >= 'A' && *letter <= 'Z' )
-          *letter += 'a' - 'A';
-    }
+    for( ; *letter; letter++ )
+    if( *letter >= 'A' && *letter <= 'Z' )
+        *letter += 'a' - 'A';
   }
 
   return document;

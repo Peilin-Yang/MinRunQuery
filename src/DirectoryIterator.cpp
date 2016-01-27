@@ -177,8 +177,6 @@ void indri::file::DirectoryIterator::_copyCurrent() {
   } else {
     _current = directoryiterator_current( _platform );
   }
-
-  _current = indri::file::Path::trim( _current );
 }
 
 void indri::file::DirectoryIterator::_next() {

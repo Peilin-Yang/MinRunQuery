@@ -25,7 +25,6 @@
 #include "indri/DocListIterator.hpp"
 #include "indri/DocExtentListIterator.hpp"
 #include "indri/DocListFileIterator.hpp"
-#include "indri/VocabularyIterator.hpp"
 #include "indri/TermList.hpp"
 #include "indri/TermListFileIterator.hpp"
 #include "indri/DocumentDataIterator.hpp"
