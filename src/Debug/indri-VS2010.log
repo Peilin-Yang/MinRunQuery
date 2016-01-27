@@ -1,9 +1,111 @@
-﻿Build started 2016/1/27 11:25:14.
-     1>Project "D:\MinRunQuery\src\indri-VS2010.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\indri.lastbuildstate".
-     1>Done Building Project "D:\MinRunQuery\src\indri-VS2010.vcxproj" (clean target(s)).
+﻿Build started 2016/1/27 11:26:18.
+     1>Project "D:\MinRunQuery\src\indri-VS2010.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\indri.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../include /I../contrib/antlr/include /I../contrib/xpdf/include /I../contrib/lemur/include /I../contrib/zlib/include /ZI /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /wd4267 /wd4018 /wd4244 /analyze- /errorReport:prompt BulkTree.cpp CompressedCollection.cpp ContextSimpleCountAccumulator.cpp DeletedDocumentList.cpp DiskDocListIterator.cpp DiskIndex.cpp DiskTermListFileIterator.cpp File.cpp IndriTimer.cpp InferenceNetwork.cpp LocalQueryServer.cpp NormalizationTransformation.cpp NullListNode.cpp NullScorerNode.cpp Parameters.cpp Path.cpp Porter_Stemmer.cpp PorterStemmerTransformation.cpp QueryEnvironment.cpp QueryStopper.cpp RelevanceModel.cpp Repository.cpp RepositoryLoadThread.cpp RepositoryMaintenanceThread.cpp SimpleQueryParser.cpp StemmerFactory.cpp StopperTransformation.cpp StopStructureRemover.cpp TermFrequencyBeliefNode.cpp TermScoreFunction.cpp Thread.cpp uint64comp.cpp UtilityThread.cpp WeightedAndNode.cpp XMLNode.cpp XMLReader.cpp
+         BulkTree.cpp
+         CompressedCollection.cpp
+         ContextSimpleCountAccumulator.cpp
+         DeletedDocumentList.cpp
+         DiskDocListIterator.cpp
+         DiskIndex.cpp
+         DiskTermListFileIterator.cpp
+         File.cpp
+         IndriTimer.cpp
+         InferenceNetwork.cpp
+     1>d:\microsoft visual studio 10.0\vc\include\vector(212): warning C4503: 'std::_Tree<_Traits>::insert' : decorated name length exceeded, name was truncated
+                 with
+                 [
+                     _Traits=std::_Tmap_traits<std::string,indri::infnet::EvaluatorNode::MResults,std::less<std::string>,std::allocator<std::pair<const std::string,indri::infnet::EvaluatorNode::MResults>>,false>
+                 ]
+     1>d:\microsoft visual studio 10.0\vc\include\vector(212): warning C4503: 'std::_Tree<_Traits>::_Insert' : decorated name length exceeded, name was truncated
+                 with
+                 [
+                     _Traits=std::_Tmap_traits<std::string,indri::infnet::EvaluatorNode::MResults,std::less<std::string>,std::allocator<std::pair<const std::string,indri::infnet::EvaluatorNode::MResults>>,false>
+                 ]
+         LocalQueryServer.cpp
+         NormalizationTransformation.cpp
+         NullListNode.cpp
+         NullScorerNode.cpp
+         Parameters.cpp
+         Path.cpp
+         Porter_Stemmer.cpp
+         PorterStemmerTransformation.cpp
+         QueryEnvironment.cpp
+     1>d:\microsoft visual studio 10.0\vc\include\vector(190): warning C4503: 'std::_Tree<_Traits>::insert' : decorated name length exceeded, name was truncated
+                 with
+                 [
+                     _Traits=std::_Tmap_traits<std::string,indri::infnet::EvaluatorNode::MResults,std::less<std::string>,std::allocator<std::pair<const std::string,indri::infnet::EvaluatorNode::MResults>>,false>
+                 ]
+     1>d:\microsoft visual studio 10.0\vc\include\vector(190): warning C4503: 'std::_Tree<_Traits>::_Insert' : decorated name length exceeded, name was truncated
+                 with
+                 [
+                     _Traits=std::_Tmap_traits<std::string,indri::infnet::EvaluatorNode::MResults,std::less<std::string>,std::allocator<std::pair<const std::string,indri::infnet::EvaluatorNode::MResults>>,false>
+                 ]
+         QueryStopper.cpp
+         Generating Code...
+         Compiling...
+         RelevanceModel.cpp
+         Repository.cpp
+         RepositoryLoadThread.cpp
+         RepositoryMaintenanceThread.cpp
+         SimpleQueryParser.cpp
+         StemmerFactory.cpp
+         StopperTransformation.cpp
+         StopStructureRemover.cpp
+         TermFrequencyBeliefNode.cpp
+         TermScoreFunction.cpp
+         Thread.cpp
+         uint64comp.cpp
+         UtilityThread.cpp
+         WeightedAndNode.cpp
+         XMLNode.cpp
+         XMLReader.cpp
+         Generating Code...
+       Lib:
+         D:\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"D:\MinRunQuery\Debug\indri.lib" /NOLOGO Debug\BulkTree.obj
+         Debug\CompressedCollection.obj
+         Debug\ContextSimpleCountAccumulator.obj
+         Debug\DeletedDocumentList.obj
+         Debug\DiskDocListIterator.obj
+         Debug\DiskIndex.obj
+         Debug\DiskTermListFileIterator.obj
+         Debug\File.obj
+         Debug\IndriTimer.obj
+         Debug\InferenceNetwork.obj
+         Debug\LocalQueryServer.obj
+         Debug\NormalizationTransformation.obj
+         Debug\NullListNode.obj
+         Debug\NullScorerNode.obj
+         Debug\Parameters.obj
+         Debug\Path.obj
+         Debug\Porter_Stemmer.obj
+         Debug\PorterStemmerTransformation.obj
+         Debug\QueryEnvironment.obj
+         Debug\QueryStopper.obj
+         Debug\RelevanceModel.obj
+         Debug\Repository.obj
+         Debug\RepositoryLoadThread.obj
+         Debug\RepositoryMaintenanceThread.obj
+         Debug\SimpleQueryParser.obj
+         Debug\StemmerFactory.obj
+         Debug\StopperTransformation.obj
+         Debug\StopStructureRemover.obj
+         Debug\TermFrequencyBeliefNode.obj
+         Debug\TermScoreFunction.obj
+         Debug\Thread.obj
+         Debug\uint64comp.obj
+         Debug\UtilityThread.obj
+         Debug\WeightedAndNode.obj
+         Debug\XMLNode.obj
+         Debug\XMLReader.obj
+         indri-VS2010.vcxproj -> D:\MinRunQuery\Debug\indri.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug\indri.unsuccessfulbuild".
+         Touching "Debug\indri.lastbuildstate".
+     1>Done Building Project "D:\MinRunQuery\src\indri-VS2010.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:42.88
