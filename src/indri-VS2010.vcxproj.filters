@@ -24,9 +24,6 @@
     <ClCompile Include="ContextSimpleCountAccumulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Copier.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DeletedDocumentList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -61,9 +58,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NullScorerNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Packer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Parameters.cpp">
@@ -120,12 +114,6 @@
     <ClCompile Include="uint64comp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Unpacker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UnpackerInternal.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="UTF8CaseNormalizationTransformation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -168,9 +156,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\ContextSimpleCountAccumulator.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\Copier.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\CorpusStatistics.hpp">
@@ -260,9 +245,6 @@
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\ListCache.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\ListIteratorNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -290,9 +272,6 @@
     <ClInclude Include="..\include\indri\ObjectHandler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\Packer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\Parameters.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -314,13 +293,7 @@
     <ClInclude Include="..\include\indri\QueryServer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\QuerySpec.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\QueryStopper.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\RawScorerNodeExtractor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\RawTextParser.hpp">
@@ -374,16 +347,10 @@
     <ClInclude Include="..\include\indri\SequentialWriteBuffer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\SimpleCopier.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\SimpleQueryParser.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\SkippingCapableNode.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\SmoothingAnnotatorWalker.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\StemmerFactory.hpp">
@@ -437,16 +404,10 @@
     <ClInclude Include="..\include\indri\Transformation.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\TreePrinterWalker.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\uint64comp.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\UnnecessaryNodeRemoverCopier.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\Unpacker.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\UnparsedDocument.hpp">

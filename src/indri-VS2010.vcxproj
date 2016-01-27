@@ -154,7 +154,6 @@
     <ClCompile Include="BulkTree.cpp" />
     <ClCompile Include="CompressedCollection.cpp" />
     <ClCompile Include="ContextSimpleCountAccumulator.cpp" />
-    <ClCompile Include="Copier.cpp" />
     <ClCompile Include="DeletedDocumentList.cpp" />
     <ClCompile Include="DirectoryIterator.cpp" />
     <ClCompile Include="DiskDocListIterator.cpp" />
@@ -167,7 +166,6 @@
     <ClCompile Include="NormalizationTransformation.cpp" />
     <ClCompile Include="NullListNode.cpp" />
     <ClCompile Include="NullScorerNode.cpp" />
-    <ClCompile Include="Packer.cpp" />
     <ClCompile Include="Parameters.cpp" />
     <ClCompile Include="Path.cpp" />
     <ClCompile Include="Porter_Stemmer.cpp" />
@@ -186,8 +184,6 @@
     <ClCompile Include="TermScoreFunction.cpp" />
     <ClCompile Include="Thread.cpp" />
     <ClCompile Include="uint64comp.cpp" />
-    <ClCompile Include="Unpacker.cpp" />
-    <ClCompile Include="UnpackerInternal.cpp" />
     <ClCompile Include="UTF8CaseNormalizationTransformation.cpp" />
     <ClCompile Include="UTF8Transcoder.cpp" />
     <ClCompile Include="UtilityThread.cpp" />
@@ -204,7 +200,6 @@
     <ClInclude Include="..\include\indri\CompressedCollection.hpp" />
     <ClInclude Include="..\include\indri\ConditionVariable.hpp" />
     <ClInclude Include="..\include\indri\ContextSimpleCountAccumulator.hpp" />
-    <ClInclude Include="..\include\indri\Copier.hpp" />
     <ClInclude Include="..\include\indri\CorpusStatistics.hpp" />
     <ClInclude Include="..\include\indri\DateParse.hpp" />
     <ClInclude Include="..\include\indri\delete_range.hpp" />
@@ -234,7 +229,6 @@
     <ClInclude Include="..\include\indri\InferenceNetwork.hpp" />
     <ClInclude Include="..\include\indri\InferenceNetworkNode.hpp" />
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp" />
-    <ClInclude Include="..\include\indri\ListCache.hpp" />
     <ClInclude Include="..\include\indri\ListIteratorNode.hpp" />
     <ClInclude Include="..\include\indri\LocalQueryServer.hpp" />
     <ClInclude Include="..\include\indri\Lockable.hpp" />
@@ -244,7 +238,6 @@
     <ClInclude Include="..\include\indri\NullListNode.hpp" />
     <ClInclude Include="..\include\indri\NullScorerNode.hpp" />
     <ClInclude Include="..\include\indri\ObjectHandler.hpp" />
-    <ClInclude Include="..\include\indri\Packer.hpp" />
     <ClInclude Include="..\include\indri\Parameters.hpp" />
     <ClInclude Include="..\include\indri\ParsedDocument.hpp" />
     <ClInclude Include="..\include\indri\Path.hpp" />
@@ -252,9 +245,7 @@
     <ClInclude Include="..\include\indri\PorterStemmerTransformation.hpp" />
     <ClInclude Include="..\include\indri\QueryEnvironment.hpp" />
     <ClInclude Include="..\include\indri\QueryServer.hpp" />
-    <ClInclude Include="..\include\indri\QuerySpec.hpp" />
     <ClInclude Include="..\include\indri\QueryStopper.hpp" />
-    <ClInclude Include="..\include\indri\RawScorerNodeExtractor.hpp" />
     <ClInclude Include="..\include\indri\RawTextParser.hpp" />
     <ClInclude Include="..\include\indri\ReaderLockable.hpp" />
     <ClInclude Include="..\include\indri\ReadersWritersLock.hpp" />
@@ -272,10 +263,8 @@
     <ClInclude Include="..\include\indri\ScoredExtentResult.hpp" />
     <ClInclude Include="..\include\indri\SequentialReadBuffer.hpp" />
     <ClInclude Include="..\include\indri\SequentialWriteBuffer.hpp" />
-    <ClInclude Include="..\include\indri\SimpleCopier.hpp" />
     <ClInclude Include="..\include\indri\SimpleQueryParser.hpp" />
     <ClInclude Include="..\include\indri\SkippingCapableNode.hpp" />
-    <ClInclude Include="..\include\indri\SmoothingAnnotatorWalker.hpp" />
     <ClInclude Include="..\include\indri\StemmerFactory.hpp" />
     <ClInclude Include="..\include\indri\StopperTransformation.hpp" />
     <ClInclude Include="..\include\indri\StopStructureRemover.hpp" />
@@ -293,10 +282,8 @@
     <ClInclude Include="..\include\indri\Thread.hpp" />
     <ClInclude Include="..\include\indri\TokenizedDocument.hpp" />
     <ClInclude Include="..\include\indri\Transformation.hpp" />
-    <ClInclude Include="..\include\indri\TreePrinterWalker.hpp" />
     <ClInclude Include="..\include\indri\uint64comp.hpp" />
     <ClInclude Include="..\include\indri\UnnecessaryNodeRemoverCopier.hpp" />
-    <ClInclude Include="..\include\indri\Unpacker.hpp" />
     <ClInclude Include="..\include\indri\UnparsedDocument.hpp" />
     <ClInclude Include="..\include\indri\UTF8CaseNormalizationTransformation.hpp" />
     <ClInclude Include="..\include\indri\UTF8Transcoder.hpp" />

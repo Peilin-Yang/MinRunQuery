@@ -25,7 +25,6 @@
 
 #include "indri/QueryServer.hpp"
 #include "indri/Repository.hpp"
-#include "indri/ListCache.hpp"
 #include "indri/InferenceNetwork.hpp"
 
 namespace indri
@@ -41,7 +40,6 @@ namespace indri
       // the parameter is false.
       bool _optimizeParameter;
       indri::collection::Repository& _repository;
-      indri::lang::ListCache _cache;
 
       //
       void _buildInferenceNetwork(

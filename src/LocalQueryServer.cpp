@@ -17,7 +17,6 @@
 //
 
 #include "indri/LocalQueryServer.hpp"
-#include "indri/QuerySpec.hpp"
 #include "lemur/lemur-platform.h"
 #include "lemur/lemur-compat.hpp"
 #include <vector>
@@ -28,15 +27,9 @@
 #include "indri/TermFrequencyBeliefNode.hpp"
 #include "indri/WeightedAndNode.hpp"
 #include "indri/ScoredExtentAccumulator.hpp"
-
 #include "indri/CompressedCollection.hpp"
 #include "indri/delete_range.hpp"
-#include "indri/WeightFoldingCopier.hpp"
-
 #include "indri/ScopedLock.hpp"
-
-#include "indri/TreePrinterWalker.hpp"
-
 
 //
 // Response objects

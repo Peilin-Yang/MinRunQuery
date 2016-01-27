@@ -19,31 +19,18 @@
 #include "indri/QueryEnvironment.hpp"
 #include "indri/CompressedCollection.hpp"
 
-#include <vector>
 #include "indri/delete_range.hpp"
-
 #include "indri/InferenceNetwork.hpp"
 #include "indri/ScoredExtentResult.hpp"
-
 #include "indri/LocalQueryServer.hpp"
-
-//#include "indri/InferenceNetworkBuilder.hpp"
-#include "indri/RawScorerNodeExtractor.hpp"
-#include "indri/TreePrinterWalker.hpp"
-#include "indri/SmoothingAnnotatorWalker.hpp"
-
-#include "indri/Packer.hpp"
-
 #include "indri/XMLReader.hpp"
 #include "indri/IndriTimer.hpp"
-
 #include "indri/Index.hpp"
-
-#include <map>
-
-#include "indri/TreePrinterWalker.hpp"
 #include "indri/VocabularyIterator.hpp"
 #include "indri/SimpleQueryParser.hpp"
+#include <vector>
+#include <map>
+#include <algorithm>
 
 using namespace lemur::api;
 
@@ -56,32 +43,6 @@ using namespace lemur::api;
 #define INIT_TIMER
 #define PRINT_TIMER(s)
 #endif
-
-// for debugging; this class prints a query tree
-namespace indri
-{
-  namespace lang
-  {
-    class Printer : public indri::lang::Walker {
-    private:
-      int tabs;
-    public:
-      Printer() : tabs(0) {}
-
-      void defaultBefore( indri::lang::Node* n ) {
-        for( int i=0; i<tabs; i++ )
-          std::cout << "\t";
-        std::cout << n->typeName() << " " << n->nodeName() << " " << n->queryText() << std::endl;
-        tabs++;
-      }
-
-      void defaultAfter( indri::lang::Node* n ) {
-        tabs--;
-      }
-
-    };
-  }
-}
 
 //
 // Helper document methods
@@ -212,23 +173,6 @@ void indri::api::QueryEnvironment::_setCollectionStatistics( indri::infnet::Infe
     _queryDict[orig].collTermCnt = collTermCnt;
     _queryDict[orig].docFrequency = docFrequency;
     _queryDict[orig].docCnt = docCnt;
-  }
-}
-
-void indri::api::QueryEnvironment::_copyStatistics( std::vector<indri::lang::RawScorerNode*>& scorerNodes, 
-	indri::infnet::InferenceNetwork::MAllResults& statisticsResults ) {
-  for( size_t i=0; i<scorerNodes.size(); i++ ) {
-    std::vector<ScoredExtentResult>& occurrencesList = statisticsResults[ scorerNodes[i]->nodeName() ][ "occurrences" ];
-    std::vector<ScoredExtentResult>& contextSizeList = statisticsResults[ scorerNodes[i]->nodeName() ][ "contextSize" ];
-    std::vector<ScoredExtentResult>& documentOccurrencesList = statisticsResults[ scorerNodes[i]->nodeName() ][ "documentOccurrences" ];
-    std::vector<ScoredExtentResult>& documentCountList = statisticsResults[ scorerNodes[i]->nodeName() ][ "documentCount" ];
-
-    double occurrences = occurrencesList[0].score;
-    double contextSize = contextSizeList[0].score;
-    int documentOccurrences = int(documentOccurrencesList[0].score);
-    int documentCount = int(documentCountList[0].score);
-
-    scorerNodes[i]->setStatistics( occurrences, contextSize, documentOccurrences, documentCount );
   }
 }
 

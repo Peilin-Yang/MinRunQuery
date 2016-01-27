@@ -19,7 +19,7 @@
 #ifndef INDRI_QUERYSERVER_HPP
 #define INDRI_QUERYSERVER_HPP
 
-#include "indri/QuerySpec.hpp"
+//#include "indri/QuerySpec.hpp"
 #include "indri/InferenceNetwork.hpp"
 #include "lemur/IndexTypes.hpp"
 #include <vector>

@@ -84,8 +84,6 @@ namespace indri
       std::map<std::string, std::map<std::string, double> > _getProcessedQTermswithStats();
       void _setCollectionStatistics( indri::infnet::InferenceNetwork::MAllResults& statisticsResults );
       void _mergeQueryResults( indri::infnet::InferenceNetwork::MAllResults& results, std::vector<indri::server::QueryServerResponse*>& responses );
-      void _copyStatistics( std::vector<indri::lang::RawScorerNode*>& scorerNodes, indri::infnet::InferenceNetwork::MAllResults& statisticsResults );
-
       std::vector<indri::server::QueryServerResponse*> _runServerQuery( int resultsRequested );
       void _sumServerQuery( indri::infnet::InferenceNetwork::MAllResults& results, int resultsRequested );
       void _mergeServerQuery( indri::infnet::InferenceNetwork::MAllResults& results, int resultsRequested );

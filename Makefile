@@ -11,7 +11,6 @@ ifeq ($(WITH_SWIG), 1)
 	$(MAKE) -C swig/src
 endif
 	$(MAKE) -C runquery
-	$(MAKE) -C indrid
 
 $(INSTALLDIRS):
 	$(INSTALL_DIR) $@
@@ -23,7 +22,6 @@ ifeq ($(WITH_SWIG), 1)
 	$(MAKE) clean -C swig/src
 endif
 	$(MAKE) clean -C runquery
-	$(MAKE) clean -C indrid
 	rm -f depend/*
 
 distclean: clean
@@ -40,7 +38,6 @@ ifeq ($(WITH_SWIG), 1)
 	$(MAKE) install -C swig/src
 endif
 	$(MAKE) install -C runquery
-	$(MAKE) install -C indrid
 	$(INSTALL_DATA) Makefile.app $(pkgdatadir)
 
 test:

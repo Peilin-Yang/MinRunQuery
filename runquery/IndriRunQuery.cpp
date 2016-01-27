@@ -25,6 +25,7 @@
 #include "indri/ScopedLock.hpp"
 #include "indri/delete_range.hpp"
 
+#include <string>
 #include <queue>
 
 static bool copy_parameters_to_string_vector( std::vector<std::string>& vec, indri::api::Parameters p, const std::string& parameterName ) {
