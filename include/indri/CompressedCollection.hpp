@@ -19,12 +19,13 @@
 #ifndef INDRI_COMPRESSEDCOLLECTION_HPP
 #define INDRI_COMPRESSEDCOLLECTION_HPP
 
-#include "indri/Collection.hpp"
+//#include "indri/Collection.hpp"
 #include "lemur/string-set.h"
 #include <string>
 #include <vector>
 #include "lemur/Keyfile.hpp"
 #include "indri/Buffer.hpp"
+#include "indri/ParsedDocument.hpp"
 #include "indri/SequentialWriteBuffer.hpp"
 #include "indri/SequentialReadBuffer.hpp"
 #include "indri/HashTable.hpp"
@@ -40,7 +41,7 @@ namespace indri
   namespace collection
   {
     
-    class CompressedCollection : public Collection {
+    class CompressedCollection {
     private:
       indri::thread::Mutex _lock;
 

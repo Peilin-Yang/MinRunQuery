@@ -22,20 +22,15 @@
 #include "lemur/lemur-compat.hpp"
 #include <vector>
 
-// #include "indri/UnnecessaryNodeRemoverCopier.hpp"
-// #include "indri/ContextSimpleCountCollectorCopier.hpp"
-// #include "indri/FrequencyListCopier.hpp"
-// #include "indri/DagCopier.hpp"
-
-#include "indri/InferenceNetworkBuilder.hpp"
 #include "indri/InferenceNetwork.hpp"
 #include "indri/ContextSimpleCountAccumulator.hpp"
+#include "indri/NullScorerNode.hpp"
+#include "indri/TermFrequencyBeliefNode.hpp"
 
 #include "indri/CompressedCollection.hpp"
 #include "indri/delete_range.hpp"
 #include "indri/WeightFoldingCopier.hpp"
 
-#include "indri/Appliers.hpp"
 #include "indri/ScopedLock.hpp"
 
 #include "indri/TreePrinterWalker.hpp"
@@ -139,47 +134,42 @@ indri::server::QueryServerResponse* indri::server::LocalQueryServer::getGlobalSt
   return new indri::server::LocalQueryServerResponse( result );  
 }
 
+void indri::server::LocalQueryServer::_buildTermScoreFunction(indri::infnet::InferenceNetwork* network, 
+      std::map<std::string, std::map<std::string, double> >& queryTerms, std::map<std::string, double>& modelParas) {
+  for (std::map<std::string, std::map<std::string, double> >::iterator it = queryTerms.begin(); it != queryTerms.end(); it++) {
+    indri::infnet::BeliefNode* belief = 0;
+    indri::query::TermScoreFunction* function = 0;
+
+    double collectionFrequency = it->second["collectionFrequency"];
+    double collTermCnt = it->second["collTermCnt"];
+    double docFrequency = it->second["docFrequency"];
+    double docCnt = it->second["docCnt"];
+    if (collTermCnt == 0) collTermCnt = 1; // For non-existant fields.
+    function = new indri::query::TermScoreFunction( collectionFrequency, collTermCnt, docFrequency, docCnt, modelParas );
+
+    if( collectionFrequency > 0 ) {
+      int listID = network->addDocIterator( it->first );
+      belief = new indri::infnet::TermFrequencyBeliefNode( it->first, *network, listID, *function );
+    }
+
+    // either there's no list here, or there aren't any occurrences
+    // in the local collection, so just use a NullScorerNode in place
+    if( !belief ) {
+      belief = new indri::infnet::NullScorerNode( it->first, *function );
+    }
+
+    network->addScoreFunction( function );
+    network->addBeliefNode( belief );
+  }
+}
+
 indri::server::QueryServerResponse* indri::server::LocalQueryServer::runQuery( 
-    std::map<std::string, double>& queryDict, 
+    std::map<std::string, std::map<std::string, double> >& queryTerms, 
+    std::map<std::string, double>& modelParas, 
     int resultsRequested, 
     bool optimize ) {
   indri::infnet::InferenceNetwork* network = new indri::infnet::InferenceNetwork(_repository);
-  indri::infnet::BeliefNode* belief = 0;
-  indri::query::TermScoreFunction* function = 0;
-/* 
-  function = indri::query::TermScoreFunctionFactory::get( smoothing, occurrences, contextSize, documentOccurrences, documentCount );
-                                      ( termScorerNode->getSmoothing(),
-                                      termScorerNode->getOccurrences(),
-                                      termScorerNode->getContextSize(),
-                                      termScorerNode->getDocumentOccurrences(),
-                                      termScorerNode->getDocumentCount());
-
-  if( termScorerNode->getOccurrences() > 0 ) {
-    bool stopword = false;
-    std::string processed = termScorerNode->getText();
-    int termID = 0;
-  
-    // stem and stop the word
-    if( termScorerNode->getStemmed() == false ) {
-      processed = _repository.processTerm( termScorerNode->getText() );
-      stopword = processed.length() == 0;
-    }
-
-    // if it isn't a stopword, we can try to get it from the index
-    if( !stopword ) {
-      int listID = _network->addDocIterator( processed );
-      belief = new TermFrequencyBeliefNode( termScorerNode->nodeName(), *_network, listID, *function );
-    }
-  }
-
-  // either there's no list here, or there aren't any occurrences
-  // in the local collection, so just use a NullScorerNode in place
-  if( !belief ) {
-    belief = new NullScorerNode( termScorerNode->nodeName(), *function );
-  }
-
-  network->addScoreFunction( function );
-  network->addBeliefNode( belief );*/
+  _buildTermScoreFunction(network, queryTerms, modelParas);
 
   indri::infnet::InferenceNetwork::MAllResults result;
   result = network->evaluate();

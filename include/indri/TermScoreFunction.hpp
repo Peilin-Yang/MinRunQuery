@@ -18,21 +18,21 @@
 
 #ifndef INDRI_TERMSCOREFUNCTION_HPP
 #define INDRI_TERMSCOREFUNCTION_HPP
+
+#include <map>
+
 namespace indri
 {
   namespace query
   {
-    
-    /*! Abstract base class for all term scoring and smoothing functions. 
-      See <a href="IndriParameters.html#rule">the <tt>rule</tt> parameter
-      format</a> for a description of the rule parameter format. @see
-      TermScoreFunctionFactory for a description of how to add a new scoring
-      function.
-    */
     class TermScoreFunction {
+    private:
+      std::map<std::string, double> _modelParas;
     public:
-      virtual double scoreOccurrence( double occurrences, int contextLength ) = 0;
-      virtual double scoreOccurrence( double occurrences, int contextLength, double documentOccurrences, int documentLength ) = 0;
+      TermScoreFunction( double collectionFrequency, double collectionSize, double documentOccurrences, 
+          double documentCount, std::map<std::string, double>& paras );
+      double scoreOccurrence( double occurrences, int contextLength );
+      double scoreOccurrence( double occurrences, int contextLength, double documentOccurrences, int documentLength );
     };
   }
 }

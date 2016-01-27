@@ -167,9 +167,6 @@
     <ClCompile Include="KrovetzStemmer.cpp" />
     <ClCompile Include="KrovetzStemmerTransformation.cpp" />
     <ClCompile Include="LocalQueryServer.cpp" />
-    <ClCompile Include="NetworkMessageStream.cpp" />
-    <ClCompile Include="NetworkServerProxy.cpp" />
-    <ClCompile Include="NetworkServerStub.cpp" />
     <ClCompile Include="NormalizationTransformation.cpp" />
     <ClCompile Include="NullListNode.cpp" />
     <ClCompile Include="NullScorerNode.cpp" />
@@ -189,8 +186,8 @@
     <ClCompile Include="StopperTransformation.cpp" />
     <ClCompile Include="StopStructureRemover.cpp" />
     <ClCompile Include="TermFrequencyBeliefNode.cpp" />
+    <ClCompile Include="TermScoreFunction.cpp" />
     <ClCompile Include="TermScoreFunctionFactory.cpp" />
-    <ClCompile Include="TFIDFTermScoreFunction.cpp" />
     <ClCompile Include="Thread.cpp" />
     <ClCompile Include="uint64comp.cpp" />
     <ClCompile Include="Unpacker.cpp" />
@@ -202,29 +199,21 @@
     <ClCompile Include="WeightedAndNode.cpp" />
     <ClCompile Include="XMLNode.cpp" />
     <ClCompile Include="XMLReader.cpp" />
-    <ClCompile Include="XMLWriter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\indri\Appliers.hpp" />
     <ClInclude Include="..\include\indri\atomic.hpp" />
     <ClInclude Include="..\include\indri\BeliefNode.hpp" />
     <ClInclude Include="..\include\indri\Buffer.hpp" />
     <ClInclude Include="..\include\indri\BulkTree.hpp" />
-    <ClInclude Include="..\include\indri\Collection.hpp" />
     <ClInclude Include="..\include\indri\CompressedCollection.hpp" />
     <ClInclude Include="..\include\indri\ConditionVariable.hpp" />
-    <ClInclude Include="..\include\indri\ContextCountGraphCopier.hpp" />
-    <ClInclude Include="..\include\indri\ContextCountGraphExtractor.hpp" />
     <ClInclude Include="..\include\indri\ContextSimpleCountAccumulator.hpp" />
-    <ClInclude Include="..\include\indri\ContextSimpleCountCollectorCopier.hpp" />
     <ClInclude Include="..\include\indri\Copier.hpp" />
     <ClInclude Include="..\include\indri\CorpusStatistics.hpp" />
-    <ClInclude Include="..\include\indri\DagCopier.hpp" />
     <ClInclude Include="..\include\indri\DateParse.hpp" />
     <ClInclude Include="..\include\indri\delete_range.hpp" />
     <ClInclude Include="..\include\indri\DeletedDocumentList.hpp" />
     <ClInclude Include="..\include\indri\DirectoryIterator.hpp" />
-    <ClInclude Include="..\include\indri\DirichletTermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\DiskDocListIterator.hpp" />
     <ClInclude Include="..\include\indri\DiskIndex.hpp" />
     <ClInclude Include="..\include\indri\DiskTermData.hpp" />
@@ -238,7 +227,6 @@
     <ClInclude Include="..\include\indri\DocumentIterator.hpp" />
     <ClInclude Include="..\include\indri\EvaluatorNode.hpp" />
     <ClInclude Include="..\include\indri\Extent.hpp" />
-    <ClInclude Include="..\include\indri\ExtentRestrictionModelAnnotatorCopier.hpp" />
     <ClInclude Include="..\include\indri\FieldStatistics.hpp" />
     <ClInclude Include="..\include\indri\File.hpp" />
     <ClInclude Include="..\include\indri\FrequencyListCopier.hpp" />
@@ -251,7 +239,6 @@
     <ClInclude Include="..\include\indri\InferenceNetworkBuilder.hpp" />
     <ClInclude Include="..\include\indri\InferenceNetworkNode.hpp" />
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp" />
-    <ClInclude Include="..\include\indri\JelinekMercerTermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\KrovetzStemmer.hpp" />
     <ClInclude Include="..\include\indri\KrovetzStemmerTransformation.hpp" />
     <ClInclude Include="..\include\indri\ListCache.hpp" />
@@ -260,11 +247,6 @@
     <ClInclude Include="..\include\indri\Lockable.hpp" />
     <ClInclude Include="..\include\indri\MetadataPair.hpp" />
     <ClInclude Include="..\include\indri\Mutex.hpp" />
-    <ClInclude Include="..\include\indri\NetworkListener.hpp" />
-    <ClInclude Include="..\include\indri\NetworkMessageStream.hpp" />
-    <ClInclude Include="..\include\indri\NetworkServerProxy.hpp" />
-    <ClInclude Include="..\include\indri\NetworkServerStub.hpp" />
-    <ClInclude Include="..\include\indri\NetworkStream.hpp" />
     <ClInclude Include="..\include\indri\NormalizationTransformation.hpp" />
     <ClInclude Include="..\include\indri\NullListNode.hpp" />
     <ClInclude Include="..\include\indri\NullScorerNode.hpp" />
@@ -276,8 +258,6 @@
     <ClInclude Include="..\include\indri\Porter_Stemmer.hpp" />
     <ClInclude Include="..\include\indri\PorterStemmerTransformation.hpp" />
     <ClInclude Include="..\include\indri\QueryEnvironment.hpp" />
-    <ClInclude Include="..\include\indri\QueryResponsePacker.hpp" />
-    <ClInclude Include="..\include\indri\QueryResponseUnpacker.hpp" />
     <ClInclude Include="..\include\indri\QueryServer.hpp" />
     <ClInclude Include="..\include\indri\QuerySpec.hpp" />
     <ClInclude Include="..\include\indri\QueryStopper.hpp" />
@@ -318,12 +298,10 @@
     <ClInclude Include="..\include\indri\TermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\TermScoreFunctionFactory.hpp" />
     <ClInclude Include="..\include\indri\TermTranslator.hpp" />
-    <ClInclude Include="..\include\indri\TFIDFTermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\Thread.hpp" />
     <ClInclude Include="..\include\indri\TokenizedDocument.hpp" />
     <ClInclude Include="..\include\indri\Transformation.hpp" />
     <ClInclude Include="..\include\indri\TreePrinterWalker.hpp" />
-    <ClInclude Include="..\include\indri\TwoStageTermScoreFunction.hpp" />
     <ClInclude Include="..\include\indri\uint64comp.hpp" />
     <ClInclude Include="..\include\indri\UnnecessaryNodeRemoverCopier.hpp" />
     <ClInclude Include="..\include\indri\Unpacker.hpp" />
@@ -338,7 +316,6 @@
     <ClInclude Include="..\include\indri\WriterLockable.hpp" />
     <ClInclude Include="..\include\indri\XMLNode.hpp" />
     <ClInclude Include="..\include\indri\XMLReader.hpp" />
-    <ClInclude Include="..\include\indri\XMLWriter.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

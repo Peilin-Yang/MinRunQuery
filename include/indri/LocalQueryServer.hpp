@@ -24,9 +24,10 @@
 #define INDRI_LOCALQUERYSERVER_HPP
 
 #include "indri/QueryServer.hpp"
-#include "indri/Collection.hpp"
 #include "indri/Repository.hpp"
 #include "indri/ListCache.hpp"
+#include "indri/InferenceNetwork.hpp"
+
 namespace indri
 {
   /*! \brief Indri query server classes. */
@@ -41,13 +42,22 @@ namespace indri
       bool _optimizeParameter;
       indri::collection::Repository& _repository;
       indri::lang::ListCache _cache;
+
+      //
+      void _buildTermScoreFunction(
+        indri::infnet::InferenceNetwork* network, 
+        std::map<std::string, std::map<std::string, double> >& queryTerms, 
+        std::map<std::string, double>& modelParas
+      );
+      void _buildScorerAccmulator();
     public:
       LocalQueryServer( indri::collection::Repository& repository );
 
       // query
       std::string processTerm( std::string s);
 	    QueryServerResponse* getGlobalStatistics( std::vector<std::string>& queryTerms );
-      QueryServerResponse* runQuery( std::map<std::string, double>& queryDict, int resultsRequested, bool optimize );
+      QueryServerResponse* runQuery( std::map<std::string, std::map<std::string, double> >& queryTerms, 
+        std::map<std::string, double>& modelParas, int resultsRequested, bool optimize );
 
       // single document queries
       std::string documentMetadatum( lemur::api::DOCID_T documentID, const std::string& attributeName );

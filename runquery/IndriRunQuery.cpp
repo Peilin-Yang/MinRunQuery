@@ -168,15 +168,6 @@ public:
         _environment.addIndex( std::string(indexes[i]) );
       }
     }
-
-    if( _parameters.exists( "server" ) ) {
-      indri::api::Parameters servers = _parameters["server"];
-
-      for( size_t i=0; i < servers.size(); i++ ) {
-        _environment.addServer( std::string(servers[i]) );
-      }
-    }
-
     _requested = _parameters.get( "count", 1000 );
     _runID = _parameters.get( "runID", "indri" );
 

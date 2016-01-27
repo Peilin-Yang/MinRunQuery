@@ -7,22 +7,23 @@
 #include <sstream>
 #include <algorithm>
 #include <vector>
+#include <cstdlib>
 #include "indri/SimpleQueryParser.hpp"
 
 void split(const std::string &s, char delim, std::vector<std::string> &elems) {
-    std::stringstream ss(s);
-    std::string item;
-    while (std::getline(ss, item, delim)) {
-  		if (!item.empty()) {
-  		  elems.push_back(item);
-  		}
-    }
+  std::stringstream ss(s);
+  std::string item;
+  while (std::getline(ss, item, delim)) {
+  	if (!item.empty()) {
+  	  elems.push_back(item);
+  	}
+  }
 }
 
 std::vector<std::string> split(const std::string &s, char delim=' ') {
-    std::vector<std::string> elems;
-    split(s, delim, elems);
-    return elems;
+  std::vector<std::string> elems;
+  split(s, delim, elems);
+  return elems;
 }
 
 std::map<string, double> indri::query::SimpleQueryParser::parseQuery( std::string query ) {
@@ -44,3 +45,24 @@ std::map<string, double> indri::query::SimpleQueryParser::parseQuery( std::strin
   return parsed;
 }
 
+
+void indri::query::SimpleQueryParser::loadModelParameters( indri::api::Parameters& parameters, std::map<std::string, double>& res ) {
+  res.clear();
+
+  if( !parameters.exists("rule") ) { return; }
+  indri::api::Parameters rules = parameters["rule"];
+  if (rules.size() == 0) { return; }
+  size_t x = 0;
+
+  std::vector<std::string> para_vectors = split(rules[x], ',');
+  for (size_t i = 0; i < para_vectors.size(); i++) {
+    std::string cur = para_vectors[i];
+    try {
+      std::vector<std::string> this_para = split(cur, ':');
+      res[this_para.at(0)] = atof(this_para.at(1).c_str());
+    }
+    catch (...) {
+      LEMUR_THROW( EMPTY_QUERY, "Parse Model Parameters Error!" );
+    }
+  }
+}

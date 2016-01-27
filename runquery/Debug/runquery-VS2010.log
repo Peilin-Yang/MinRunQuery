@@ -1,4 +1,4 @@
-﻿Build started 2016/1/25 17:21:48.
+﻿Build started 2016/1/26 19:27:53.
      1>Project "D:\MinRunQuery\runquery\runquery-VS2010.vcxproj" on node 2 (clean target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\IndriRunQuery.lastbuildstate".
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:00.01

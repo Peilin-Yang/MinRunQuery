@@ -63,15 +63,6 @@
     <ClCompile Include="LocalQueryServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NetworkMessageStream.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NetworkServerProxy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NetworkServerStub.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="NormalizationTransformation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -129,10 +120,10 @@
     <ClCompile Include="TermFrequencyBeliefNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TermScoreFunctionFactory.cpp">
+    <ClCompile Include="TermScoreFunction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TFIDFTermScoreFunction.cpp">
+    <ClCompile Include="TermScoreFunctionFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Thread.cpp">
@@ -168,14 +159,8 @@
     <ClCompile Include="XMLReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="XMLWriter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\indri\Appliers.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\atomic.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -188,34 +173,19 @@
     <ClInclude Include="..\include\indri\BulkTree.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\Collection.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\CompressedCollection.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\ConditionVariable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\ContextCountGraphCopier.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\ContextCountGraphExtractor.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\ContextSimpleCountAccumulator.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\ContextSimpleCountCollectorCopier.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\Copier.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\CorpusStatistics.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\DagCopier.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\DateParse.hpp">
@@ -228,9 +198,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\DirectoryIterator.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\DirichletTermScoreFunction.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\DiskDocListIterator.hpp">
@@ -272,9 +239,6 @@
     <ClInclude Include="..\include\indri\Extent.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\ExtentRestrictionModelAnnotatorCopier.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\FieldStatistics.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -311,9 +275,6 @@
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\JelinekMercerTermScoreFunction.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\KrovetzStemmer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -336,21 +297,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\Mutex.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\NetworkListener.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\NetworkMessageStream.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\NetworkServerProxy.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\NetworkServerStub.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\NetworkStream.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\NormalizationTransformation.hpp">
@@ -384,12 +330,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\QueryEnvironment.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\QueryResponsePacker.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\QueryResponseUnpacker.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\QueryServer.hpp">
@@ -512,9 +452,6 @@
     <ClInclude Include="..\include\indri\TermTranslator.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\indri\TFIDFTermScoreFunction.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\indri\Thread.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -525,9 +462,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\TreePrinterWalker.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\TwoStageTermScoreFunction.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\uint64comp.hpp">
@@ -570,9 +504,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\XMLReader.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\XMLWriter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

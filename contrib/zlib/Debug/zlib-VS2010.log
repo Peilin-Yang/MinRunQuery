@@ -1,4 +1,4 @@
-﻿Build started 2016/1/25 17:21:49.
+﻿Build started 2016/1/26 19:27:53.
      1>Project "D:\MinRunQuery\contrib\zlib\zlib-VS2010.vcxproj" on node 2 (clean target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\zlib.lastbuildstate".
@@ -6,4 +6,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.02
+Time Elapsed 00:00:00.01
