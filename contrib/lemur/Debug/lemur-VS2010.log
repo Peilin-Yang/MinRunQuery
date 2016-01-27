@@ -1,31 +1,9 @@
-﻿Build started 2016/1/27 11:26:18.
-     1>Project "D:\MinRunQuery\contrib\lemur\lemur-VS2010.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\lemur.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude /I../../include /Iinclude/lemur /ZI /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt src\fileio.c src\keyfilecode.c "src\string-set.c"
-         string-set.c
-         keyfilecode.c
-         fileio.c
-         Generating Code...
-         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude /I../../include /Iinclude/lemur /ZI /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt src\Keyfile.cpp "src\lemur-compat.cpp" src\RVLCompress.cpp
-         RVLCompress.cpp
-         lemur-compat.cpp
-         Keyfile.cpp
-         Generating Code...
-       Lib:
-         D:\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"Debug\lemur.lib" /NOLOGO Debug\fileio.obj
-         Debug\Keyfile.obj
-         Debug\keyfilecode.obj
-         "Debug\lemur-compat.obj"
-         Debug\RVLCompress.obj
-         "Debug\string-set.obj"
-         lemur-VS2010.vcxproj -> D:\MinRunQuery\contrib\lemur\Debug\lemur.lib
-       FinalizeBuildStatus:
-         Deleting file "Debug\lemur.unsuccessfulbuild".
-         Touching "Debug\lemur.lastbuildstate".
-     1>Done Building Project "D:\MinRunQuery\contrib\lemur\lemur-VS2010.vcxproj" (build target(s)).
+﻿Build started 2016/1/27 11:42:49.
+     1>Project "D:\MinRunQuery\contrib\lemur\lemur-VS2010.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\lemur.lastbuildstate".
+     1>Done Building Project "D:\MinRunQuery\contrib\lemur\lemur-VS2010.vcxproj" (clean target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.89
+Time Elapsed 00:00:00.02

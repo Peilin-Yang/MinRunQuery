@@ -20,7 +20,6 @@
 #define INDRI_CASENORMALIZATIONTRANSFORMATION_HPP
 
 #include "indri/Transformation.hpp"
-#include "indri/Parameters.hpp"
 #include "lemur/string-set.h"
 namespace indri
 {

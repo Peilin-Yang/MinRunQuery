@@ -1,41 +1,9 @@
-﻿Build started 2016/1/27 11:26:18.
-     1>Project "D:\MinRunQuery\contrib\zlib\zlib-VS2010.vcxproj" on node 4 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\zlib.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         D:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\include /ZI /nologo /W1 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt src\adler32.c src\compress.c src\crc32.c src\deflate.c src\gzio.c src\infback.c src\inffast.c src\inflate.c src\inftrees.c src\trees.c src\uncompr.c src\zutil.c
-         zutil.c
-         uncompr.c
-         trees.c
-         inftrees.c
-         inflate.c
-         inffast.c
-         infback.c
-         gzio.c
-         deflate.c
-         crc32.c
-         compress.c
-         adler32.c
-         Generating Code...
-       Lib:
-         D:\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"Debug\zlib.lib" /NOLOGO Debug\adler32.obj
-         Debug\compress.obj
-         Debug\crc32.obj
-         Debug\deflate.obj
-         Debug\gzio.obj
-         Debug\infback.obj
-         Debug\inffast.obj
-         Debug\inflate.obj
-         Debug\inftrees.obj
-         Debug\trees.obj
-         Debug\uncompr.obj
-         Debug\zutil.obj
-         zlib-VS2010.vcxproj -> D:\MinRunQuery\contrib\zlib\Debug\zlib.lib
-       FinalizeBuildStatus:
-         Deleting file "Debug\zlib.unsuccessfulbuild".
-         Touching "Debug\zlib.lastbuildstate".
-     1>Done Building Project "D:\MinRunQuery\contrib\zlib\zlib-VS2010.vcxproj" (build target(s)).
+﻿Build started 2016/1/27 11:42:49.
+     1>Project "D:\MinRunQuery\contrib\zlib\zlib-VS2010.vcxproj" on node 2 (clean target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug\zlib.lastbuildstate".
+     1>Done Building Project "D:\MinRunQuery\contrib\zlib\zlib-VS2010.vcxproj" (clean target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.47
+Time Elapsed 00:00:00.02
