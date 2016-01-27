@@ -1,9 +1,5 @@
-﻿Build started 2016/1/27 10:36:56.
-     1>Project "D:\MinRunQuery\contrib\lemur\lemur-VS2010.vcxproj" on node 2 (clean target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\lemur.lastbuildstate".
-     1>Done Building Project "D:\MinRunQuery\contrib\lemur\lemur-VS2010.vcxproj" (clean target(s)).
+﻿Build started 2016/1/27 10:45:48.
 
 Build succeeded.
 
-Time Elapsed 00:00:00.02
+Time Elapsed 00:00:00.01
