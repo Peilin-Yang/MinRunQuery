@@ -51,12 +51,6 @@
     <ClCompile Include="InferenceNetwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KrovetzStemmer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KrovetzStemmerTransformation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="LocalQueryServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -264,12 +258,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\KrovetzStemmer.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\indri\KrovetzStemmerTransformation.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\indri\ListCache.hpp">

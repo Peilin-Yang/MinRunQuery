@@ -18,11 +18,9 @@
 
 #include "indri/StemmerFactory.hpp"
 #include "indri/PorterStemmerTransformation.hpp"
-#include "indri/KrovetzStemmerTransformation.hpp"
 #include "lemur/Exception.hpp"
 
 #define STEMMER_PORTER ( "Porter" )
-#define STEMMER_KROVETZ ( "Krovetz" )
 
 //
 // Directions for adding your own stemmer:
@@ -40,8 +38,6 @@ indri::parse::Transformation* indri::parse::StemmerFactory::get( const std::stri
 
   if( name == STEMMER_PORTER ) {
     return new indri::parse::PorterStemmerTransformation();
-  } else if( name == STEMMER_KROVETZ ) {
-    return new indri::parse::KrovetzStemmerTransformation( stemmerParams );
   }
   
   LEMUR_THROW( LEMUR_RUNTIME_ERROR, stemmerName + " is not a known stemmer." );
@@ -49,9 +45,7 @@ indri::parse::Transformation* indri::parse::StemmerFactory::get( const std::stri
 }
 
 std::string indri::parse::StemmerFactory::preferredName( const std::string& name ) {
-  if( name[0] == 'k' || name[0] == 'K' ) {
-    return STEMMER_KROVETZ;
-  } else if( name[0] == 'p' || name[0] == 'P' ) {
+  if( name[0] == 'p' || name[0] == 'P' ) {
     return STEMMER_PORTER;
   }
   // no match, return whatever was passed in.

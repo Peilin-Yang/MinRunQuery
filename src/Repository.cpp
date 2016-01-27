@@ -19,7 +19,6 @@
 #include "indri/CompressedCollection.hpp"
 #include "indri/Path.hpp"
 #include "indri/PorterStemmerTransformation.hpp"
-#include "indri/KrovetzStemmerTransformation.hpp"
 #include "indri/StopperTransformation.hpp"
 #include "indri/Parameters.hpp"
 #include "indri/StemmerFactory.hpp"

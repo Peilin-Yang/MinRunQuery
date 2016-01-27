@@ -163,8 +163,6 @@
     <ClCompile Include="File.cpp" />
     <ClCompile Include="IndriTimer.cpp" />
     <ClCompile Include="InferenceNetwork.cpp" />
-    <ClCompile Include="KrovetzStemmer.cpp" />
-    <ClCompile Include="KrovetzStemmerTransformation.cpp" />
     <ClCompile Include="LocalQueryServer.cpp" />
     <ClCompile Include="NormalizationTransformation.cpp" />
     <ClCompile Include="NullListNode.cpp" />
@@ -236,8 +234,6 @@
     <ClInclude Include="..\include\indri\InferenceNetwork.hpp" />
     <ClInclude Include="..\include\indri\InferenceNetworkNode.hpp" />
     <ClInclude Include="..\include\indri\InternalFileBuffer.hpp" />
-    <ClInclude Include="..\include\indri\KrovetzStemmer.hpp" />
-    <ClInclude Include="..\include\indri\KrovetzStemmerTransformation.hpp" />
     <ClInclude Include="..\include\indri\ListCache.hpp" />
     <ClInclude Include="..\include\indri\ListIteratorNode.hpp" />
     <ClInclude Include="..\include\indri\LocalQueryServer.hpp" />
