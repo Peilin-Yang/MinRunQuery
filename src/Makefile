@@ -7,24 +7,9 @@ OBJLIB = libindri.a
 
 all: $(OBJLIB)
 
-QUERYSPEC = ../include/indri/QuerySpec.hpp
-SPECOBJS = Copier.o Walker.o UnpackerInternal.o
-SPECSRCS = ../src/Copier.cpp ../src/Walker.cpp ../src/UnpackerInternal.cpp
-SPECHEADERS = ../include/indri/Copier.hpp ../include/indri/Walker.hpp 
-GENERATORS = ../src/generators
-
-
 # how to make a library from object files
 $(OBJLIB): $(SPECHEADERS) $(OBJ) $(SPECOBJS)
 	rm -f $@; $(AR) -rs $@ $(OBJ)
-
-#check this.
-$(SPECHEADERS): $(QUERYSPEC)
-	cat $(QUERYSPEC) | awk -f $(GENERATORS)/include/$@.awk > $@
-
-$(SPECSRCS): $(QUERYSPEC)
-	cat $(QUERYSPEC) | awk -f $(GENERATORS)/src/$@.awk > $@
-
 
 # compiling C++ code
 %.o: ../src/%.cpp
