@@ -16,12 +16,14 @@
 indri::infnet::TermFrequencyBeliefNode::TermFrequencyBeliefNode( const std::string& name,
                                                                  class InferenceNetwork& network,
                                                                  int listID,
-                                                                 indri::query::TermScoreFunction& scoreFunction )
+                                                                 indri::query::TermScoreFunction& scoreFunction,
+                                                                 double qtf )
   :
   _name(name),
   _network(network),
   _listID(listID),
-  _function(scoreFunction)
+  _function(scoreFunction),
+  _qtf(qtf)
 {
   _maximumBackgroundScore = INDRI_HUGE_SCORE;
   _maximumScore = INDRI_HUGE_SCORE;
@@ -66,12 +68,12 @@ const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infn
   if( _list ) {
     const indri::index::DocListIterator::DocumentData* entry = _list->currentEntry();
     int count = ( entry && entry->document == documentID ) ? (int)entry->positions.size() : 0;
-    score = _function.scoreOccurrence( count, documentLength );
+    score = _function.scoreOccurrence( count, documentLength, _qtf );
 
     assert( score <= _maximumScore || _list->topDocuments().size() > 0 );
     assert( score <= _maximumBackgroundScore || count != 0 );
   } else {
-    score = _function.scoreOccurrence( 0, documentLength );
+    score = _function.scoreOccurrence( 0, documentLength, _qtf );
   }
   
   indri::api::ScoredExtentResult result(extent);
@@ -128,8 +130,8 @@ void indri::infnet::TermFrequencyBeliefNode::indexChanged( indri::index::Index& 
 
     double maxOccurrences = ceil( double(termData->maxDocumentLength) * maximumFraction );
 
-    _maximumScore = _function.scoreOccurrence( maxOccurrences, termData->maxDocumentLength );
-    _maximumBackgroundScore = _function.scoreOccurrence( 0, 1 );
+    _maximumScore = _function.scoreOccurrence( maxOccurrences, termData->maxDocumentLength, _qtf );
+    _maximumBackgroundScore = _function.scoreOccurrence( 0, 1, _qtf );
   }
 }
 

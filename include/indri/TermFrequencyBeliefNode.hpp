@@ -39,6 +39,7 @@ namespace indri
       double _maximumScore;
       std::string _name;
       int _listID;
+      double _qtf;
 
       indri::utility::greedy_vector<indri::index::DocListIterator::TopDocument> _emptyTopdocs;
 
@@ -46,7 +47,8 @@ namespace indri
       TermFrequencyBeliefNode( const std::string& name,
                                class InferenceNetwork& network,
                                int listID,
-                               indri::query::TermScoreFunction& scoreFunction );
+                               indri::query::TermScoreFunction& scoreFunction,
+                               double qtf );
 
       ~TermFrequencyBeliefNode();
 

@@ -32,12 +32,13 @@ namespace indri
       double _collectionSize;
       double _documentOccurrences;
       double _documentCount;
+      double _queryLength;
       std::map<std::string, double> _modelParas;
     public:
       TermScoreFunction( double collectionOccurence, double collectionSize, double documentOccurrences, 
-          double documentCount, std::map<std::string, double>& paras );
-      double scoreOccurrence( double occurrences, int contextLength );
-      double scoreOccurrence( double occurrences, int contextLength, double documentOccurrences, int documentLength );
+          double documentCount, double queryLength, std::map<std::string, double>& paras );
+      void _preCompute();
+      double scoreOccurrence( double occurrences, int contextLength, double qtf );
     };
   }
 }

@@ -241,6 +241,8 @@ indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infnet::We
   double score = 0;
   double sumWeight = 0;
   bool scored = false;
+
+  /* not sure whether this is correct
   indri::utility::greedy_vector< indri::utility::greedy_vector<indri::api::ScoredExtentResult> > scores;
   for( iter = _children.begin(); iter != _children.end(); iter++ ) {
     const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& childResults = (*iter).node->score( documentID, extent, documentLength );
@@ -257,6 +259,17 @@ indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infnet::We
       childScore += (*iter).weight * childResults[j].score/sumWeight;
     }
     i++;
+    score += childScore;
+  }
+  */
+
+  for( iter = _children.begin(); iter != _children.end(); iter++ ) {
+    const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& childResults = (*iter).node->score( documentID, extent, documentLength );
+    double childScore = 0;
+    for( size_t j=0; j<childResults.size(); j++ ) {
+      scored = true;
+      childScore += childResults[j].score;
+    }
     score += childScore;
   }
 
