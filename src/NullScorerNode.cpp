@@ -19,11 +19,12 @@
 #include "indri/NullScorerNode.hpp"
 #include "lemur/lemur-compat.hpp"
 
-indri::infnet::NullScorerNode::NullScorerNode( const std::string& name, indri::query::TermScoreFunction& scoreFunction ) :
+indri::infnet::NullScorerNode::NullScorerNode( const std::string& name, indri::query::TermScoreFunction& scoreFunction, double qtf ) :
   _name(name),
   _scoreFunction(scoreFunction),
   _maximumBackgroundScore(0),
-  _maximumScore(0)
+  _maximumScore(0),
+  _qtf(qtf)
 {
 }
 
@@ -49,7 +50,7 @@ const indri::utility::greedy_vector<bool>& indri::infnet::NullScorerNode::hasMat
 
 const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infnet::NullScorerNode::score( lemur::api::DOCID_T documentID, indri::index::Extent &extent, int documentLength ) {
   _scores.clear();
-  double score = _scoreFunction.scoreOccurrence(0, documentLength);
+  double score = _scoreFunction.scoreOccurrence(0, documentLength, _qtf);
   indri::api::ScoredExtentResult result(extent);
   result.score=score;
   result.document=documentID;

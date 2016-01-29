@@ -36,9 +36,10 @@ namespace indri
       std::string _name;
       double _maximumBackgroundScore;
       double _maximumScore;
+      double _qtf;
 
     public:
-      NullScorerNode( const std::string& name, indri::query::TermScoreFunction& scoreFunction );
+      NullScorerNode( const std::string& name, indri::query::TermScoreFunction& scoreFunction, double qtf );
 
       void indexChanged( indri::index::Index& index );
       lemur::api::DOCID_T nextCandidateDocument();

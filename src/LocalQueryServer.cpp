@@ -138,6 +138,10 @@ void indri::server::LocalQueryServer::_buildInferenceNetwork(indri::infnet::Infe
   std::string nodeName("ranking");
   indri::infnet::WeightedAndNode* wandNode = new indri::infnet::WeightedAndNode( nodeName );
   size_t querySize = queryTerms.size();
+  double queryLength = 0.0;
+  for (std::map<std::string, std::map<std::string, double> >::iterator it = queryTerms.begin(); it != queryTerms.end(); it++) {
+    queryLength += it->second["weight"];
+  }
 
   /* _buildTermScoreFunction */
   for (std::map<std::string, std::map<std::string, double> >::iterator it = queryTerms.begin(); it != queryTerms.end(); it++) {
@@ -149,20 +153,21 @@ void indri::server::LocalQueryServer::_buildInferenceNetwork(indri::infnet::Infe
     double docFrequency = it->second["docFrequency"];
     double docCnt = it->second["docCnt"];
     if (collTermCnt == 0) collTermCnt = 1; // For non-existant fields.
-    function = new indri::query::TermScoreFunction( collectionOccurence, collTermCnt, docFrequency, docCnt, modelParas );
+    function = new indri::query::TermScoreFunction( collectionOccurence, collTermCnt, docFrequency, docCnt, queryLength, modelParas );
 
     if( collectionOccurence > 0 ) {
       int listID = network->addDocIterator( it->first );
-      belief = new indri::infnet::TermFrequencyBeliefNode( it->first, *network, listID, *function );
+      belief = new indri::infnet::TermFrequencyBeliefNode( it->first, *network, listID, *function, it->second["weight"] );
     }
 
     // either there's no list here, or there aren't any occurrences
     // in the local collection, so just use a NullScorerNode in place
     if( !belief ) {
-      belief = new indri::infnet::NullScorerNode( it->first, *function );
+      belief = new indri::infnet::NullScorerNode( it->first, *function, it->second["weight"] );
     }
 
-    wandNode->addChild( 1.0/double(querySize), belief );
+    //wandNode->addChild( 1.0/double(querySize), belief );
+	  wandNode->addChild( 1.0, belief );
     network->addScoreFunction( function );
     network->addBeliefNode( belief );
   }

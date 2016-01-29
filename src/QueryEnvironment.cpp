@@ -148,6 +148,7 @@ std::map<std::string, std::map<std::string, double> > indri::api::QueryEnvironme
     cur["collTermCnt"] = _queryDict[it->second].collTermCnt;
     cur["docFrequency"] = _queryDict[it->second].docFrequency;
     cur["docCnt"] = _queryDict[it->second].docCnt;
+    cur["weight"] = _queryDict[it->second].qtf;
     res[it->first] = cur;
   }
   return res;
