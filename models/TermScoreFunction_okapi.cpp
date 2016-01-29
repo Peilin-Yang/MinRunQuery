@@ -12,7 +12,7 @@ void indri::query::TermScoreFunction::_preCompute() {
 }
 
 indri::query::TermScoreFunction::TermScoreFunction( double collectionOccurence, double collectionSize, double documentOccurrences, 
-    double documentCount, std::map<std::string, double>& paras ) {
+    double documentCount, double queryLength, std::map<std::string, double>& paras ) {
   _collectionOccurence = collectionOccurence;
   _collectionSize = collectionSize;
   _documentOccurrences = documentOccurrences;
@@ -24,7 +24,7 @@ indri::query::TermScoreFunction::TermScoreFunction( double collectionOccurence, 
 }
 
 
-double indri::query::TermScoreFunction::scoreOccurrence( double occurrences, int documentLength ) {
+double indri::query::TermScoreFunction::scoreOccurrence( double occurrences, int documentLength, double qtf, double docUniqueTerms ) {
   double termWeight = (_modelParas["k3"] + 1) * qtf / (_modelParas["k3"] + qtf);
   double numerator = _modelParas["_termWeightTimesidfTimesK1PlusOne"] * occurrences * termWeight;
   double denominator = occurrences + _modelParas["_k1TimesOneMinusB"] + _modelParas["_k1TimesBOverAvgDocLength"] * documentLength;

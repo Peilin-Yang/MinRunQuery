@@ -2,7 +2,7 @@
 #include <cmath>
 
 indri::query::TermScoreFunction::TermScoreFunction( double collectionOccurence, double collectionSize, double documentOccurrences, 
-    double documentCount, std::map<std::string, double>& paras ) {
+    double documentCount, double queryLength, std::map<std::string, double>& paras ) {
   _collectionOccurence = collectionOccurence;
   _collectionSize = collectionSize;
   _documentOccurrences = documentOccurrences;
@@ -13,7 +13,7 @@ indri::query::TermScoreFunction::TermScoreFunction( double collectionOccurence, 
 }
 
 
-double indri::query::TermScoreFunction::scoreOccurrence( double occurrences, int contextSize ) {
+double indri::query::TermScoreFunction::scoreOccurrence( double occurrences, int contextSize, double qtf, double docUniqueTerms ) {
   double seen = ( double(occurrences) + _modelParas["_muTimesCollectionFrequency"] ) / ( double(contextSize) + _modelParas["mu"] );
   return log( seen );
 }
