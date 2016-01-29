@@ -194,6 +194,9 @@
     <ClInclude Include="..\include\indri\EvaluatorNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\indri\ex_changes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\include\indri\Extent.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>

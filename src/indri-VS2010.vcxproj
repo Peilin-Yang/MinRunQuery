@@ -212,6 +212,7 @@
     <ClInclude Include="..\include\indri\DocumentDataIterator.hpp" />
     <ClInclude Include="..\include\indri\DocumentIterator.hpp" />
     <ClInclude Include="..\include\indri\EvaluatorNode.hpp" />
+    <ClInclude Include="..\include\indri\ex_changes.hpp" />
     <ClInclude Include="..\include\indri\Extent.hpp" />
     <ClInclude Include="..\include\indri\FieldStatistics.hpp" />
     <ClInclude Include="..\include\indri\File.hpp" />

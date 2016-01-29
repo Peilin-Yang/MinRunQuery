@@ -70,19 +70,18 @@ const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infn
     const indri::index::DocListIterator::DocumentData* entry = _list->currentEntry();
     int count = ( entry && entry->document == documentID ) ? (int)entry->positions.size() : 0;
     
-    #ifdef DOC_UNIQUE_TERM_COUNTS
     int docUniqueTermCounts = 0;
+    #ifdef DOC_UNIQUE_TERM_COUNTS
     if (entry){
         docUniqueTermCounts = entry->uniqueTermCounts;
         //cout << "TermFreBeliefNode.cpp --- count:" << count << " UniqueTermCounts:" << docUniqueTermCounts << " DLN:" << documentLength << endl;
     }
     #endif
-
-    score = _function.scoreOccurrence( count, documentLength, _qtf );
+    score = _function.scoreOccurrence( count, documentLength, _qtf, docUniqueTermCounts );
     assert( score <= _maximumScore || _list->topDocuments().size() > 0 );
     assert( score <= _maximumBackgroundScore || count != 0 );
   } else {
-    score = _function.scoreOccurrence( 0, documentLength, _qtf );
+    score = _function.scoreOccurrence( 0, documentLength, _qtf, 0 );
   }
   
   indri::api::ScoredExtentResult result(extent);
@@ -139,8 +138,8 @@ void indri::infnet::TermFrequencyBeliefNode::indexChanged( indri::index::Index& 
 
     double maxOccurrences = ceil( double(termData->maxDocumentLength) * maximumFraction );
 
-    _maximumScore = _function.scoreOccurrence( maxOccurrences, termData->maxDocumentLength, _qtf );
-    _maximumBackgroundScore = _function.scoreOccurrence( 0, 1, _qtf );
+    _maximumScore = _function.scoreOccurrence( maxOccurrences, termData->maxDocumentLength, _qtf, 0 );
+    _maximumBackgroundScore = _function.scoreOccurrence( 0, 1, _qtf, 0 );
   }
 }
 
