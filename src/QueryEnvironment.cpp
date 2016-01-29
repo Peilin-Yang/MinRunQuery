@@ -32,7 +32,7 @@
 
 using namespace lemur::api;
 
-#define TIME_QUERIES
+// #define TIME_QUERIES
 // debug code: should be gone soon
 #ifdef TIME_QUERIES
 #define INIT_TIMER      indri::utility::IndriTimer t; t.start();
