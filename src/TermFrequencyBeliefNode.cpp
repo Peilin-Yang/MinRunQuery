@@ -11,7 +11,8 @@
 
 #include "indri/TermFrequencyBeliefNode.hpp"
 #include "indri/InferenceNetwork.hpp"
-#include <math.h>
+#include <cmath>
+#include "indri/ex_changes.hpp"
 
 indri::infnet::TermFrequencyBeliefNode::TermFrequencyBeliefNode( const std::string& name,
                                                                  class InferenceNetwork& network,
@@ -66,8 +67,14 @@ const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infn
   if( _list ) {
     const indri::index::DocListIterator::DocumentData* entry = _list->currentEntry();
     int count = ( entry && entry->document == documentID ) ? (int)entry->positions.size() : 0;
+    int docUniqueTermCounts = 0;
+    #ifdef DOC_UNIQUE_TERM_COUNTS
+    if (entry){
+        docUniqueTermCounts = entry->uniqueTermCounts;
+        //cout << "TermFreBeliefNode.cpp --- count:" << count << " UniqueTermCounts:" << docUniqueTermCounts << " DLN:" << documentLength << endl;
+    }
+    #endif
     score = _function.scoreOccurrence( count, documentLength );
-
     assert( score <= _maximumScore || _list->topDocuments().size() > 0 );
     assert( score <= _maximumBackgroundScore || count != 0 );
   } else {

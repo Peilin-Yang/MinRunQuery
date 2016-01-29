@@ -22,6 +22,7 @@
 #include "indri/greedy_vector"
 #include "indri/TermData.hpp"
 #include "lemur/IndexTypes.hpp"
+#include "indri/ex_changes.hpp"
 
 namespace indri {
   namespace index {
@@ -29,6 +30,9 @@ namespace indri {
     public:
       struct DocumentData {
         lemur::api::DOCID_T document;
+        #ifdef DOC_UNIQUE_TERM_COUNTS
+        int uniqueTermCounts;
+        #endif
         indri::utility::greedy_vector<int> positions;
       };
 

@@ -17,6 +17,7 @@
 
 #include "indri/DiskDocListIterator.hpp"
 #include "lemur/RVLCompress.hpp"
+#include "indri/ex_changes.hpp"
 
 //
 // ---------------------
@@ -146,6 +147,9 @@ void indri::index::DiskDocListIterator::startIteration() {
   
   // clear out all the internal data
   _data.document = 0;
+  #ifdef DOC_UNIQUE_TERM_COUNTS
+  _data.uniqueTermCounts = 0;
+  #endif
   _data.positions.clear();
   _skipDocument = -1;
   _list = _listEnd = 0;
@@ -281,6 +285,12 @@ inline void indri::index::DiskDocListIterator::_readEntry() {
   _list = lemur::utility::RVLCompress::decompress_int( _list, deltaDocument );
   _data.document += deltaDocument;
 
+  #ifdef DOC_UNIQUE_TERM_COUNTS
+  int uniqueTermCounts;
+  _list = lemur::utility::RVLCompress::decompress_int( _list, uniqueTermCounts );
+  _data.uniqueTermCounts = uniqueTermCounts;
+  #endif
+ 
   int numPositions;
   _list = lemur::utility::RVLCompress::decompress_int( _list, numPositions );
 
