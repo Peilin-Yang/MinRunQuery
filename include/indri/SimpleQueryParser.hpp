@@ -30,7 +30,13 @@ namespace indri
       std::map<std::string, double> processQueryTerms( std::map<std::string, double>& queryDict );
 
       // load the possible parameters for the method
-      void loadModelParameters( indri::api::Parameters& parameters, std::map<std::string, double>& res );
+      void loadModelParameters( 
+        indri::api::Parameters& parameters, 
+        std::map<std::string, double>& res );
+      void loadPertubeParameters(
+        const int pertube_type,
+        const std::map<std::string, double>& pertube_paras,  
+        std::map<std::string, double>& res );
     };
 
     #define EMPTY_QUERY ((lemur::api::LemurErrorType)0xFFFFFFEF)

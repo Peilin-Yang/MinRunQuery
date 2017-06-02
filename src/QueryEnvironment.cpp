@@ -176,16 +176,21 @@ void indri::api::QueryEnvironment::_setCollectionStatistics( indri::infnet::Infe
 }
 
 // run a query (Indri query language)
-std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::_runQuery( indri::infnet::InferenceNetwork::MAllResults& results,
-                                                                                     const std::string& q,
-                                                                                     int resultsRequested,
-                                                                                     const std::string &queryType) {
+std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::_runQuery( 
+  indri::infnet::InferenceNetwork::MAllResults& results,
+  const std::string& q,
+  int resultsRequested,
+  const int pertube_type,
+  const std::map<std::string, double>& pertube_paras ) {
+
   INIT_TIMER
   PRINT_TIMER( "Initialization complete" );
 
   indri::query::SimpleQueryParser* sqp = new indri::query::SimpleQueryParser();
   std::map<std::string, double> parsedQuery = sqp->parseQuery( q );
+  _modelParas.clear();
   sqp->loadModelParameters( _parameters, _modelParas );
+  sqp->loadPertubeParameters( pertube_type, pertube_paras, _modelParas );
   delete(sqp);
   
   _setQTF(parsedQuery);
@@ -425,8 +430,8 @@ void indri::api::QueryEnvironment::_scoredQuery( indri::infnet::InferenceNetwork
 }
 
 std::vector<indri::api::ScoredExtentResult> indri::api::QueryEnvironment::runQuery( 
-	const std::string& query, int resultsRequested, const std::string &queryType ) {
+	const std::string& query, int resultsRequested, const int pertube_type, const std::map<std::string, double>& pertube_paras ) {
   indri::infnet::InferenceNetwork::MAllResults results;
-  std::vector<indri::api::ScoredExtentResult> queryResult = _runQuery( results, query, resultsRequested, queryType );
+  std::vector<indri::api::ScoredExtentResult> queryResult = _runQuery( results, query, resultsRequested, pertube_type, pertube_paras );
   return queryResult;
 }

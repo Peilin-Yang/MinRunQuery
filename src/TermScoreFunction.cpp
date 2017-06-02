@@ -1,13 +1,19 @@
 #include "indri/TermScoreFunction.hpp"
 #include <cmath>
+#include <iostream>
 
-indri::query::TermScoreFunction::TermScoreFunction( double collectionOccurence, double collectionSize, double documentOccurrences, 
-    double documentCount, double queryLength, std::map<std::string, double>& paras ) {
+using namespace std;
+
+indri::query::TermScoreFunction::TermScoreFunction( double collectionOccurence, 
+    double collectionSize, double documentOccurrences, double documentCount, 
+    double avdl, double queryLength, std::map<std::string, double>& paras ) {
   _collectionOccurence = collectionOccurence;
   _collectionSize = collectionSize;
   _documentOccurrences = documentOccurrences;
   _documentCount = documentCount;
+  _avdl = avdl;
   _modelParas = paras;
+  _modelParas["mu"] = 2500;
   _modelParas["collectionFrequency"] = _collectionOccurence ? (_collectionOccurence/_collectionSize) : (1.0 / _collectionSize*2.);
   _modelParas["_muTimesCollectionFrequency"] = _modelParas["mu"] * _modelParas["collectionFrequency"];
 }

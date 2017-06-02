@@ -77,6 +77,43 @@ const indri::utility::greedy_vector<indri::api::ScoredExtentResult>& indri::infn
         //cout << "TermFreBeliefNode.cpp --- count:" << count << " UniqueTermCounts:" << docUniqueTermCounts << " DLN:" << documentLength << endl;
     }
     #endif
+    std::map<std::string, double> modelParas = _function.getModelParas();
+    switch(int(modelParas["__PERTUBE_TYPE__"])) {
+      case 1 : // LV1 
+        count *= (1-modelParas["__PERTUBE_b__"])*documentLength+modelParas["__PERTUBE_b__"]*1000000;
+        documentLength *= (1-modelParas["__PERTUBE_b__"])*documentLength+modelParas["__PERTUBE_b__"]*1000000;
+        break;
+      case 2 : // LV2
+        break;
+      case 3 : // LV3
+        count *= modelParas["__PERTUBE_k__"]+1;
+        documentLength *= modelParas["__PERTUBE_k__"]+1;
+        break;
+      case 4 : // TN1 (constant)
+        documentLength += modelParas["__PERTUBE_k__"];
+        break;
+      case 5 : // TN2 (linear)
+        documentLength *= 1+modelParas["__PERTUBE_b__"];
+        break;
+      case 6 : // TG1 (constant)
+        count += modelParas["__PERTUBE_k__"];
+        documentLength += modelParas["__PERTUBE_k__"];
+        break;
+      case 7 : // TG1 (linear)
+        break;
+      case 8 : // TG2 (constant)
+        break;
+      case 9 : // TG2 (linear)
+        break;
+      case 10 : // TG3 (constant)
+        count += _function.getQueryLength()*modelParas["__PERTUBE_k__"];
+        documentLength += _function.getQueryLength()*modelParas["__PERTUBE_k__"];
+        break;
+      case 11 : // TG3 (linear)
+        break;
+      default:
+        break;
+    } 
     score = _function.scoreOccurrence( count, documentLength, _qtf, docUniqueTermCounts );
     assert( score <= _maximumScore || _list->topDocuments().size() > 0 );
     assert( score <= _maximumBackgroundScore || count != 0 );

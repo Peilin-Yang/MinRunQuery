@@ -26,6 +26,8 @@
 #include "indri/delete_range.hpp"
 
 #include <string>
+#include <vector>
+#include <map>
 #include <queue>
 
 static bool copy_parameters_to_string_vector( std::vector<std::string>& vec, indri::api::Parameters p, const std::string& parameterName ) {
@@ -48,17 +50,21 @@ struct query_t {
     }
   };
 
-  query_t( int _index, std::string _number, const std::string& _text, const std::string &queryType) :
+  query_t( int _index, std::string _number, const std::string& _text, 
+        const int _pertube_type, std::map<std::string, double>& _pertube_paras) :
     index( _index ),
     number( _number ),
-    text( _text ), qType(queryType)
+    text( _text ), 
+    pertube_type(_pertube_type),
+    pertube_paras(_pertube_paras)
   {
   }
 
   query_t( int _index, std::string _number, const std::string& _text ) :
     index( _index ),
     number( _number ),
-    text( _text )
+    text( _text ),
+    pertube_type(0)
   {
   }
 
@@ -66,6 +72,8 @@ struct query_t {
   int index;
   std::string text;
   std::string qType;
+  int pertube_type;
+  std::map<std::string, double> pertube_paras;
 };
 
 class QueryThread : public indri::thread::UtilityThread {
@@ -84,9 +92,9 @@ private:
 
   // Runs the query, expanding it if necessary.  Will print output as well if verbose is on.
   void _runQuery( std::stringstream& output, const std::string& query,
-                  const std::string &queryType) {
+                  const int pertube_type, const std::map<std::string, double>& pertube_paras) {
     try {
-      _results = _environment.runQuery( query, _requested, queryType );
+      _results = _environment.runQuery( query, _requested, pertube_type, pertube_paras );
     }
     catch( lemur::api::Exception& e )
     {
@@ -210,7 +218,7 @@ public:
 
     // run the query
     try {
-      _runQuery( output, query->text, query->qType );
+      _runQuery( output, query->text, query->pertube_type, query->pertube_paras );
     } catch( lemur::api::Exception& e ) {
       output << "# EXCEPTION in query " << query->number << ": " << e.what() << std::endl;
     }
@@ -230,7 +238,8 @@ public:
   }
 };
 
-void push_queue( std::queue< query_t* >& q, indri::api::Parameters& queries ) {
+void push_queue( std::queue< query_t* >& q, indri::api::Parameters& queries,
+    int pertube_type, std::map<std::string, double>& pertube_paras ) {
 
   for( size_t i=0; i<queries.size(); i++ ) {
     std::string queryNumber;
@@ -246,8 +255,24 @@ void push_queue( std::queue< query_t* >& q, indri::api::Parameters& queries ) {
     if (queryText.size() == 0)
       queryText = (std::string) queries[i];
 
-    q.push( new query_t( i, queryNumber, queryText, queryType ) );
+    q.push( new query_t( i, queryNumber, queryText, pertube_type, pertube_paras ) );
   }
+}
+
+void _split(const std::string &s, char delim, std::vector<std::string> &elems) {
+  std::stringstream ss(s);
+  std::string item;
+  while (std::getline(ss, item, delim)) {
+    if (!item.empty()) {
+      elems.push_back(item);
+    }
+  }
+}
+
+std::vector<std::string> _split(const std::string &s, char delim=' ') {
+  std::vector<std::string> elems;
+  _split(s, delim, elems);
+  return elems;
 }
 
 int main(int argc, char * argv[]) {
@@ -265,6 +290,9 @@ int main(int argc, char * argv[]) {
     if( !param.exists("index") && !param.exists("server") )
       LEMUR_THROW( LEMUR_MISSING_PARAMETER_ERROR, "Must specify a server or index to query against." );
 
+    if( !param.exists("pertube") )
+      LEMUR_THROW( LEMUR_MISSING_PARAMETER_ERROR, "Must specify whether the query is pertube query: 0-not pertube, positive integer-pertube." );
+
     int threadCount = param.get( "threads", 1 );
     std::queue< query_t* > queries;
     std::priority_queue< query_t*, std::vector< query_t* >, query_t::greater > output;
@@ -274,7 +302,29 @@ int main(int argc, char * argv[]) {
 
     // push all queries onto a queue
     indri::api::Parameters parameterQueries = param[ "query" ];
-    push_queue( queries, parameterQueries );
+    std::map<std::string, double> pertube_paras;
+
+    int pertube_type = param.get( "pertube", 0 );
+    if( param.exists("pertube_paras") ) {
+      indri::api::Parameters p_paras = param["pertube_paras"];
+      if (p_paras.size() != 0) {
+        size_t x = 0;
+
+        std::vector<std::string> para_vectors = _split(p_paras[x], ',');
+        for (size_t i = 0; i < para_vectors.size(); i++) {
+          std::string cur = para_vectors[i];
+          try {
+            std::vector<std::string> this_para = _split(cur, ':');
+            pertube_paras[this_para.at(0)] = atof(this_para.at(1).c_str());
+          }
+          catch (...) {
+            LEMUR_THROW( LEMUR_MISSING_PARAMETER_ERROR, "Parse Pertube Parameters Error!" );
+          }
+        }
+      }
+    }
+
+    push_queue( queries, parameterQueries, pertube_type, pertube_paras );
     int queryCount = (int)queries.size();
 
     // launch threads

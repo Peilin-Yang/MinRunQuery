@@ -46,9 +46,9 @@ std::map<string, double> indri::query::SimpleQueryParser::parseQuery( std::strin
 }
 
 
-void indri::query::SimpleQueryParser::loadModelParameters( indri::api::Parameters& parameters, std::map<std::string, double>& res ) {
-  res.clear();
-
+void indri::query::SimpleQueryParser::loadModelParameters( 
+    indri::api::Parameters& parameters, 
+    std::map<std::string, double>& res ) {
   if( !parameters.exists("rule") ) { return; }
   indri::api::Parameters rules = parameters["rule"];
   if (rules.size() == 0) { return; }
@@ -64,5 +64,15 @@ void indri::query::SimpleQueryParser::loadModelParameters( indri::api::Parameter
     catch (...) {
       LEMUR_THROW( EMPTY_QUERY, "Parse Model Parameters Error!" );
     }
+  }
+}
+
+void indri::query::SimpleQueryParser::loadPertubeParameters( 
+    const int pertube_type,
+    const std::map<std::string, double>& pertube_paras,
+    std::map<std::string, double>& res ) {
+  res["__PERTUBE_TYPE__"] = pertube_type;
+  for (std::map<std::string, double>::const_iterator it=pertube_paras.begin(); it!=pertube_paras.end(); ++it) {
+    res["__PERTUBE_"+it->first+"__"] = it->second;
   }
 }

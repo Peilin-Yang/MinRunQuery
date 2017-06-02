@@ -153,7 +153,51 @@ void indri::server::LocalQueryServer::_buildInferenceNetwork(indri::infnet::Infe
     double docFrequency = it->second["docFrequency"];
     double docCnt = it->second["docCnt"];
     if (collTermCnt == 0) collTermCnt = 1; // For non-existant fields.
-    function = new indri::query::TermScoreFunction( collectionOccurence, collTermCnt, docFrequency, docCnt, queryLength, modelParas );
+
+    double avdl = collTermCnt / double(docCnt);
+    switch(int(modelParas["__PERTUBE_TYPE__"])) {
+      case 1 : // LV1 
+        avdl = (1-modelParas["__PERTUBE_b__"])*avdl+modelParas["__PERTUBE_b__"]*1000000/double(docCnt);
+        break;
+      case 2 : // LV2
+        break;
+      case 3 : // LV3
+        avdl *= modelParas["__PERTUBE_k__"]+1;
+        break;
+      case 4 : // TN1 (constant)
+        avdl += modelParas["__PERTUBE_k__"];
+        break;
+      case 5 : // TN2 (linear)
+        avdl *= 1+modelParas["__PERTUBE_b__"];
+        break;
+      case 6 : // TG1 (constant)
+        avdl += modelParas["__PERTUBE_k__"];
+        break;
+      case 7 : // TG1 (linear)
+        break;
+      case 8 : // TG2 (constant)
+        avdl += (queryLength-1)*modelParas["__PERTUBE_k__"];
+        break;
+      case 9 : // TG2 (linear)
+        break;
+      case 10 : // TG3 (constant)
+        avdl += queryLength*modelParas["__PERTUBE_k__"];
+        break;
+      case 11 : // TG3 (linear)
+        break;
+      default:
+        break;
+    } 
+
+    function = new indri::query::TermScoreFunction( 
+      collectionOccurence, 
+      collTermCnt, 
+      docFrequency, 
+      docCnt, 
+      avdl, 
+      queryLength, 
+      modelParas 
+    );
 
     if( collectionOccurence > 0 ) {
       int listID = network->addDocIterator( it->first );

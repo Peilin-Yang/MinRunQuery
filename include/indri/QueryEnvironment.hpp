@@ -91,7 +91,8 @@ namespace indri
       std::vector<indri::api::ScoredExtentResult> _runQuery( indri::infnet::InferenceNetwork::MAllResults& results,
                                                              const std::string& q,
                                                              int resultsRequested,
-                                                             const std::string &queryType = "indri" );
+                                                             const int pertube_type,
+                                                             const std::map<std::string, double>& pertube_paras );
       void _scoredQuery( indri::infnet::InferenceNetwork::MAllResults& results, int resultsRequested );
 
       QueryEnvironment( QueryEnvironment& other ) {}
@@ -122,7 +123,7 @@ namespace indri
       /// @param query the query to run
       /// @param resultsRequested maximum number of results to return
       /// @return the vector of ScoredExtentResults for the query
-      std::vector<indri::api::ScoredExtentResult> runQuery( const std::string& query, int resultsRequested, const std::string &queryType = "indri" );
+      std::vector<indri::api::ScoredExtentResult> runQuery( const std::string& query, int resultsRequested, const int pertube_type, const std::map<std::string, double>& pertube_paras );
 
       /// \brief Run an Indri query language query. @see ScoredExtentResult
       /// @param query the query to run
