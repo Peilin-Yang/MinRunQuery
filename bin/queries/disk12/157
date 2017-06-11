@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>157</number>
+    <text>Causes and treatments of multiple sclerosis (MS)</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>347</number>
+    <text>Wildlife Extinction</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>63</number>
+    <text>Machine Translation</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>128</number>
+    <text>Privatization of State Assets</text>
+  </query>
+</parameters>

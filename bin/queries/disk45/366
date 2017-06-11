@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>366</number>
+    <text>commercial cyanide uses</text>
+  </query>
+</parameters>

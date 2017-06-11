@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>657</number>
+    <text>school prayer banned</text>
+  </query>
+</parameters>

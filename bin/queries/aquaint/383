@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>383</number>
+    <text>mental illness drugs</text>
+  </query>
+</parameters>

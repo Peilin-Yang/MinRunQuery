@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>180</number>
+    <text>Ineffectiveness of U.S. Embargoes/Sanctions</text>
+  </query>
+</parameters>

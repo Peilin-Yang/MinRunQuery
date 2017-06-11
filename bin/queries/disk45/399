@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>399</number>
+    <text>oceanographic vessels</text>
+  </query>
+</parameters>

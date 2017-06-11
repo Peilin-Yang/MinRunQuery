@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>85</number>
+    <text>Official Corruption</text>
+  </query>
+</parameters>

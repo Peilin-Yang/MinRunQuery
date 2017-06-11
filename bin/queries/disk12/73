@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>73</number>
+    <text>Demographic Shifts across National Boundaries</text>
+  </query>
+</parameters>

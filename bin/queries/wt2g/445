@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>445</number>
+    <text>women clergy</text>
+  </query>
+</parameters>

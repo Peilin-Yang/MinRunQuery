@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>331</number>
+    <text>World Bank Criticism</text>
+  </query>
+</parameters>

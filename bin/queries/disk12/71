@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>71</number>
+    <text>Border Incursions</text>
+  </query>
+</parameters>

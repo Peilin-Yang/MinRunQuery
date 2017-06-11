@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>623</number>
+    <text>toxic chemical weapon</text>
+  </query>
+</parameters>

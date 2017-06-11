@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>505</number>
+    <text>edmund hillary; sir?</text>
+  </query>
+</parameters>

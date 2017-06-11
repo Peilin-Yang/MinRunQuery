@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>164</number>
+    <text>Generic Drugs - Illegal Activities by Manufacturers</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>647</number>
+    <text>windmill electricity</text>
+  </query>
+</parameters>

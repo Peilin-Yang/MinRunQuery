@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>68</number>
+    <text>Health Hazards from Fine-Diameter Fibers</text>
+  </query>
+</parameters>

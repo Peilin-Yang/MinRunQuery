@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>357</number>
+    <text>territorial waters dispute</text>
+  </query>
+</parameters>

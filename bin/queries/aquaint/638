@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>638</number>
+    <text>wrongful convictions</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>394</number>
+    <text>home schooling</text>
+  </query>
+</parameters>

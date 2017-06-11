@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>96</number>
+    <text>Computer-Aided Medical Diagnosis</text>
+  </query>
+</parameters>

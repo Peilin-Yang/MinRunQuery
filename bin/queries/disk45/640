@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>640</number>
+    <text>maternity leave policies</text>
+  </query>
+</parameters>

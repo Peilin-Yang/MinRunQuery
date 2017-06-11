@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>476</number>
+    <text>Jennifer Aniston</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>353</number>
+    <text>Antarctica exploration</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>679</number>
+    <text>opening adoption records</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>126</number>
+    <text>Medical Ethics and Modern Technology</text>
+  </query>
+</parameters>

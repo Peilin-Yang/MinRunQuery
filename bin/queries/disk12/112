@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>112</number>
+    <text>Funding Biotechnology</text>
+  </query>
+</parameters>

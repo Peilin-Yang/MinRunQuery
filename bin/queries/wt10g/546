@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>546</number>
+    <text>recycle cans and why?</text>
+  </query>
+</parameters>

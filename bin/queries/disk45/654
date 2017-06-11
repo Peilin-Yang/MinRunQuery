@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>654</number>
+    <text>same-sex schools</text>
+  </query>
+</parameters>

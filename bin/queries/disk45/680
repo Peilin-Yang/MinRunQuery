@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>680</number>
+    <text>immigrants Spanish school</text>
+  </query>
+</parameters>

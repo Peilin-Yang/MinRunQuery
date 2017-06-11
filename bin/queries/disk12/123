@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>123</number>
+    <text>Research into &amp; Control of Carcinogens</text>
+  </query>
+</parameters>

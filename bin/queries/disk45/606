@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>606</number>
+    <text>leg traps ban</text>
+  </query>
+</parameters>

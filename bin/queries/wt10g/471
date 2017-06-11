@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>471</number>
+    <text>mexican food culture</text>
+  </query>
+</parameters>

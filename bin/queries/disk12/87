@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>87</number>
+    <text>Criminal Actions Against Officers of Failed                Financial Institutions</text>
+  </query>
+</parameters>

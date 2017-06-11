@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>166</number>
+    <text>Standardized testing and cultural bias</text>
+  </query>
+</parameters>

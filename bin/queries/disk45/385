@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>385</number>
+    <text>hybrid fuel cars</text>
+  </query>
+</parameters>

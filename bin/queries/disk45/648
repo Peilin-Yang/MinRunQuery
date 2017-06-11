@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>648</number>
+    <text>family leave law</text>
+  </query>
+</parameters>

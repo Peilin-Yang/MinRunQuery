@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>655</number>
+    <text>ADD diagnosis treatment</text>
+  </query>
+</parameters>

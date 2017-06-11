@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>93</number>
+    <text>What Backing Does the National Rifle Association                Have?</text>
+  </query>
+</parameters>

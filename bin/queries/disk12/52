@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>52</number>
+    <text>South African Sanctions</text>
+  </query>
+</parameters>

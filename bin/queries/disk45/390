@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>390</number>
+    <text>orphan drugs</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>455</number>
+    <text>whan did Jackie Robinson appear at his first game</text>
+  </query>
+</parameters>

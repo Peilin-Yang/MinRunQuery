@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>375</number>
+    <text>hydrogen energy</text>
+  </query>
+</parameters>

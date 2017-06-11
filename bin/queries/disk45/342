@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>342</number>
+    <text>Diplomatic Expulsion</text>
+  </query>
+</parameters>

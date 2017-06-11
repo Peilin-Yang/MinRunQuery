@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>143</number>
+    <text>Why Protect U.S. Farmers?</text>
+  </query>
+</parameters>

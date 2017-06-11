@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>162</number>
+    <text>Automobile Recalls</text>
+  </query>
+</parameters>

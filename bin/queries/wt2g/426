@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>426</number>
+    <text>law enforcement, dogs</text>
+  </query>
+</parameters>

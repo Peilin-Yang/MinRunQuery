@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>109</number>
+    <text>Find Innovative Companies</text>
+  </query>
+</parameters>

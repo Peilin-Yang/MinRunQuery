@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>370</number>
+    <text>food/drug laws</text>
+  </query>
+</parameters>

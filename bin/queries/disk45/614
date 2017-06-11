@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>614</number>
+    <text>Flavr Savr tomato</text>
+  </query>
+</parameters>

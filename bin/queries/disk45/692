@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>692</number>
+    <text>prostate cancer detection treatment</text>
+  </query>
+</parameters>

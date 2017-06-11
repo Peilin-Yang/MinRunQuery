@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>137</number>
+    <text>Expansion in the U.S. Theme Park Industry</text>
+  </query>
+</parameters>

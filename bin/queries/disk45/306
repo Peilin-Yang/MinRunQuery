@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>306</number>
+    <text>African Civilian Deaths</text>
+  </query>
+</parameters>

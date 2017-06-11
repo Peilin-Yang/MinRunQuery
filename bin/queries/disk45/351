@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>351</number>
+    <text>Falkland petroleum exploration</text>
+  </query>
+</parameters>

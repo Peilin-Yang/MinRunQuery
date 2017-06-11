@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>117</number>
+    <text>Capacity of the U.S. Cellular Telephone Network</text>
+  </query>
+</parameters>

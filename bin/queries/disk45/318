@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>318</number>
+    <text>Best Retirement Country</text>
+  </query>
+</parameters>

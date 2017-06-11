@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>486</number>
+    <text>where is the Eldorado Casino in Reno ?</text>
+  </query>
+</parameters>

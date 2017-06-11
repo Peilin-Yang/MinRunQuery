@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>641</number>
+    <text>Valdez wildlife marine life</text>
+  </query>
+</parameters>

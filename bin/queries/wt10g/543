@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>543</number>
+    <text>radiography what are the risks</text>
+  </query>
+</parameters>

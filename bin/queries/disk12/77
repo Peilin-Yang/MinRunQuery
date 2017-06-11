@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>77</number>
+    <text>Poaching</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>451</number>
+    <text>What is a Bengals cat?</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>94</number>
+    <text>Computer-aided Crime</text>
+  </query>
+</parameters>

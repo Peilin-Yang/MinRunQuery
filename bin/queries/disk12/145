@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>145</number>
+    <text>Influence of the "Pro-Israel Lobby"</text>
+  </query>
+</parameters>

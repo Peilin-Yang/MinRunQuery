@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>179</number>
+    <text>U. S. Restaurants in Foreign Lands</text>
+  </query>
+</parameters>

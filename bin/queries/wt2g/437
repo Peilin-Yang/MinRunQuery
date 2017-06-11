@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>437</number>
+    <text>deregulation, gas, electric</text>
+  </query>
+</parameters>

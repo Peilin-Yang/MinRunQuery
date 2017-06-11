@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>135</number>
+    <text>Possible Contributions of Gene Mapping to Medicine</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>62</number>
+    <text>Military Coups D'etat</text>
+  </query>
+</parameters>

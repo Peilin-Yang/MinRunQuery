@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>617</number>
+    <text>Russia Cuba economy</text>
+  </query>
+</parameters>

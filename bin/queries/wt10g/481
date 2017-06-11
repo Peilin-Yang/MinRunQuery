@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>481</number>
+    <text>what did babe ruth do in the 1920's?</text>
+  </query>
+</parameters>

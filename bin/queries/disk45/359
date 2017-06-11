@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>359</number>
+    <text>mutual fund predictors</text>
+  </query>
+</parameters>

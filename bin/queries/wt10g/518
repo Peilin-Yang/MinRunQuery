@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>518</number>
+    <text>how we use statistics to aid our decision making?</text>
+  </query>
+</parameters>

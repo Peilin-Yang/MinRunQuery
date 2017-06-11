@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>503</number>
+    <text>Vikings in Scotland?</text>
+  </query>
+</parameters>

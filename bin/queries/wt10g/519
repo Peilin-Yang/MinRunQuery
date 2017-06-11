@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>519</number>
+    <text>info on where frogs live</text>
+  </query>
+</parameters>

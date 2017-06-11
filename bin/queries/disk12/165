@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>165</number>
+    <text>Tobacco company advertising and the young</text>
+  </query>
+</parameters>

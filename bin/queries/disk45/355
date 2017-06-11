@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>355</number>
+    <text>ocean remote sensing</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>699</number>
+    <text>term limits</text>
+  </query>
+</parameters>

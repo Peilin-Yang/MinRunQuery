@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>67</number>
+    <text>Politically Motivated Civil Disturbances</text>
+  </query>
+</parameters>

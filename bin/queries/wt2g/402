@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>402</number>
+    <text>behavioral genetics</text>
+  </query>
+</parameters>

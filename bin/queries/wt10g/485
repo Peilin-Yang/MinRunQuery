@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>485</number>
+    <text>gps clock</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>387</number>
+    <text>radioactive waste</text>
+  </query>
+</parameters>

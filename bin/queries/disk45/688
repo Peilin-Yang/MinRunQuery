@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>688</number>
+    <text>non-U.S. media bias</text>
+  </query>
+</parameters>

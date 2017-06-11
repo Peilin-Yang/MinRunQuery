@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>340</number>
+    <text>Land Mine Ban</text>
+  </query>
+</parameters>

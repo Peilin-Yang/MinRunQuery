@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>368</number>
+    <text>in vitro fertilization</text>
+  </query>
+</parameters>

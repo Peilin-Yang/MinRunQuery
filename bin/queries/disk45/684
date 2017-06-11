@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>684</number>
+    <text>part-time benefits</text>
+  </query>
+</parameters>

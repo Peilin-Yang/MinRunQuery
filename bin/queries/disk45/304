@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>304</number>
+    <text>Endangered Species (Mammals)</text>
+  </query>
+</parameters>

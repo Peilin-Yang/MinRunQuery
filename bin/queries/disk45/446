@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>446</number>
+    <text>tourists, violence</text>
+  </query>
+</parameters>

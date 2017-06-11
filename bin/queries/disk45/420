@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>420</number>
+    <text>carbon monoxide poisoning</text>
+  </query>
+</parameters>

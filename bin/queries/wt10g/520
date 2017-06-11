@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>520</number>
+    <text>how was the black plague stopped?</text>
+  </query>
+</parameters>

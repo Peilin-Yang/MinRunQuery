@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>169</number>
+    <text>Cost of Garbage/Trash Removal</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>492</number>
+    <text>"us savings bonds"</text>
+  </query>
+</parameters>

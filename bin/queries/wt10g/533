@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>533</number>
+    <text>school uniforms in public schools?</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>409</number>
+    <text>legal, Pan Am, 103</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>662</number>
+    <text>telemarketer protection</text>
+  </query>
+</parameters>

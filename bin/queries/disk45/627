@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>627</number>
+    <text>Russian food crisis</text>
+  </query>
+</parameters>

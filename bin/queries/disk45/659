@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>659</number>
+    <text>cruise health safety</text>
+  </query>
+</parameters>

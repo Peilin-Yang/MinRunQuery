@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>660</number>
+    <text>whale watching California</text>
+  </query>
+</parameters>

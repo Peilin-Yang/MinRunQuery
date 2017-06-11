@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>189</number>
+    <text>Real Motives for Murder</text>
+  </query>
+</parameters>

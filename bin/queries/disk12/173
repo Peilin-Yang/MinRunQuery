@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>173</number>
+    <text>Smoking Bans</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>130</number>
+    <text>Jewish Emigration and U.S.-USSR Relations</text>
+  </query>
+</parameters>

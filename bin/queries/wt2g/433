@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>433</number>
+    <text>Greek, philosophy, stoicism</text>
+  </query>
+</parameters>

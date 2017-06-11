@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>344</number>
+    <text>Abuses of E-Mail</text>
+  </query>
+</parameters>

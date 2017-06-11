@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>431</number>
+    <text>robotic technology</text>
+  </query>
+</parameters>

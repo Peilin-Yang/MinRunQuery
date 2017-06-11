@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>339</number>
+    <text>Alzheimer's Drug Treatment</text>
+  </query>
+</parameters>

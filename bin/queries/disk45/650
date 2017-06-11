@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>650</number>
+    <text>tax evasion indicted</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>76</number>
+    <text>U.S. Constitution - Original Intent</text>
+  </query>
+</parameters>

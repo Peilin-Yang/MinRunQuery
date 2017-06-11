@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>358</number>
+    <text>blood-alcohol fatalities</text>
+  </query>
+</parameters>

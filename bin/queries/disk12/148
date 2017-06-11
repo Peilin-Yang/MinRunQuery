@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>148</number>
+    <text>Conflict in the Horn of Africa</text>
+  </query>
+</parameters>

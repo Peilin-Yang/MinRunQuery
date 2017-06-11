@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>422</number>
+    <text>art, stolen, forged</text>
+  </query>
+</parameters>

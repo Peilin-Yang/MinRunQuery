@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>685</number>
+    <text>Oscar winner selection</text>
+  </query>
+</parameters>

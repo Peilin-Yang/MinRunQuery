@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>604</number>
+    <text>Lyme disease arthritis</text>
+  </query>
+</parameters>

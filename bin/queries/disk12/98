@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>98</number>
+    <text>Fiber Optics Equipment Manufacturers</text>
+  </query>
+</parameters>

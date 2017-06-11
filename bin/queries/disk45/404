@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>404</number>
+    <text>Ireland, peace talks</text>
+  </query>
+</parameters>

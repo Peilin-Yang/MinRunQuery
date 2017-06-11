@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>467</number>
+    <text>dachshund dachshunds "wiener dog"</text>
+  </query>
+</parameters>

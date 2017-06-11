@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>192</number>
+    <text>Oil Spill Cleanup</text>
+  </query>
+</parameters>

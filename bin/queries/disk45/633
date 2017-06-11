@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>633</number>
+    <text>Welsh devolution</text>
+  </query>
+</parameters>

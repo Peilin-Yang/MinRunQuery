@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>147</number>
+    <text>Productivity Trends in the U.S. Economy</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>432</number>
+    <text>profiling, motorists, police</text>
+  </query>
+</parameters>

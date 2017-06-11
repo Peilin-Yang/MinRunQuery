@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>120</number>
+    <text>Economic Impact of International Terrorism</text>
+  </query>
+</parameters>

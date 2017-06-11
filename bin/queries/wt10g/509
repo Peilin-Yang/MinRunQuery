@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>509</number>
+    <text>steroids;what does it do to your body</text>
+  </query>
+</parameters>

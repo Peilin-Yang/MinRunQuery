@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>362</number>
+    <text>human smuggling</text>
+  </query>
+</parameters>

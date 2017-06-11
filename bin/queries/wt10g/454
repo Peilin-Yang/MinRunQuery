@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>454</number>
+    <text>parkinson's disease</text>
+  </query>
+</parameters>

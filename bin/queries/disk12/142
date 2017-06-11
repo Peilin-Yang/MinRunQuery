@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>142</number>
+    <text>Impact of Government Regulated Grain Farming on International  Relations</text>
+  </query>
+</parameters>

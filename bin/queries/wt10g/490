@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>490</number>
+    <text>motorcycle safety helmets</text>
+  </query>
+</parameters>

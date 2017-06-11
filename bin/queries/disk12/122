@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>122</number>
+    <text>RDT&amp;E of New Cancer Fighting Drugs</text>
+  </query>
+</parameters>

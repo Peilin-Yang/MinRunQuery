@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>152</number>
+    <text>Accusations of Cheating by Contractors on U.S. Defense Projects</text>
+  </query>
+</parameters>

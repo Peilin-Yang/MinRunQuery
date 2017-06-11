@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>176</number>
+    <text>Real-life private investigators</text>
+  </query>
+</parameters>

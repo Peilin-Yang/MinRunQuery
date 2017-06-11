@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>536</number>
+    <text>can babies eat honey?</text>
+  </query>
+</parameters>

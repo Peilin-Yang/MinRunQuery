@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>506</number>
+    <text>history of skateboarding?</text>
+  </query>
+</parameters>

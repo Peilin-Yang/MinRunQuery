@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>133</number>
+    <text>Hubble Space Telescope</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>315</number>
+    <text>Unexplained Highway Accidents</text>
+  </query>
+</parameters>

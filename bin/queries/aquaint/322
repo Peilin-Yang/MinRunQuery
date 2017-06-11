@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>322</number>
+    <text>International Art Crime</text>
+  </query>
+</parameters>

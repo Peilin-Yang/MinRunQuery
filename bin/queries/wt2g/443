@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>443</number>
+    <text>U.S., investment, Africa</text>
+  </query>
+</parameters>

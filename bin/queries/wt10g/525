@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>525</number>
+    <text>how does water get into the atmosphere?</text>
+  </query>
+</parameters>

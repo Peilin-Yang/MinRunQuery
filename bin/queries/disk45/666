@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>666</number>
+    <text>Thatcher resignation impact</text>
+  </query>
+</parameters>

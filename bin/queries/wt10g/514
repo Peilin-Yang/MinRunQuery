@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>514</number>
+    <text>how much money for retirement?</text>
+  </query>
+</parameters>

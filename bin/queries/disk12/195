@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>195</number>
+    <text>Stock Market Perturbations Attributable to Computer Initiated Trading</text>
+  </query>
+</parameters>

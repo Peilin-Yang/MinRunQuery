@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>644</number>
+    <text>exotic animals import</text>
+  </query>
+</parameters>

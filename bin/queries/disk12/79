@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>79</number>
+    <text>FRG Political Party Positions</text>
+  </query>
+</parameters>

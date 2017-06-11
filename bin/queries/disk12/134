@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>134</number>
+    <text>The Human Genome Project</text>
+  </query>
+</parameters>

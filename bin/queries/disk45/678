@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>678</number>
+    <text>joint custody impact</text>
+  </query>
+</parameters>

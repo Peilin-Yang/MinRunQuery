@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>677</number>
+    <text>Leaning Tower of Pisa</text>
+  </query>
+</parameters>

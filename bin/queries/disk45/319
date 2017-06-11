@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>319</number>
+    <text>New Fuel Sources</text>
+  </query>
+</parameters>

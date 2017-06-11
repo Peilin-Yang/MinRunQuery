@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>541</number>
+    <text>instruments to forecast the weather?</text>
+  </query>
+</parameters>

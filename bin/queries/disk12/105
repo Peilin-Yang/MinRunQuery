@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>105</number>
+    <text>"Black Monday"</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>473</number>
+    <text>Toronto FIlm Awards</text>
+  </query>
+</parameters>

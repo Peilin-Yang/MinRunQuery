@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>151</number>
+    <text>Coping with overcrowded prisons</text>
+  </query>
+</parameters>

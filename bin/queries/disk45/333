@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>333</number>
+    <text>Antibiotics Bacteria Disease</text>
+  </query>
+</parameters>

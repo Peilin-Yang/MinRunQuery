@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>124</number>
+    <text>Alternatives to Traditional Cancer Therapies</text>
+  </query>
+</parameters>

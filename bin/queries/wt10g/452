@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>452</number>
+    <text>do beavers live in salt water</text>
+  </query>
+</parameters>

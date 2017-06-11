@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>190</number>
+    <text>Instances of Fraud Involving the Use of a Computer</text>
+  </query>
+</parameters>

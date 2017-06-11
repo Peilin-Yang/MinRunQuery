@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>549</number>
+    <text>how is cancer related to cell reproduction?</text>
+  </query>
+</parameters>

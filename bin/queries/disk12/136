@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>136</number>
+    <text>Diversification by Pacific Telesis</text>
+  </query>
+</parameters>

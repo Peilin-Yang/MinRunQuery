@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>610</number>
+    <text>minimum wage adverse impact</text>
+  </query>
+</parameters>

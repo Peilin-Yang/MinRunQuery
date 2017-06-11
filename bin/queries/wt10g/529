@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>529</number>
+    <text>history on cambodia?</text>
+  </query>
+</parameters>

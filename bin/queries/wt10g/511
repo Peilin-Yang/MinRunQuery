@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>511</number>
+    <text>diseases caused by smoking?</text>
+  </query>
+</parameters>

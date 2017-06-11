@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>687</number>
+    <text>Northern Ireland industry</text>
+  </query>
+</parameters>

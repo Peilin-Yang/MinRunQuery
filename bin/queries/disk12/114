@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>114</number>
+    <text>Non-commercial Satellite Launches</text>
+  </query>
+</parameters>

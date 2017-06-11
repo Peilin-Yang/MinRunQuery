@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>531</number>
+    <text>who and whom</text>
+  </query>
+</parameters>

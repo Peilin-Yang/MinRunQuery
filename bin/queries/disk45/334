@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>334</number>
+    <text>Export Controls Cryptography</text>
+  </query>
+</parameters>

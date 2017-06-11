@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>632</number>
+    <text>southeast Asia tin mining</text>
+  </query>
+</parameters>

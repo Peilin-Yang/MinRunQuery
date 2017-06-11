@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>626</number>
+    <text>human stampede</text>
+  </query>
+</parameters>

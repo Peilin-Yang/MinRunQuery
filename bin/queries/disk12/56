@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>56</number>
+    <text>Prime (Lending) Rate Moves, Predictions</text>
+  </query>
+</parameters>

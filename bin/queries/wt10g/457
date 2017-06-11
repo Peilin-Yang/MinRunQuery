@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>457</number>
+    <text>CHEVROLET TRUCKS</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>414</number>
+    <text>Cuba, sugar, exports</text>
+  </query>
+</parameters>

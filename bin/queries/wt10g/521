@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>521</number>
+    <text>surveys on the best places to live</text>
+  </query>
+</parameters>

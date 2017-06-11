@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>629</number>
+    <text>abortion clinic attack</text>
+  </query>
+</parameters>

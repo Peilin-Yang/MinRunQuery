@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>510</number>
+    <text>do you have any information on j. robert oppenheimer?</text>
+  </query>
+</parameters>

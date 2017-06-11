@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>453</number>
+    <text>hunger</text>
+  </query>
+</parameters>

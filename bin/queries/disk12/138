@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>138</number>
+    <text>Iranian Support for Lebanese Hostage-takers</text>
+  </query>
+</parameters>

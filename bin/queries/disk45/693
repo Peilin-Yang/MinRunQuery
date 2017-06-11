@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>693</number>
+    <text>newspapers electronic media</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>504</number>
+    <text>information about what manatees eat</text>
+  </query>
+</parameters>

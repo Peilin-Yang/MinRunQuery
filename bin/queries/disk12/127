@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>127</number>
+    <text>U.S.-U.S.S.R. Arms Control Agreements</text>
+  </query>
+</parameters>

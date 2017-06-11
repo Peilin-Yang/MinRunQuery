@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>60</number>
+    <text>Merit-Pay vs. Seniority</text>
+  </query>
+</parameters>

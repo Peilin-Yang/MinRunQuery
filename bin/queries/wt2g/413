@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>413</number>
+    <text>steel production</text>
+  </query>
+</parameters>

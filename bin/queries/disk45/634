@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>634</number>
+    <text>L-tryptophan deaths</text>
+  </query>
+</parameters>

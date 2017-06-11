@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>639</number>
+    <text>consumer on-line shopping</text>
+  </query>
+</parameters>

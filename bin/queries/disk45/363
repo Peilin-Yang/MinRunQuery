@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>363</number>
+    <text>transportation tunnel disasters</text>
+  </query>
+</parameters>

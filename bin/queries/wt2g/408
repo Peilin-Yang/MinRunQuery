@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>408</number>
+    <text>tropical storms</text>
+  </query>
+</parameters>

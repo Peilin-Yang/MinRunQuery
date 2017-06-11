@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>651</number>
+    <text>U.S. ethnic population</text>
+  </query>
+</parameters>

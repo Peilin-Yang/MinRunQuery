@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>80</number>
+    <text>1988 Presidential Candidates Platforms</text>
+  </query>
+</parameters>

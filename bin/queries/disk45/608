@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>608</number>
+    <text>taxing social security</text>
+  </query>
+</parameters>

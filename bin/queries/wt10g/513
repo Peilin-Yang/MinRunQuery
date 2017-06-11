@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>513</number>
+    <text>earthquakes?</text>
+  </query>
+</parameters>

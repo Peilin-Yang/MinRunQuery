@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>329</number>
+    <text>Mexican Air Pollution</text>
+  </query>
+</parameters>

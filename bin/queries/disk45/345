@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>345</number>
+    <text>Overseas Tobacco Sales</text>
+  </query>
+</parameters>

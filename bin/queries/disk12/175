@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>175</number>
+    <text>NRA Prevention of Gun Control Legislation</text>
+  </query>
+</parameters>

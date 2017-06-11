@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>99</number>
+    <text>Iran-Contra Affair</text>
+  </query>
+</parameters>

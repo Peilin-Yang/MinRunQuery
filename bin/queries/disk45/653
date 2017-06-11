@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>653</number>
+    <text>ETA Basque terrorism</text>
+  </query>
+</parameters>

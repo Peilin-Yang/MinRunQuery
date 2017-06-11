@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>185</number>
+    <text>Reform of the U.S. Welfare System</text>
+  </query>
+</parameters>

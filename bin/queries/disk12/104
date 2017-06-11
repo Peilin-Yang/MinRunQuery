@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>104</number>
+    <text>Catastrophic Health Insurance</text>
+  </query>
+</parameters>

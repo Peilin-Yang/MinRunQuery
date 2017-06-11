@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>59</number>
+    <text>Weather Related Fatalities</text>
+  </query>
+</parameters>

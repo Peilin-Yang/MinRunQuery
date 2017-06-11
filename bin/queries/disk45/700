@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>700</number>
+    <text>gasoline tax U.S.</text>
+  </query>
+</parameters>

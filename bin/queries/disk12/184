@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>184</number>
+    <text>Corporate Pension Plans/Funds</text>
+  </query>
+</parameters>

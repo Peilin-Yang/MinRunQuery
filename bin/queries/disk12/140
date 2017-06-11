@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>140</number>
+    <text>Political Impact of Islamic Fundamentalism</text>
+  </query>
+</parameters>

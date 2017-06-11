@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>400</number>
+    <text>Amazon rain forest</text>
+  </query>
+</parameters>

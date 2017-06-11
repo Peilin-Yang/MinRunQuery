@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>643</number>
+    <text>salmon dams Pacific northwest</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>522</number>
+    <text>how is water supplied to the mojave desert region?</text>
+  </query>
+</parameters>

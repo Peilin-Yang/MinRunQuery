@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>664</number>
+    <text>American Indian Museum</text>
+  </query>
+</parameters>

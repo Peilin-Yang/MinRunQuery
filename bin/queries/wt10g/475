@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>475</number>
+    <text>what is the compostion of zirconium</text>
+  </query>
+</parameters>

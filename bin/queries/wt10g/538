@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>538</number>
+    <text>fha</text>
+  </query>
+</parameters>

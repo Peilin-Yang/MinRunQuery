@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>466</number>
+    <text>information about the Peer Gynt Suite?</text>
+  </query>
+</parameters>

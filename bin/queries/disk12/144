@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>144</number>
+    <text>Management Problems at the United Nations</text>
+  </query>
+</parameters>

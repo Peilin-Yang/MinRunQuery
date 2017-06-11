@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>528</number>
+    <text>How does a hygrometer measure the humidity in the atmosphere?</text>
+  </query>
+</parameters>

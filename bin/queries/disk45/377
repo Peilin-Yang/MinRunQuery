@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>377</number>
+    <text>cigar smoking</text>
+  </query>
+</parameters>

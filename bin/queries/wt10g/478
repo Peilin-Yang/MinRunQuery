@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>478</number>
+    <text>baltimore</text>
+  </query>
+</parameters>

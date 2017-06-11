@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>534</number>
+    <text>artists who died in the 1700's</text>
+  </query>
+</parameters>

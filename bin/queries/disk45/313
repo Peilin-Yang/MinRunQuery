@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>313</number>
+    <text>Magnetic Levitation-Maglev</text>
+  </query>
+</parameters>

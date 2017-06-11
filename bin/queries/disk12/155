@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>155</number>
+    <text>Right Wing Christian Fundamentalism in U.S.</text>
+  </query>
+</parameters>

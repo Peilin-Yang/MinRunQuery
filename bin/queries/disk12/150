@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>150</number>
+    <text>U.S. Political Campaign Financing</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>116</number>
+    <text>Generic Drug Substitutions</text>
+  </query>
+</parameters>

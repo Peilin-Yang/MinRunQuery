@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>160</number>
+    <text>Vitamins - The Cure for or Cause of Human Ailments</text>
+  </query>
+</parameters>

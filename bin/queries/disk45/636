@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>636</number>
+    <text>jury duty exemptions</text>
+  </query>
+</parameters>

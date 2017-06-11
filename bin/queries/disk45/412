@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>412</number>
+    <text>airport security</text>
+  </query>
+</parameters>

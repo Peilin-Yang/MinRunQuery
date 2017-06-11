@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>111</number>
+    <text>Nuclear Proliferation</text>
+  </query>
+</parameters>

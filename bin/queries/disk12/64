@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>64</number>
+    <text>Hostage-Taking</text>
+  </query>
+</parameters>

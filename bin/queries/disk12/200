@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>200</number>
+    <text>Impact of foreign textile imports on U.S. textile industry</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>97</number>
+    <text>Fiber Optics Applications</text>
+  </query>
+</parameters>

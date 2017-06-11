@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>669</number>
+    <text>Islamic Revolution</text>
+  </query>
+</parameters>

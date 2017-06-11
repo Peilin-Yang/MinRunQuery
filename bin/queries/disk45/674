@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>674</number>
+    <text>Greenpeace prosecuted</text>
+  </query>
+</parameters>

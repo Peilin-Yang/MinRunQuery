@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>411</number>
+    <text>salvaging, shipwreck, treasure</text>
+  </query>
+</parameters>

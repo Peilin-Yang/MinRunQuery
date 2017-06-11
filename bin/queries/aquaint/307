@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>307</number>
+    <text>New Hydroelectric Projects</text>
+  </query>
+</parameters>

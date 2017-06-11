@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>672</number>
+    <text>NRA membership profile</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>102</number>
+    <text>Laser Research Applicable to the U.S.'s Strategic Defense  Initiative</text>
+  </query>
+</parameters>

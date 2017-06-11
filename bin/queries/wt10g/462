@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>462</number>
+    <text>real estate and new jersey</text>
+  </query>
+</parameters>

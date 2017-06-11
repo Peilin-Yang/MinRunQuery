@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>100</number>
+    <text>Controlling the Transfer of High Technology</text>
+  </query>
+</parameters>

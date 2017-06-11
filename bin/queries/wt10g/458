@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>458</number>
+    <text>fasting</text>
+  </query>
+</parameters>

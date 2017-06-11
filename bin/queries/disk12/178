@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>178</number>
+    <text>Dog Maulings</text>
+  </query>
+</parameters>

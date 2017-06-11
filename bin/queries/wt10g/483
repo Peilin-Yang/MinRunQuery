@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>483</number>
+    <text>rosebowl parade</text>
+  </query>
+</parameters>

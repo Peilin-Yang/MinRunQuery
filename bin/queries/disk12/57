@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>57</number>
+    <text>MCI</text>
+  </query>
+</parameters>

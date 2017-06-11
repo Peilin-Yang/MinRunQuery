@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>106</number>
+    <text>U.S. Control of Insider Trading</text>
+  </query>
+</parameters>

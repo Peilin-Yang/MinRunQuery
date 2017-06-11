@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>527</number>
+    <text>can you info on booker t. washington?</text>
+  </query>
+</parameters>

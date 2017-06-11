@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>484</number>
+    <text>auto skoda</text>
+  </query>
+</parameters>

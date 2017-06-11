@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>424</number>
+    <text>suicides</text>
+  </query>
+</parameters>

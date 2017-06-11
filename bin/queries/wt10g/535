@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>535</number>
+    <text>canadian building codes?</text>
+  </query>
+</parameters>

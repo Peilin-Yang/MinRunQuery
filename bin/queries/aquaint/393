@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>393</number>
+    <text>mercy killing</text>
+  </query>
+</parameters>

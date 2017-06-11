@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>491</number>
+    <text>Japanese Wave</text>
+  </query>
+</parameters>

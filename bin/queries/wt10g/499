@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>499</number>
+    <text>pool cue</text>
+  </query>
+</parameters>

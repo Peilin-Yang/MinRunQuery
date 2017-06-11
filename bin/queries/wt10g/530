@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>530</number>
+    <text>do pheromone scents work?</text>
+  </query>
+</parameters>

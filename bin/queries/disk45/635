@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>635</number>
+    <text>doctor assisted suicides</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>338</number>
+    <text>Risk of Aspirin</text>
+  </query>
+</parameters>

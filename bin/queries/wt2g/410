@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>410</number>
+    <text>Schengen agreement</text>
+  </query>
+</parameters>

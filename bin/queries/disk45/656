@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>656</number>
+    <text>lead poisoning children</text>
+  </query>
+</parameters>

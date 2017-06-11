@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>154</number>
+    <text>Oil Spills</text>
+  </query>
+</parameters>

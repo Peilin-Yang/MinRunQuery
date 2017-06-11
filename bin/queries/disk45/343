@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>343</number>
+    <text>Police Deaths</text>
+  </query>
+</parameters>

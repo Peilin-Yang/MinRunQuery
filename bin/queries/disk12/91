@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>91</number>
+    <text>U.S. Army Acquisition of Advanced Weapons Systems</text>
+  </query>
+</parameters>

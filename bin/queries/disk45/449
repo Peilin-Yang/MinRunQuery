@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>449</number>
+    <text>antibiotics ineffectiveness</text>
+  </query>
+</parameters>

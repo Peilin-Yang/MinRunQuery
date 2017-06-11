@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>456</number>
+    <text>is the world going to end 2000</text>
+  </query>
+</parameters>

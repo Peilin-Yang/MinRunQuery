@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>382</number>
+    <text>hydrogen fuel automobiles</text>
+  </query>
+</parameters>

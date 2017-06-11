@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>488</number>
+    <text>newport beach california</text>
+  </query>
+</parameters>

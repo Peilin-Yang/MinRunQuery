@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>539</number>
+    <text>authors who suffered from depression</text>
+  </query>
+</parameters>

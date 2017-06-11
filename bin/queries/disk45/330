@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>330</number>
+    <text>Iran-Iraq Cooperation</text>
+  </query>
+</parameters>

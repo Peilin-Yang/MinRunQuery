@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>542</number>
+    <text>good things fire do for environment</text>
+  </query>
+</parameters>

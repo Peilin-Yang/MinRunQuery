@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>113</number>
+    <text>New Space Satellite Applications</text>
+  </query>
+</parameters>

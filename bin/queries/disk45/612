@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>612</number>
+    <text>Tibet protesters</text>
+  </query>
+</parameters>

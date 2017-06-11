@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>620</number>
+    <text>France nuclear testing</text>
+  </query>
+</parameters>

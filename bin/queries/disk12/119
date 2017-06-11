@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>119</number>
+    <text>Actions Against International Terrorists</text>
+  </query>
+</parameters>

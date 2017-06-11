@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>131</number>
+    <text>McDonnell Douglas Contracts for Military Aircraft</text>
+  </query>
+</parameters>

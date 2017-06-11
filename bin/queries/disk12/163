@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>163</number>
+    <text>Vietnam Veterans and Agent Orange</text>
+  </query>
+</parameters>

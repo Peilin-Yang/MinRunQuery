@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>88</number>
+    <text>Crude Oil Price Trends</text>
+  </query>
+</parameters>

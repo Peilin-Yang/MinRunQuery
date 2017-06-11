@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>101</number>
+    <text>Design of the "Star Wars" Anti-missile Defense System</text>
+  </query>
+</parameters>

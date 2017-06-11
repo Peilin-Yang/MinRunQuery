@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>613</number>
+    <text>Berlin wall disposal</text>
+  </query>
+</parameters>

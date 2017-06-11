@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>186</number>
+    <text>Difference of Learning Levels Among Inner City and More Suburban School Students</text>
+  </query>
+</parameters>

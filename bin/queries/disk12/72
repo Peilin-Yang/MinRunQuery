@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>72</number>
+    <text>Demographic Shifts in the U.S.</text>
+  </query>
+</parameters>

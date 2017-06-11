@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>172</number>
+    <text>The Effectiveness of Medical Products and Related Programs Utilized in the Cessation of Smoking.</text>
+  </query>
+</parameters>

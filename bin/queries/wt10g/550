@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>550</number>
+    <text>how are the volcanoes made?</text>
+  </query>
+</parameters>

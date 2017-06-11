@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>646</number>
+    <text>food stamps increase</text>
+  </query>
+</parameters>

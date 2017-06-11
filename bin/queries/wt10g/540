@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>540</number>
+    <text>does stress cause obesity?</text>
+  </query>
+</parameters>

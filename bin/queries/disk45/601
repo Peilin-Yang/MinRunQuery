@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>601</number>
+    <text>Turkey Iraq water</text>
+  </query>
+</parameters>

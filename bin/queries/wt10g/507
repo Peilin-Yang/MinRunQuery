@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>507</number>
+    <text>dodge recalls?</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>512</number>
+    <text>how are tornadoes formed?</text>
+  </query>
+</parameters>

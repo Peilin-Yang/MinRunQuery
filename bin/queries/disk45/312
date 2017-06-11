@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>312</number>
+    <text>Hydroponics</text>
+  </query>
+</parameters>

@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>61</number>
+    <text>Israeli Role in Iran-Contra Affair</text>
+  </query>
+</parameters>

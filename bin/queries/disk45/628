@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>628</number>
+    <text>U.S. invasion of Panama</text>
+  </query>
+</parameters>

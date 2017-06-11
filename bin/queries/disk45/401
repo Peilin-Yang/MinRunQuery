@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>401</number>
+    <text>foreign minorities, Germany</text>
+  </query>
+</parameters>

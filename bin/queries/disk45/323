@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>323</number>
+    <text>Literary/Journalistic Plagiarism</text>
+  </query>
+</parameters>

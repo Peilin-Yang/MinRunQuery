@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>495</number>
+    <text>Where can I find information on the decade of the 1920's?</text>
+  </query>
+</parameters>

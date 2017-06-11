@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>430</number>
+    <text>killer bee attacks</text>
+  </query>
+</parameters>

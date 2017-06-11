@@ -1,0 +1,8 @@
+<parameters>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>301</number>
+    <text>International Organized Crime</text>
+  </query>
+</parameters>
