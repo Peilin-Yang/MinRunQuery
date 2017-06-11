@@ -1,0 +1,452 @@
+<root>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>401</number>
+    <text>foreign minorities germany </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>402</number>
+    <text>behavioral genetics </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>403</number>
+    <text>osteoporosis </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>404</number>
+    <text>ireland peace talks </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>405</number>
+    <text>cosmic events </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>406</number>
+    <text>parkinsons disease </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>407</number>
+    <text>poaching wildlife preserves </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>408</number>
+    <text>tropical storms </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>409</number>
+    <text>legal pan am 103 </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>410</number>
+    <text>schengen agreement </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>411</number>
+    <text>salvaging shipwreck treasure </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>412</number>
+    <text>airport security </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>413</number>
+    <text>steel production </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>414</number>
+    <text>cuba sugar exports </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>415</number>
+    <text>drugs golden triangle </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>416</number>
+    <text>three gorges project </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>417</number>
+    <text>creativity </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>418</number>
+    <text>quilts income </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>419</number>
+    <text>recycle automobile tires </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>420</number>
+    <text>carbon monoxide poisoning </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>421</number>
+    <text>industrial waste disposal </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>422</number>
+    <text>art stolen forged </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>423</number>
+    <text>milosevic mirjana markovic </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>424</number>
+    <text>suicides </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>425</number>
+    <text>counterfeiting money </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>426</number>
+    <text>law enforcement dogs </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>427</number>
+    <text>uv damage eyes </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>428</number>
+    <text>declining birth rates </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>429</number>
+    <text>legionnaires disease </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>430</number>
+    <text>killer bee attacks </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>431</number>
+    <text>robotic technology </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>432</number>
+    <text>profiling motorists police </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>433</number>
+    <text>greek philosophy stoicism </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>434</number>
+    <text>estonia economy </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>435</number>
+    <text>curbing population growth </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>436</number>
+    <text>railway accidents </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>437</number>
+    <text>deregulation gas electric </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>438</number>
+    <text>tourism increase </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>439</number>
+    <text>inventions scientific discoveries </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>440</number>
+    <text>child labor </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>441</number>
+    <text>lyme disease </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>442</number>
+    <text>heroic acts </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>443</number>
+    <text>us investment africa </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>444</number>
+    <text>supercritical fluids </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>445</number>
+    <text>women clergy </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>446</number>
+    <text>tourists violence </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>447</number>
+    <text>stirling engine </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>448</number>
+    <text>ship losses </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>449</number>
+    <text>antibiotics ineffectiveness </text>
+  </query>
+</parameters>
+<parameters>
+  <index>/lustre/scratch/franklyn/reproduce/collections/wt2g/index</index>
+  <trecFormat>true</trecFormat>
+  <count>1000</count>
+  <query>
+    <number>450</number>
+    <text>king hussein peace </text>
+  </query>
+</parameters>
+</root>
